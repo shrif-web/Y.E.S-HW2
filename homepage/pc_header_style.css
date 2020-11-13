@@ -1,8 +1,7 @@
 #headerBody {
   height: 70px;
   background-color: cadetblue;
-  /* margin-right: 0 !important;
-  margin-left: 0 !important; */
+  /* position: fixed; */
   padding: 10px;
   align-content: center;
   align-items: center;
@@ -16,6 +15,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  align-items: center;
+
 }
 
 #searchbar {
