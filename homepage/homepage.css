@@ -12,13 +12,27 @@
   }
 }
 
-
 @media only screen and (min-width: 1000px) {
   #threeColGrid {
     display: none;
   }
 }
 
+.ui.segment {
+  height: 100px;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
 #card {
-    /* margin: 10px; */
+  box-shadow: none;
+  transition: box-shadow 1.5s;
+}
+
+#card:hover {
+  cursor: pointer;
+  box-shadow: -5px -5px 10px 2px rgba(0, 0, 0, 0.2),
+    5px 5px 10px 2px rgba(0, 0, 0, 0.2), 5px -5px 10px 2px rgba(0, 0, 0, 0.2),
+    -5px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
