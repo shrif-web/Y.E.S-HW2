@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile Homepage</title>
+
+    <link href="header.css" rel="stylesheet" />
+    <link href="homepage.css" rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+      $("#card").mouseenter(function() {
+        console.log("here");
+        $("#card").fadeOut(1000);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <div id="header"></div> -->
+
+    <!-- Header -->
+    <div class="ui fluid menu" id="headerBody">
+      <div class="ui search" id="searchbar">
+        <div class="ui icon input">
+          <input
+            class="prompt"
+            type="text"
+            placeholder="نوار جست و جو"
+            style="text-align: end;"
+          />
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div>LOGO</div>
+    </div>
+
+    <!-- Grid Part -->
+    <div class="ui one column centered grid" id="mobileGrid">
+      <div class="column">
+        <div class="ui segment" id="card">salam</div>
+        <div class="ui segment" id="card">salam</div>
+        <div class="ui segment" id="card">salam</div>
+        <div class="ui segment" id="card">salam</div>
+        <div class="ui segment" id="card">salam</div>
+        <div class="ui segment" id="card">salam</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="ui fluid menu" id="footerBody">
+      <div class="ui button" id="enterButton">ورود</div>
+      <div class="ui button" id="datasButton">داده‌ها</div>
+      <div class="ui button" id="homeButton">خانه</div>
+    </div>
+  </body>
+</html>

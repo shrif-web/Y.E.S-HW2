@@ -1,4 +1,6 @@
 #headerBody {
+  border-radius: 0rem;
+  top: 0px;
   height: 70px;
   background-color: cadetblue;
   position: fixed;
@@ -9,7 +11,25 @@
   display: inline-flex;
   flex-direction: row;
   flex: 1 0 auto;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#footerBody {
+  border-radius: 0rem;
+  bottom: 0px;
+  height: 70px;
+  background-color: cadetblue;
+  position: fixed;
+  padding: 10px;
+  z-index: 1;
+  align-content: center;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #enterButton {
@@ -18,7 +38,7 @@
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
-
+  text-align: center;
 }
 
 #searchbar {
