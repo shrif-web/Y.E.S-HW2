@@ -1,0 +1,47 @@
+#headerBody {
+  height: 70px;
+  background-color: cadetblue;
+  /* margin-right: 0 !important;
+  margin-left: 0 !important; */
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+}
+
+#enterButton {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+#searchbar {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+#headerIcon {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+#homeButton {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+#datasButton {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
