@@ -1,8 +1,9 @@
 #headerBody {
   height: 70px;
   background-color: cadetblue;
-  /* position: fixed; */
+  position: fixed;
   padding: 10px;
+  z-index: 1;
   align-content: center;
   align-items: center;
   display: inline-flex;
