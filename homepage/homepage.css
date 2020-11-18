@@ -49,13 +49,15 @@
 }
 
 #mobileGrid {
-  top: 100px;
-  margin: 20px;
+  top: 90px;
+  /* margin: 20px; */
+  /* margin-right: 20px; */
+  padding: 20px;
   position: absolute;
   overflow: auto;
   right: 0px;
   left: 0px;
-  bottom: 100px;
+  bottom: 90px;
 }
 
 #fourColGrid {
