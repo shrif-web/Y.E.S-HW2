@@ -1,12 +1,19 @@
+.homepageBody {
+  /* position: relative; */
+}
+
 #rightBar {
+  position: fixed;
   padding: 20px;
-  top: 70px;
-  width: 240px;
+  top: 90px;
+  width: 300px;
+  right: 0px;
+  bottom: 0px;
   align-items: center;
   text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 999px) {
   #fourColGrid {
     display: none;
   }
@@ -39,28 +46,37 @@
 }
 
 #mobileGrid {
-  top: 70px;
+  top: 100px;
   margin: 20px;
   position: absolute;
-  overflow: auto;
+  /* overflow: auto; */
   right: 0px;
   left: 0px;
-  bottom: 70px;
+  bottom: 100px;
 }
 
 #fourColGrid {
-  right: 240px;
   position: absolute;
+  right: 300px;
   left: 0px;
   overflow: auto;
-  top: 70px;
+  top: 100px;
   margin: 10px;
 }
 
 #threeColGrid {
-  right: 240px;
+  right: 300px;
   position: absolute;
   left: 0px;
-  top: 70px;
+  top: 100px;
+  margin: 10px;
+}
+
+#gridContainer {
+  right: 300px;
+  position: absolute;
+  /* overflow: auto; */
+  left: 0px;
+  top: 100px;
   margin: 10px;
 }

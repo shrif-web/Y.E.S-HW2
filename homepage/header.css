@@ -1,7 +1,41 @@
 #headerBody {
   border-radius: 0rem;
   top: 0px;
-  height: 70px;
+  height: 100px;
+  background-color: #c6c9cf;
+  position: fixed;
+  /* position: -webkit-sticky;
+  position: sticky; */
+  top: 0;
+  padding: 10px;
+  z-index: 1;
+  align-content: center;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#newHeader {
+  border-radius: 0rem;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  z-index: 1;
+  align-content: center;
+  align-items: center;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
+    0 10px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#footerBody {
+  border-radius: 0rem;
+  bottom: 0px;
+  height: 100px;
   background-color: cadetblue;
   position: fixed;
   padding: 10px;
@@ -15,21 +49,14 @@
     0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#footerBody {
-  border-radius: 0rem;
-  bottom: 0px;
-  height: 70px;
-  background-color: cadetblue;
-  position: fixed;
-  padding: 10px;
-  z-index: 1;
+#registerButton {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: auto;
+  text-align: center;
   align-content: center;
-  align-items: center;
-  display: inline-flex;
-  flex-direction: row;
-  flex: 1 0 auto;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
-    0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #enterButton {
@@ -37,22 +64,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  width: 150px;
   align-items: center;
-  text-align: center;
 }
 
-#searchbar {
+#headerButton {
   flex: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
-}
-
-#headerIcon {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
+  justify-content: center;
+  width: 120px;
+  align-items: center;
+  vertical-align: middle;
 }
 
 #homeButton {
@@ -67,4 +90,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
+}
+
+#searchbar {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+#headerIcon {
+  /* flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right; */
+  max-width: auto;
+  height: 60px;
+  object-fit: contain;
+  align-content: center;
+  vertical-align: middle;
+}
+
+#headerRight {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  vertical-align: middle;
 }

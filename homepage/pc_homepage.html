@@ -4,6 +4,7 @@
     <title>Homepage</title>
 
     <link href="header.css" rel="stylesheet" />
+    <link href="header2.css" rel="stylesheet" />
     <link href="homepage.css" rel="stylesheet" />
 
     <script
@@ -14,36 +15,44 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <script>
-      $("#card").mouseenter(function() {
-        console.log("here");
-        $("#card").fadeOut(1000);
-      });
-    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
   </head>
-  <body>
+  <body class="homepageBody">
     <!-- <div id="header"></div> -->
 
     <!-- Header -->
-    <div class="ui fluid menu" id="headerBody">
-      <div class="ui button" id="enterButton">ورود</div>
-      <div class="ui search" id="searchbar">
-        <div class="ui icon input">
-          <input
-            class="prompt"
-            type="text"
-            placeholder="نوار جست و جو"
-            style="text-align: end;"
-          />
-          <i class="search icon"></i>
-        </div>
-        <div class="results"></div>
-      </div>
+    <div class="ui fixed borderless huge menu" id="newHeader">
+        <div class="ui container grid">
+          <div class="row">
+            <div class="item">
+              <div class="ui inverted button">
+                ورود
+              </div>
+            </div>
 
-      <div class="ui button" id="datasButton">داده‌ها</div>
-      <div class="ui button" id="homeButton">خانه</div>
-      <div>LOGO</div>
+            <div class="item">
+              <div class="ui inverted button">
+                ثبت‌نام
+              </div>
+            </div>
+
+            <div class="right menu">
+
+                  <a class="item">داده‌ها</a>
+                  <a class="active item">خانه</a>
+
+              <a class="item">
+                <img
+                  class="ui image"
+                  src="../files/blue_logo_200x200_copy.png"
+                  id="headerIcon"
+                  
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Right Bar -->
@@ -59,15 +68,20 @@
         <div class="ui sub header">Bahar</div>
         <div class="ui sub header">Abdi</div>
       </div>
+
+      <h3 class="ui header">
+        <div class="content">
+          setting
+        </div>
+      </h3>
+      <div class="ui toggle checkbox">
+        <input type="checkbox" name="public" />
+        <label>Turn on night mode</label>
+      </div>
     </div>
 
     <!-- Grid Part -->
-
-    <div
-      class="ui four column grid"
-      id="fourColGrid"
-      style="right: 240px;position: absolute;left: 0px;overflow: auto;top: 70px;margin: 10px;"
-    >
+    <div class="ui four column grid" id="fourColGrid">
       <div class="ui center aligned column">
         <div class="ui segment" id="card">salam</div>
       </div>
@@ -166,11 +180,7 @@
       </div>
     </div>
 
-    <div
-      class="ui three column padded grid"
-      id="threeColGrid"
-      style="right: 240px;position: absolute;left: 0px;top: 70px;margin: 10px;"
-    >
+    <div class="ui three column padded grid" id="threeColGrid">
       <div class="ui center aligned column">
         <div class="ui segment" id="card">salam</div>
       </div>
@@ -197,9 +207,4 @@
       </div>
     </div>
   </body>
-  <!-- <script>
-    $(function() {
-      $("#header").load("pc_header.html");
-    });
-  </script> -->
 </html>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Header</title>
-    <link href="header.css" rel="stylesheet" />
+    <link href="header2.css" rel="stylesheet" />
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       crossorigin="anonymous"
@@ -14,22 +14,89 @@
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   </head>
   <body>
-    <div class="ui fluid menu" id="headerBody">
-      <div class="ui button" id="enterButton">ورود</div>
-      <div class="ui search" id="searchbar">
-        <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="نوار جست و جو" style="text-align: end;" />
-          <i class="search icon"></i>
+    <div class="ui container" style="height: 150px;overflow: hidden;">
+      <div class="ui fixed borderless huge menu">
+        <div class="ui container grid">
+          <div class="row">
+            <div class="item">
+              <div class="ui inverted button">
+                ورود
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="ui inverted button">
+                ثبت‌نام
+              </div>
+            </div>
+
+            <div class="right menu">
+              <a class="active item">خانه</a>
+              <a class="item">داده‌ها</a>
+              <a class="item">
+                <img
+                  class="ui image"
+                  src="../files/blue_logo_200x200_copy.png"
+                  id="headerIcon"
+                  style="width: auto;height: 50px;"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="results"></div>
+      </div>
+    </div>
+
+    <div
+      class="ui right fixed vertical menu"
+      style="background-color: brown;top: 83px;overflow: hidden;"
+    >
+      <div>
+        <h2 class="ui header">
+          <i class="plug icon"></i>
+          <div class="content">
+            Team Members
+          </div>
+        </h2>
+        <div class="ui sub header">Arshia</div>
+        <div class="ui sub header">Bahar</div>
+        <div class="ui sub header">Abdi</div>
       </div>
 
-      
-      <div class="ui button" id="datasButton">داده‌ها</div>
-      <div class="ui button" id="homeButton">خانه</div>
-      <div>LOGO</div>
-
+      <h3 class="ui header">
+        <div class="content">
+          setting
+        </div>
+      </h3>
+      <div class="ui toggle checkbox">
+        <input type="checkbox" name="public" />
+        <label>Turn on night mode</label>
       </div>
     </div>
   </body>
 </html>
+
+<!-- <div class="ui fixed borderless huge menu">
+    <div class="ui container grid">
+
+      <div class="row">
+        <div class="item">
+          <div class="ui inverted button">ورود</div>
+        </div>
+
+        <div class="item">
+            <div class="ui inverted button">ثبت‌نام</div>
+          </div>
+
+        <div class="right menu">
+          <div class="item">
+            خانه
+          </div>
+          <div class="item">
+            داده‌ها
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
