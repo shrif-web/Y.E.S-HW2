@@ -12,6 +12,7 @@ body > .ui.container {
 }
 /* Nav */
 .ui.fixed.borderless.menu {
+    z-index: 2;
   background-color: #4a008a;
 }
 

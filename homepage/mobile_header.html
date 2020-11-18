@@ -3,6 +3,8 @@
   <head>
     <title>Mobile Header</title>
     <link href="header.css" rel="stylesheet" />
+    <link href="header2.css" rel="stylesheet" />
+    <link href="homepage.css" rel="stylesheet" />
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       crossorigin="anonymous"
@@ -14,20 +16,23 @@
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   </head>
   <body>
-    <div class="ui fluid menu" id="headerBody">
-      <div class="ui search" id="searchbar">
-        <div class="ui icon input">
-          <input
-            class="prompt"
-            type="text"
-            placeholder="نوار جست و جو"
-            style="text-align: end;"
-          />
-          <i class="search icon"></i>
+    <div class="ui fixed borderless huge menu" id="newHeader">
+      <div class="ui container grid">
+        <div class="row">
+          <a class="item" id="sidebarButton">
+            <i class="sidebar icon"></i>
+          </a>
+          <div class="right menu">
+            <a class="item">
+              <img
+                class="ui image"
+                src="../files/blue_logo_200x200_copy.png"
+                id="headerIcon"
+              />
+            </a>
+          </div>
         </div>
-        <div class="results"></div>
       </div>
-      <div>LOGO</div>
     </div>
   </body>
 </html>

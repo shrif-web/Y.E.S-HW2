@@ -9,8 +9,11 @@
   width: 300px;
   right: 0px;
   bottom: 0px;
-  align-items: center;
-  text-align: center;
+  /* align-items: center;
+  text-align: center; */
+  z-index: 1;
+  float: right;
+  direction: rtl;
 }
 
 @media only screen and (max-width: 999px) {
@@ -49,7 +52,7 @@
   top: 100px;
   margin: 20px;
   position: absolute;
-  /* overflow: auto; */
+  overflow: auto;
   right: 0px;
   left: 0px;
   bottom: 100px;

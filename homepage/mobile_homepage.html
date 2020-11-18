@@ -4,6 +4,7 @@
     <title>Mobile Homepage</title>
 
     <link href="header.css" rel="stylesheet" />
+    <link href="header2.css" rel="stylesheet" />
     <link href="homepage.css" rel="stylesheet" />
 
     <script
@@ -25,21 +26,59 @@
   <body>
     <!-- <div id="header"></div> -->
 
-    <!-- Header -->
-    <div class="ui fluid menu" id="headerBody">
-      <div class="ui search" id="searchbar">
-        <div class="ui icon input">
-          <input
-            class="prompt"
-            type="text"
-            placeholder="نوار جست و جو"
-            style="text-align: end;"
-          />
-          <i class="search icon"></i>
+    <!-- Sidebar -->
+    <div
+      class="ui sidebar inverted  
+                  vertical menu" style="top: 90px;bottom: 80px;"
+    >
+      <div
+        class="ui bottom attached menu"
+        id="rightBar"
+        style="bottom: 0px;top: 0px;"
+      >
+        <div style="margin-right: 30px;">
+          <h2 class="ui header">
+            <div class="content">
+              اعضای تیم
+            </div>
+          </h2>
+          <div class="ui sub header">عرشیا</div>
+          <div class="ui sub header">بهار</div>
+          <div class="ui sub header">محمدرضا</div>
         </div>
-        <div class="results"></div>
+
+        <div style="margin-right: 30px;margin-top: 40px;">
+          <h3 class="ui header">
+            <div class="content">
+              تنظیمات
+            </div>
+          </h3>
+          <div class="ui toggle checkbox">
+            <label>حالت شب</label>
+            <input type="checkbox" name="public" />
+          </div>
+        </div>
       </div>
-      <div>LOGO</div>
+    </div>
+
+    <!-- Header -->
+    <div class="ui fixed borderless huge menu" id="newHeader">
+      <div class="ui container grid">
+        <div class="row">
+          <a class="item" id="sidebarButton">
+            <i class="sidebar icon"></i>
+          </a>
+          <div class="right menu">
+            <a class="item">
+              <img
+                class="ui image"
+                src="../files/blue_logo_200x200_copy.png"
+                id="headerIcon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Grid Part -->
@@ -55,10 +94,27 @@
     </div>
 
     <!-- Footer -->
-    <div class="ui fluid menu" id="footerBody">
-      <div class="ui button" id="enterButton">ورود</div>
-      <div class="ui button" id="datasButton">داده‌ها</div>
-      <div class="ui button" id="homeButton">خانه</div>
+    <div class="ui fluid four item menu" id="footerBody">
+      <a class="item">ثبت‌نام</a>
+      <a class="item">ورود</a>
+      <a class="item active">داده‌ها</a>
+      <a class="item">خانه</a>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <script>
+      $("#sidebarButton").click(function() {
+        $(".ui.sidebar")
+          .sidebar("setting", "transition", "overlay")
+          .sidebar("toggle");
+      });
+    </script>
   </body>
 </html>
