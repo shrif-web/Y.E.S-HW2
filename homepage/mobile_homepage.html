@@ -16,26 +16,23 @@
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <script>
-      $("#card").mouseenter(function() {
-        console.log("here");
-        $("#card").fadeOut(1000);
-      });
-    </script>
   </head>
   <body>
     <!-- <div id="header"></div> -->
 
     <!-- Sidebar -->
+    <div id="app">
+
+
     <div
       class="ui sidebar inverted  
                   vertical menu"
-      style="top: 90px;bottom: 80px;"
     >
+      <!-- bottom attached -->
+      for vertical menu
       <div
-        class="ui bottom attached menu"
+        class="ui  vertical menu"
         id="rightBar"
-        style="bottom: 80px;top: 0px;"
       >
         <div style="margin-right: 30px;">
           <h2 class="ui header">
@@ -62,6 +59,19 @@
       </div>
     </div>
 
+    <!-- Grid Part -->
+    <div class="ui one column centered grid" id="mobileGrid">
+        <div class="column">
+          <div class="ui segment" id="card">salam</div>
+          <div class="ui segment" id="card">salam</div>
+          <div class="ui segment" id="card">salam</div>
+          <div class="ui segment" id="card">salam</div>
+          <div class="ui segment" id="card">salam</div>
+          <div class="ui segment" id="card">salam</div>
+        </div>
+      </div>
+    </div>
+
     <div class="pusher">
       <!-- Header -->
       <div class="ui fixed borderless huge menu" id="newHeader">
@@ -83,23 +93,13 @@
         </div>
       </div>
 
-      <!-- Grid Part -->
-      <div class="ui one column centered grid" id="mobileGrid">
-        <div class="column">
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-        </div>
-      </div>
+      
 
       <!-- Footer -->
-      <div class="ui fluid four item menu" id="footerBody">
+      <div class="ui four item menu" id="mobileFooter">
         <a class="item">ثبت‌نام</a>
         <a class="item">ورود</a>
-        <a class="item active">داده‌ها</a>
+        <a class="item">داده‌ها</a>
         <a class="item">خانه</a>
       </div>
     </div>
@@ -115,6 +115,7 @@
     <script>
       $("#sidebarButton").click(function() {
         $(".ui.sidebar")
+          .sidebar({ context: $("#app") })
           .sidebar("setting", "transition", "overlay")
           .sidebar("toggle");
       });
