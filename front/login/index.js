@@ -61,21 +61,21 @@ function signInFormValidation() {
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         err_message.style.display = "block";
         mail_input.className = "field error";
-        err_list.innerHTML += "<li>.ایمیلی درج نشده است</li>";
+        err_list.innerHTML += "<li>ایمیلی درج نشده است.</li>";
     }
     else
         if (!validateEmail(mail)) {
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             err_message.style.display = "block";
             mail_input.className = "field error";
-            err_list.innerHTML += "<li>.ایمیل وارد شده نامعتبر است</li>";
+            err_list.innerHTML += "<li>ایمیل وارد شده نامعتبر است.</li>";
         }
 
     if (pass == "") {
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         err_message.style.display = "block";
         pass_input.className = "field error";
-        err_list.innerHTML += "<li>.رمز عبوری درج نشده است</li>";
+        err_list.innerHTML += "<li>رمز عبوری درج نشده است.</li>";
     }
 
 }
@@ -106,41 +106,41 @@ function signUpFormValidation() {
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         err_message.style.display = "block";
         mail_input.className = "field error";
-        err_list.innerHTML += "<li'>.ایمیلی درج نشده است</li>";
+        err_list.innerHTML += "<li>ایمیلی درج نشده است.</li>";
     }
     else
         if (!validateEmail(mail)) {
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             err_message.style.display = "block";
             mail_input.className = "field error";
-            err_list.innerHTML += "<li>.ایمیل وارد شده نامعتبر است</li>";
+            err_list.innerHTML += "<li>ایمیل وارد شده نامعتبر است.</li>";
         }
 
     if (pass == "") {
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         err_message.style.display = "block";
         pass_input.className = "field error";
-        err_list.innerHTML += "<li>.رمز عبوری درج نشده است</li>";
+        err_list.innerHTML += "<li>رمز عبوری درج نشده است.</li>";
     } else
         if (pass != "" && repass == "") {
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             err_message.style.display = "block";
             repass_input.className = "field error";
-            err_list.innerHTML += "<li>.رمز عبور وارد شده تکرار نشده است</li>";
+            err_list.innerHTML += "<li>رمز عبور وارد شده تکرار نشده است.</li>";
         } else
             if (pass != repass) {
                 form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
                 err_message.style.display = "block";
                 repass_input.className = "field error";
                 pass_input.className = "field error";
-                err_list.innerHTML += "<li>.رمز های عبور با یکدیگر تطابق نمیکنند</li>";
+                err_list.innerHTML += "<li>رمز های عبور با یکدیگر مطابقت نمیکنند.</li>";
             }
 
     if (!checkbox.checked) {
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         err_message.style.display = "block";
         checkbox_input.className = "field error";
-        err_list.innerHTML += "<li>.قوانین و شرایط باید پذیرفته شوند</li>";
+        err_list.innerHTML += "<li>قوانین و شرایط باید پذیرفته شوند.</li>";
     }
 
 }

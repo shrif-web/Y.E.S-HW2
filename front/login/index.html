@@ -54,9 +54,10 @@
                             <button id="sisubbtn" class="ui button" type="submit"
                                 style="margin-top:10px; width:300px; border-radius:0px; font-family:sahel;"
                                 onclick="signInFormValidation()">ورود</button>
-                            <div id="sierrmsg" class="ui negative message"
-                                style="margin-top:25px; width:300px; border-radius:0px; display:none;">
-                                <i class="close icon" onclick="closeErrMsg('sierrmsg')"></i>
+                            <div id="sierrmsg" dir="rtl"
+                                style="margin-top:25px; width:300px; display:none; background-color:#f1d7d7; border-width:1px; border-style:solid; border-color:#9f3a38; color:#9f3a38; padding-bottom:1px; padding-top:1px;">
+                                <i class="close icon" onclick="closeErrMsg('sierrmsg')"
+                                    style="margin-top:5px; margin-left:5px; float:left;"></i>
                                 <ul id="sierrlist" class="list" style="font-family:sahel;">
                                 </ul>
                             </div>
@@ -74,18 +75,19 @@
                                 <input type="password" name="retype-password" placeholder="تکرار رمز عبور" dir="rtl"
                                     style="margin-top:8px; width:300px; border-radius:0px; font-family:sahel;">
                             </div>
-                            <div id="suchbox" class="field">
-                                <div class="ui checkbox" style="margin-top:8px;">
-                                    <input id="chbox" type="checkbox" tabindex="0" style="float:right;">
-                                    <label style="font-family:sahel; float:left;">قوانین و شرایط را میپذیرم</label>
+                            <div id="suchbox" class="field" dir="rtl" style="margin-right:15px;">
+                                <div class="ui checkbox" style="margin-top:8px;" dir="rtl">
+                                    <input id="chbox" type="checkbox" tabindex="0">
+                                    <label style="font-family:sahel;">قوانین و شرایط را میپذیرم.</label>
                                 </div>
                             </div>
                             <button id="susubbtn" class="ui button" type="submit"
                                 style="margin-top:8px; width:300px; border-radius:0px; font-family:sahel;"
                                 onclick="signUpFormValidation()">ارسال</button>
-                            <div id="suerrmsg" class="ui negative message"
-                                style="margin-top:20px; width:300px; border-radius:0px; display:none;">
-                                <i class="close icon" onclick="closeErrMsg('suerrmsg')"></i>
+                            <div id="suerrmsg" dir="rtl"
+                                style="margin-top:25px; width:300px; display:none; background-color:#f1d7d7; border-width:1px; border-style:solid; border-color:#9f3a38; color:#9f3a38; padding-bottom:1px; padding-top:1px;">
+                                <i class="close icon" onclick="closeErrMsg('suerrmsg')"
+                                    style="margin-top:5px; margin-left:5px; float:left;"></i>
                                 <ul id="suerrlist" class="list" style="font-family:sahel;">
                                 </ul>
                             </div>
