@@ -1,5 +1,6 @@
+//TODO:more presise implementation
 function resizeFunc() {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 1000) {
         document.getElementById("picframe").style.display = "none";
         document.getElementById("mainContainer").style.width = "360px";
     } else {
@@ -44,11 +45,14 @@ function validateEmail(email) {
 
 function signInFormValidation() {
     container = document.getElementById("formcontainer");
+    cssVars = getComputedStyle(document.documentElement);
     form = document.getElementById("signInForm");
     mail_input = document.getElementById("siemail");
     pass_input = document.getElementById("sipass");
     err_message = document.getElementById("sierrmsg");
     err_list = document.getElementById("sierrlist");
+    mail_field = document.getElementById("sim");
+    pass_field = document.getElementById("sip");
     mail = document.getElementById("siemail").getElementsByTagName("*")[0].value;
     pass = document.getElementById("sipass").getElementsByTagName("*")[0].value;
     pass = document.getElementById("sipass").getElementsByTagName("*")[0].value;
@@ -56,6 +60,8 @@ function signInFormValidation() {
     formStepDecrease = 15;
     mail_input.className = "field";
     pass_input.className = "field";
+    mail_field.style.borderColor = cssVars.getPropertyValue('--field');
+    pass_field.style.borderColor = cssVars.getPropertyValue('--field');
     err_message.style.display = "none";
     err_list.innerHTML = "";
     err = false;
@@ -64,6 +70,7 @@ function signInFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         mail_input.className = "field error";
+        mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
         err_list.innerHTML += "<li>ایمیلی درج نشده است.</li>";
     }
     else
@@ -71,6 +78,7 @@ function signInFormValidation() {
             err = true;
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             mail_input.className = "field error";
+            mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
             err_list.innerHTML += "<li>ایمیل وارد شده نامعتبر است.</li>";
         }
 
@@ -78,6 +86,7 @@ function signInFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         pass_input.className = "field error";
+        pass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
         err_list.innerHTML += "<li>رمز عبوری درج نشده است.</li>";
     }
 
@@ -90,6 +99,7 @@ function signInFormValidation() {
 
 function signUpFormValidation() {
     container = document.getElementById("formcontainer");
+    cssVars = getComputedStyle(document.documentElement);
     form = document.getElementById("signUpForm");
     mail_input = document.getElementById("suemail");
     pass_input = document.getElementById("supass");
@@ -97,6 +107,10 @@ function signUpFormValidation() {
     checkbox_input = document.getElementById("suchbox");
     err_message = document.getElementById("suerrmsg");
     err_list = document.getElementById("suerrlist");
+    mail_field = document.getElementById("sum");
+    pass_field = document.getElementById("sup");
+    repass_field = document.getElementById("surp");
+    checkbox_lable = document.getElementById("chl");
     mail = document.getElementById("suemail").getElementsByTagName("*")[0].value;
     pass = document.getElementById("supass").getElementsByTagName("*")[0].value;
     repass = document.getElementById("surepass").getElementsByTagName("*")[0].value;
@@ -107,6 +121,10 @@ function signUpFormValidation() {
     pass_input.className = "field";
     repass_input.className = "field";
     checkbox_input.className = "field";
+    mail_field.style.borderColor = cssVars.getPropertyValue('--field');
+    pass_field.style.borderColor = cssVars.getPropertyValue('--field');
+    repass_field.style.borderColor = cssVars.getPropertyValue('--field');
+    checkbox_lable.style.color = cssVars.getPropertyValue('--field');
     err_message.style.display = "none";
     err_list.innerHTML = "";
     err = false;
@@ -115,6 +133,7 @@ function signUpFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         mail_input.className = "field error";
+        mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
         err_list.innerHTML += "<li>ایمیلی درج نشده است.</li>";
     }
     else
@@ -122,6 +141,7 @@ function signUpFormValidation() {
             err = true;
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             mail_input.className = "field error";
+            mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
             err_list.innerHTML += "<li>ایمیل وارد شده نامعتبر است.</li>";
         }
 
@@ -129,12 +149,14 @@ function signUpFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         pass_input.className = "field error";
+        pass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
         err_list.innerHTML += "<li>رمز عبوری درج نشده است.</li>";
     } else
         if (pass != "" && repass == "") {
             err = true;
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             repass_input.className = "field error";
+            repass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
             err_list.innerHTML += "<li>رمز عبور وارد شده تکرار نشده است.</li>";
         } else
             if (pass != repass) {
@@ -142,6 +164,8 @@ function signUpFormValidation() {
                 form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
                 repass_input.className = "field error";
                 pass_input.className = "field error";
+                pass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+                repass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
                 err_list.innerHTML += "<li>رمز های عبور با یکدیگر مطابقت نمیکنند.</li>";
             }
 
@@ -149,6 +173,7 @@ function signUpFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         checkbox_input.className = "field error";
+        checkbox_lable.style.color = cssVars.getPropertyValue('--err_box_font');
         err_list.innerHTML += "<li>قوانین و شرایط باید پذیرفته شوند.</li>";
     }
 

@@ -16,83 +16,66 @@
 </head>
 
 <body onresize="resizeFunc()" onload="resizeFunc()">
-    <button id="lpshup" onclick="loginPageShowUp()" style="display: none;">show up</button>
-    <div id="bodycontainer" style="background-color: var(--body); height:100%;" class="ui grid">
+    <button id="lpshup" onclick="loginPageShowUp()">show up</button>
+    <div id="bodycontainer" class="ui grid">
         <div class="two column row">
-            <div class="left floated column" style="margin-top:55px;  padding-left:10%;" onclick="loginPageHide()"><a
-                    style="cursor: pointer;"><i class="caret left blue icon"></i>بازگشت به خانه</a></div>
-            <div class="right floated column" style="padding-left:30%; margin-top:30px;"><img class="ui small image"
+            <div id="backtohomelink" class="left floated column" onclick="loginPageHide()"><a><i id="bcki"
+                        class="caret left blue icon"></i>بازگشت به
+                    خانه</a></div>
+            <div id="mainicon" class="right floated column"><img class="ui small image"
                     src="../resources/blue_logo_200x200.png"> </div>
         </div>
-        <div id="mainContainer" class="ui container"
-            style="margin-left:100px; margin-top:75px; width:1000px; border-radius:0px;">
-            <div class="ui raised segments" style="border-radius: 0px; ">
+        <div id="mainContainer" class="ui container">
+            <div id="raisedsegment" class="ui raised segments">
                 <div class="ui horizontal segments">
-                    <div id="picframe" class="ui segment"
-                        style="padding-top: 0px; padding-left:0px; padding-right:0px; padding-bottom:0px; width:47%; background-color: var(--tab);">
-                        <img class="ui image" src="../resources/g1.gif"
-                            style="height: 470px; width:99.9%; border:none;">
+                    <div id="picframe" class="ui segment">
+                        <img id="bigimgframe" class="ui image" src="../resources/g1.gif">
                     </div>
-                    <div class="ui segment" id="formcontainer"
-                        style="padding-top: 0px; padding-left:0px; padding-right:0px; padding-bottom:0px; height: 470px; border:none; background-color: var(--tab);  overflow: hidden;  position: relative;">
+                    <div id="formcontainer" class="ui segment">
                         <!-- issue in zoom-->
-                        <div class="ui two attached buttons" style="cursor: pointer;">
-                            <button id="sibtn" class="ui button" style="border-radius:0px;"
-                                onclick="changetab('si')">ورود</button>
-                            <button id="subtn" class="ui button" style="border-radius:0px;"
-                                onclick="changetab('su')">ثبت نام
-                            </button>
+                        <div id="tabbtns" class="ui two attached buttons">
+                            <button id="sibtn" class="ui button" onclick="changetab('si')">ورود</button>
+                            <button id="subtn" class="ui button" onclick="changetab('su')">ثبت نام</button>
                         </div>
-                        <div id="signInForm" class="ui form"
-                            style="margin-left: 15px; margin-top: 120px;   position: absolute;">
+                        <div id="signInForm" class="ui form">
                             <div id="siemail" class="field">
-                                <input class="field" type="text" name="email" placeholder="ایمیل" dir="rtl"
-                                    style="width:300px; border-radius:0px; font-family:sahel;">
+                                <input id="sim" class="field" type="text" name="email" placeholder="ایمیل" dir="rtl">
                             </div>
                             <div id="sipass" class="field">
-                                <input type="password" name="password" placeholder="رمز عبور"
-                                    style="margin-top:10px; width:300px; border-radius:0px; font-family:sahel;"
-                                    dir="rtl">
+                                <input id="sip" type="password" name="password" placeholder="رمز عبور" dir="rtl">
                             </div>
                             <button id="sisubbtn" class="ui button" type="submit"
-                                style="margin-top:10px; width:300px; border-radius:0px; font-family:sahel;"
                                 onclick="signInFormValidation()">ورود</button>
-                            <div id="sierrmsg" dir="rtl"
-                                style="margin-top:25px; width:300px; display:none; background-color:#f1d7d7; border-width:1px; border-style:solid; border-color:#9f3a38; color:#9f3a38; padding-bottom:1px; padding-top:1px;">
-                                <i class="close icon" onclick="closeErrMsg('sierrmsg', 'signInForm', '120px')"
-                                    style="margin-top:5px; margin-left:5px; float:left;"></i>
-                                <ul id="sierrlist" class="list" style="font-family:sahel;">
+                            <div id="sierrmsg" dir="rtl">
+                                <i id="sicli" class="close icon"
+                                    onclick="closeErrMsg('sierrmsg', 'signInForm', '120px')"></i>
+                                <ul id="sierrlist" class="list">
                                 </ul>
                             </div>
                         </div>
-                        <div id="signUpForm" class="ui form"
-                            style="margin-left: 345px; margin-top: 75px;  position: absolute;">
+                        <div id="signUpForm" class="ui form">
                             <div id="suemail" class="field">
-                                <input type="text" name="email" placeholder="ایمیل" dir="rtl"
-                                    style="width:300px; border-radius:0px; font-family:sahel;">
+                                <input id="sum" type="text" name="email" placeholder="ایمیل" dir="rtl">
                             </div>
                             <div id="supass" class="field">
-                                <input type="password" name="password" placeholder="رمز عبور" dir="rtl"
-                                    style="margin-top:8px; width:300px; border-radius:0px; font-family:sahel;">
+                                <input id="sup" type="password" name="password" placeholder="رمز عبور" dir="rtl">
                             </div>
                             <div id="surepass" class="field">
-                                <input type="password" name="retype-password" placeholder="تکرار رمز عبور" dir="rtl"
-                                    style="margin-top:8px; width:300px; border-radius:0px; font-family:sahel;">
+                                <input id="surp" type="password" name="retype-password" placeholder="تکرار رمز عبور"
+                                    dir="rtl">
                             </div>
-                            <div id="suchbox" class="field" dir="rtl" style="margin-right:15px;">
-                                <div class="ui checkbox" style="margin-top:8px;" dir="rtl">
+                            <div id="suchbox" class="field" dir="rtl">
+                                <div class="ui checkbox" dir="rtl">
                                     <input id="chbox" type="checkbox" tabindex="0">
-                                    <label style="font-family:sahel;">قوانین و شرایط را میپذیرم.</label>
+                                    <label id="chl">قوانین و شرایط را میپذیرم.</label>
                                 </div>
                             </div>
                             <button id="susubbtn" class="ui button" type="submit"
-                                style="margin-top:8px; width:300px; border-radius:0px; font-family:sahel;"
                                 onclick="signUpFormValidation()">ارسال</button>
-                            <div id="suerrmsg" dir="rtl"
-                                style="margin-top:25px; width:300px; display:none; background-color:#f1d7d7; border-width:1px; border-style:solid; border-color:#9f3a38; color:#9f3a38; padding-bottom:1px; padding-top:1px;">
-                                <i class="close icon" onclick="closeErrMsg('suerrmsg', 'signUpForm', '75px')"
-                                    style="margin-top:5px; margin-left:5px; float:left;"></i>
-                                <ul id="suerrlist" class="list" style="font-family:sahel;">
+                            <div id="suerrmsg" dir="rtl">
+                                <i id="sucli" class="close icon"
+                                    onclick="closeErrMsg('suerrmsg', 'signUpForm', '75px')"></i>
+                                <ul id="suerrlist" class="list">
                                 </ul>
                             </div>
                         </div>
@@ -101,14 +84,6 @@
             </div>
         </div>
     </div>
-    <script>
-        //   $("#subtn").on("click", function () {
-        //      $('#signInForm').transition('slide right');
-        //       $('#signInForm').show('false');
-        //      $('#signUpForm').transition('slide left');
-        //  });
-
-    </script>
 </body>
 
 </html>
