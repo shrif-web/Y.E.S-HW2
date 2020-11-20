@@ -1,12 +1,17 @@
 .theme-light {
-  --color-header: yellow;
+  --color-header: #cee6ed;
+  --color-grid: #cccccc;
+  --color-itemHover: #e4eff2;
+  --color-shadow: #cee6ed;
+  --color-rightbar: #ff414d;
+  --font-color: black;
 }
 
 .theme-dark {
   --color-header: #595959;
   --color-grid: #363636;
-  --font-color: white;
   --color-itemHover: #919191;
   --color-shadow: #9ec3ff;
-  --color-rightbar: #0375a6;
+  --color-rightbar: #005073;
+  --font-color: white;
 }

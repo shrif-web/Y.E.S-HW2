@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="theme-dark">
+<html class="theme-light">
   <head>
     <title>Homepage</title>
 
@@ -39,14 +39,14 @@
           </div>
 
           <div class="right menu">
-            <a class="item">داده‌ها</a>
+            <a class="item" id="hoverable">داده‌ها</a>
             <a class="active item">خانه</a>
 
             <a class="item">
               <img
                 class="ui image"
                 id="headerIcon"
-                src="../files/multi_logo_200x200 copy.png"
+                src="../files/blue_logo_200x200_copy.png"
               />
             </a>
           </div>
@@ -252,7 +252,7 @@
         } else {
           setTheme("theme-dark");
           document.getElementById("headerIcon").src =
-            "../files/multi_logo_200x200 copy.png";
+            "../files/multi_logo_200x200_copy.png";
         }
       }
       // $(".ui.checkbox").checkbox("onUncheck", function() {
