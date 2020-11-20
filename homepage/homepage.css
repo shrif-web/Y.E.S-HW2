@@ -66,10 +66,8 @@
 }
 
 #mobileGrid {
-  background-color: var(--color-header);
+  background-color: var(--color-grid);
   top: 90px;
-  /* margin: 20px; */
-  /* margin-right: 20px; */
   padding: 20px;
   position: absolute;
   overflow: auto;

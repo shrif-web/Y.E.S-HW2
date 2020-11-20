@@ -1,3 +1,5 @@
+@import 'theme.css';
+
 #headerBody {
   border-radius: 0rem;
   top: 0px;
@@ -51,7 +53,7 @@
   border-radius: 0rem;
   bottom: 0px;
   height: 80px;
-  background-color: darkgrey;
+  background-color: var(--color-header);
   position: fixed;
   padding: 10px;
   z-index: 2;
