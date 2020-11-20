@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="theme-dark">
   <head>
     <title>Mobile Homepage</title>
 
@@ -22,52 +22,45 @@
 
     <!-- Sidebar -->
     <div id="app">
-
-
-    <div
-      class="ui sidebar inverted  
-                  vertical menu"
-    >
-      <!-- bottom attached -->
-      for vertical menu
       <div
-        class="ui  vertical menu"
-        id="rightBar"
+        class="ui sidebar inverted  
+                  vertical menu"
       >
-        <div style="margin-right: 30px;">
-          <h2 class="ui header">
-            <div class="content">
-              اعضای تیم
-            </div>
-          </h2>
-          <div class="ui sub header">عرشیا</div>
-          <div class="ui sub header">بهار</div>
-          <div class="ui sub header">محمدرضا</div>
-        </div>
+        <div class="ui vertical menu" id="rightBar">
+          <div style="margin-right: 30px;">
+            <h2 class="ui header">
+              <div class="content">
+                اعضای تیم
+              </div>
+            </h2>
+            <div class="ui sub header">عرشیا</div>
+            <div class="ui sub header">بهار</div>
+            <div class="ui sub header">محمدرضا</div>
+          </div>
 
-        <div style="margin-right: 30px;margin-top: 40px;">
-          <h3 class="ui header">
-            <div class="content">
-              تنظیمات
+          <div style="margin-right: 30px;margin-top: 40px;">
+            <h3 class="ui header">
+              <div class="content">
+                تنظیمات
+              </div>
+            </h3>
+            <div class="ui toggle checkbox">
+              <label>حالت شب</label>
+              <input type="checkbox" name="public" />
             </div>
-          </h3>
-          <div class="ui toggle checkbox">
-            <label>حالت شب</label>
-            <input type="checkbox" name="public" />
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Grid Part -->
-    <div class="ui one column centered grid" id="mobileGrid">
+      <!-- Grid Part -->
+      <div class="ui one column centered grid" id="mobileGrid">
         <div class="column">
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
-          <div class="ui segment" id="card">salam</div>
+          <div class="ui segment" id="card">Card</div>
+          <div class="ui segment" id="card">Card</div>
+          <div class="ui segment" id="card">Card</div>
+          <div class="ui segment" id="card">Card</div>
+          <div class="ui segment" id="card">Card</div>
+          <div class="ui segment" id="card">Card</div>
         </div>
       </div>
     </div>
@@ -84,7 +77,7 @@
               <a class="item">
                 <img
                   class="ui image"
-                  src="../files/blue_logo_200x200_copy.png"
+                  src="../files/multi_logo_200x200 copy.png"
                   id="headerIcon"
                 />
               </a>
@@ -93,11 +86,9 @@
         </div>
       </div>
 
-      
-
       <!-- Footer -->
       <div class="ui four item menu" id="mobileFooter">
-        <a class="item">ثبت‌نام</a>
+        <a class="item" style="font-family: url(https://cdn.jsdelivr.net/npm/shabnam-font@5.0.0/source/Shabnam.sfd);">ثبت‌نام</a>
         <a class="item">ورود</a>
         <a class="item">داده‌ها</a>
         <a class="item">خانه</a>
@@ -119,6 +110,23 @@
           .sidebar("setting", "transition", "overlay")
           .sidebar("toggle");
       });
+    </script>
+
+    <script>
+      function setTheme(themeName) {
+        localStorage.setItem("theme", themeName);
+        document.documentElement.className = themeName;
+      }
+
+      // function to toggle between light and dark theme
+      function toggleTheme() {
+        console.log("in function");
+        if (localStorage.getItem("theme") === "theme-dark") {
+          setTheme("theme-light");
+        } else {
+          setTheme("theme-dark");
+        }
+      }
     </script>
   </body>
 </html>

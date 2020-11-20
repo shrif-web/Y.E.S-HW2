@@ -1,0 +1,12 @@
+.theme-light {
+  --color-header: yellow;
+}
+
+.theme-dark {
+  --color-header: #595959;
+  --color-grid: #363636;
+  --font-color: white;
+  --color-itemHover: #919191;
+  --color-shadow: #9ec3ff;
+  --color-rightbar: #0375a6;
+}
