@@ -8,23 +8,28 @@ function onButtonClick() {
   }
 }
 
+function onLoad() {
+    console.log("body loadingggggg...")
+    document.getElementById("slider").checked = false
+}
+
 function setTheme(themeName) {
-    localStorage.setItem("theme", themeName);
-    document.documentElement.className = themeName;
-  }
+  localStorage.setItem("theme", themeName);
+  document.documentElement.className = themeName;
+}
 
 function toggleTheme() {
-    
+  slider = document.getElementById("slider");
 
+  console.log("slider.checked:", slider.checked);
 
-  console.log("in toggling theme!", document.getElementById("slider"));
-  if (localStorage.getItem("theme") === "theme-dark") {
-    setTheme("theme-light");
-    document.getElementById("headerIcon").src =
-      "../files/blue_logo_200x200_copy.png";
-  } else {
+  if (slider.checked) {
     setTheme("theme-dark");
     document.getElementById("headerIcon").src =
       "../files/multi_logo_200x200_copy.png";
+  } else {
+    setTheme("theme-light");
+    document.getElementById("headerIcon").src =
+      "../files/blue_logo_200x200_copy.png";
   }
 }
