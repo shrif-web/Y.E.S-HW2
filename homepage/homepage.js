@@ -9,7 +9,6 @@ function onButtonClick() {
 }
 
 function onLoad() {
-    console.log("body loadingggggg...")
     document.getElementById("slider").checked = false
 }
 
@@ -19,9 +18,8 @@ function setTheme(themeName) {
 }
 
 function toggleTheme() {
+    console.log("here")
   slider = document.getElementById("slider");
-
-  console.log("slider.checked:", slider.checked);
 
   if (slider.checked) {
     setTheme("theme-dark");

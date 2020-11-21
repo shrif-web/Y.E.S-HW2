@@ -95,6 +95,8 @@
   left: 0px;
   top: 100px;
   margin: auto;
+  overflow: auto;
+  height: calc(100% - 100px);
   max-width: 1000px;
   padding: 2%;
 }
@@ -102,7 +104,6 @@
 #gridContainer {
   right: 300px;
   position: absolute;
-  /* overflow: auto; */
   left: 0px;
   top: 100px;
   margin: 10px;

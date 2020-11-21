@@ -4,6 +4,7 @@
   --color-itemHover: #e4eff2;
   --color-shadow: #cee6ed;
   --color-rightbar: #ff414d;
+  --color-button: #34a4eb;
   --font-color: black;
 }
 
@@ -13,5 +14,6 @@
   --color-itemHover: #919191;
   --color-shadow: #9ec3ff;
   --color-rightbar: #005073;
+  --color-button: transparent;
   --font-color: white;
 }
