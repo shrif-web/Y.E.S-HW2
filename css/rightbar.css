@@ -5,9 +5,14 @@
     color: white !important;
 }
 
+.ui.list .list>.item a.header, .ui.list>.item a.header {
+    color: white !important;
+}
+
 label{
   color: white !important;
 }
+
 #rightBar {
   position: fixed;
   padding: 20px;
