@@ -82,7 +82,9 @@
   left: 0px;
   overflow: auto;
   top: 100px;
-  margin: 10px;
+  margin: auto;
+  max-width: 1000px;
+  padding: 2%;
 }
 
 #threeColGrid {
@@ -90,7 +92,9 @@
   position: absolute;
   left: 0px;
   top: 100px;
-  margin: 10px;
+  margin: auto;
+  max-width: 1000px;
+  padding: 2%;
 }
 
 #gridContainer {
