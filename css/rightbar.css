@@ -3,8 +3,11 @@
 .ui.header{
   color: white;
 }
-.ui.toggle.checkbox label {
-  color: white;
+.ui.toggle.checkbox input:checked~.box, .ui.toggle.checkbox input:checked~label {
+    color: white !important;
+}
+label{
+  color: white !important;
 }
 #rightBar {
   position: fixed;
