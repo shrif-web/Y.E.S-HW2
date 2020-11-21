@@ -1,9 +1,5 @@
 @import "theme.css";
 
-/*body{
-	direction: rtl;
-}*/
-
 td,th,a,table{
 	text-align: center !important;
 }
