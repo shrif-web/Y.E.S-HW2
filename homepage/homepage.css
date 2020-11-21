@@ -81,6 +81,7 @@
   right: 300px;
   left: 0px;
   overflow: auto;
+  height: calc(100% - 100px);
   top: 100px;
   margin: auto;
   max-width: 1000px;
