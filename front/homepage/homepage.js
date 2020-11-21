@@ -21,12 +21,12 @@ function toggleTheme() {
     document.getElementById("headerButton1").classList.add("inverted");
     document.getElementById("headerButton2").classList.add("inverted");
     document.getElementById("headerIcon").src =
-      "../files/multi_logo_200x200_copy.png";
+      "../../resources/multi_logo_200x200_copy.png";
   } else {
     setTheme("theme-light");
     document.getElementById("headerButton1").classList.remove("inverted");
     document.getElementById("headerButton2").classList.remove("inverted");
     document.getElementById("headerIcon").src =
-      "../files/blue_logo_200x200_copy.png";
+      "../../resources/blue_logo_200x200_copy.png";
   }
 }
