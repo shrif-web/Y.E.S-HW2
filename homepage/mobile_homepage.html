@@ -6,6 +6,9 @@
     <link href="header.css" rel="stylesheet" />
     <link href="header2.css" rel="stylesheet" />
     <link href="homepage.css" rel="stylesheet" />
+    <link href="slider.css" rel="stylesheet" />
+
+    <script src="homepage.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -44,10 +47,17 @@
                 تنظیمات
               </div>
             </h3>
-            <div class="ui toggle checkbox">
+            <!-- <div class="ui toggle checkbox">
               <label>حالت شب</label>
               <input type="checkbox" name="public" />
-            </div>
+            </div> -->
+            <div style="display:inline-block">
+                <label>حالت شب</label>
+                <label id="switch" class="switch">
+                  <input type="checkbox" onchange="toggleTheme()" id="slider" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
           </div>
         </div>
       </div>

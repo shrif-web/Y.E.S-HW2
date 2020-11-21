@@ -4,6 +4,7 @@
     display: inline-block;
     width: 45px;
     height: 25.5px;
+    margin-right: 10px;
   }
   
   /* Hide default HTML checkbox */
@@ -39,7 +40,7 @@
     -webkit-transition: 0.4s;
     transition: 0.2s;
     box-shadow: 0 0px 15px #2020203d;
-    background: white url('https://i.ibb.co/FxzBYR9/night.png');
+    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -56,7 +57,7 @@
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
     transform: translateX(18px);
-    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+    background: white url('https://i.ibb.co/FxzBYR9/night.png');
     background-repeat: no-repeat;
     background-position: center;
   }
