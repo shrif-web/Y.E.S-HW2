@@ -99,6 +99,10 @@
   vertical-align: middle; */
 }
 
+#headerButton1, #headerButton2 {
+  margin: 10px;
+}
+
 #homeButton {
   flex: auto;
   display: flex;
