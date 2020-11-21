@@ -1,0 +1,31 @@
+.ui.header{
+  color: white;
+}
+.ui.toggle.checkbox input:checked~.box, .ui.toggle.checkbox input:checked~label {
+    color: white !important;
+}
+
+.ui.list .list>.item a.header, .ui.list>.item a.header {
+    color: white !important;
+}
+
+label{
+  color: white !important;
+}
+
+#rightBar {
+  position: fixed;
+  padding: 20px;
+  top: 90px;
+  width: 300px;
+  right: 0px;
+  bottom: 0px;
+
+  color: white !important;
+  /* align-items: center;
+  text-align: center; */
+  z-index: 1;
+  float: right;
+  direction: rtl;
+  /*background-color: var(--color-rightbar);*/
+}
