@@ -1,3 +1,16 @@
+function themeToggle() {
+    document.documentElement.classList.toggle('light');
+    document.documentElement.classList.toggle('dark');
+
+    img = document.getElementById("imageid");
+    if (img.src.search("blue_logo_200x200.png") > 0) {
+        img.src = "../resources/black_logo_200x200.png";
+    } else {
+        img.src = "../resources/blue_logo_200x200.png";
+    }
+
+}
+
 //TODO:more presise implementation
 function resizeFunc() {
     if (window.innerWidth < 1000) {

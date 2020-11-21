@@ -14,6 +14,49 @@
   --field_selected: #11232e;
   --link: #325e7a;
   --link_hover: #10202b;
+  --chbox_font:#325e7a;
+  --err_box: #f1d7d7;
+  --err_box_font: #9f3a38;
+}
+
+:root.light {
+  --body: #d3e4ee;
+  --tab: #ffffff;
+  --tab_button_active: #ffffff;
+  --tab_button: #3a6c8a;
+  --tab_button_hover: #283238;
+  --tab_button_hover_disable: #ffffff;
+  --tab_button_active_font: #193d53;
+  --tab_button_font: #ffffff;
+  --submit_button: #035a8d;
+  --submit_button_hover: #042f47;
+  --submit_buttton_font: #ffffff;
+  --field: #a3a6a8;
+  --field_selected: #030303;
+  --link: #325e7a;
+  --link_hover: #10202b;
+  --chbox_font:#325e7a;
+  --err_box: #f1d7d7;
+  --err_box_font: #9f3a38;
+}
+
+:root.dark {
+  --body: #e0e0e0;
+  --tab: #272626;
+  --tab_button_active: #272626;
+  --tab_button: #a4a6a7;
+  --tab_button_hover: #ffffff;
+  --tab_button_hover_disable: #272626;
+  --tab_button_active_font: #ffffff;
+  --tab_button_font: #181818;
+  --submit_button: #d6d7d8;
+  --submit_button_hover: #ffffff;
+  --submit_buttton_font: #0f0f0f;
+  --field: #000000;
+  --field_selected: #969696;
+  --link: #3b3b3b;
+  --link_hover: #0f0f0f;
+  --chbox_font:#f1f1f1;
   --err_box: #f1d7d7;
   --err_box_font: #9f3a38;
 }
@@ -306,7 +349,7 @@ a {
 
 #chl {
   font-family: sahel;
-  color: var(--field);
+  color: var(--chbox_font);
 }
 
 #chl:hover {
