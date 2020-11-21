@@ -14,7 +14,10 @@ function setTheme(themeName) {
   }
 
 function toggleTheme() {
-  console.log("in toggling theme!");
+    
+
+
+  console.log("in toggling theme!", document.getElementById("slider"));
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-light");
     document.getElementById("headerIcon").src =

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="theme-light">
+<html class="theme-dark">
   <head>
     <title>Homepage</title>
 
@@ -23,23 +23,6 @@
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
   </head>
-
-  <script
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-    type="text/javascript"
-  ></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("ui.toggle.checkbox")
-        .checkbox()
-        .first()
-        .checkbox({
-          onChecked: function() {
-            console.log("oon checkeddddddd");
-          }
-        });
-    });
-  </script>
 
   <body class="body">
     <!-- <div id="header"></div> -->
@@ -284,5 +267,12 @@
         <div class="ui segment" id="card">Card</div>
       </div>
     </div>
+
+    <script>
+      document.getElementById("slider").addEventListener("change", e => {
+        this.checkboxValue = e.target.checked ? "on" : "off";
+        console.log(this.checkboxValue);
+      });
+    </script>
   </body>
 </html>
