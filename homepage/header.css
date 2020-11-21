@@ -1,4 +1,4 @@
-@import 'theme.css';
+@import "theme.css";
 
 #headerBody {
   border-radius: 0rem;
@@ -26,6 +26,7 @@
   height: 90px;
   position: fixed;
   top: 0;
+  display: flex;
   padding: 10px;
   z-index: 2;
   align-content: center;
@@ -86,13 +87,16 @@
 }
 
 #headerButton {
-  flex: auto;
+  /* flex: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 90px;
+  justify-content: left; */
+  /* max-width: 90px; */
+
+  margin: 10px;
+  /* width: auto;
   align-items: center;
-  vertical-align: middle;
+  vertical-align: middle; */
 }
 
 #homeButton {
@@ -121,6 +125,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: right; */
+
   max-width: auto;
   height: 60px;
   object-fit: contain;
@@ -135,4 +140,11 @@
   flex-wrap: wrap;
   justify-content: right;
   vertical-align: middle;
+}
+
+@media (min-width: 680px) {
+  a#logoItem.item {
+    width: 300px;
+    margin-right: -9px;
+  }
 }

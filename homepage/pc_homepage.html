@@ -7,41 +7,57 @@
     <link href="header2.css" rel="stylesheet" />
     <link href="homepage.css" rel="stylesheet" />
     <link href="theme.css" rel="stylesheet" />
+    <link href="slider.css" rel="stylesheet" />
     <!-- <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'> -->
-
-    <script
+    <script src="homepage.js"></script>
+    <!-- <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
+    <script type="text/javascript"></script>
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
   </head>
+
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    type="text/javascript"
+  ></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("ui.toggle.checkbox")
+        .checkbox()
+        .first()
+        .checkbox({
+          onChecked: function() {
+            console.log("oon checkeddddddd");
+          }
+        });
+    });
+  </script>
 
   <body class="body">
     <!-- <div id="header"></div> -->
 
     <!-- Header -->
-
     <div class="ui fluid menu" id="newHeader">
-      <div class="item">
-        <div class="ui inverted button">
-          ورود
-        </div>
+      <div class="ui inverted button" id="headerButton">
+        ورود
+      </div>
+      <div class="ui blue button" id="headerButton">
+        ثبت‌نام
       </div>
 
-      <div class="item">
-        <div class="ui inverted button" onclick="onBtnClick()" style="width: 50px;">
-          ثبت‌نام
-        </div>
-      </div>
       <div class="right menu">
         <a class="item">داده‌ها</a>
         <a class="active item">خانه</a>
 
-        <a class="item" style="width: 300px;margin-right: -9px;">
+        <a class="item" id="logoItem">
           <img
             class="ui image"
             id="headerIcon"
@@ -102,113 +118,120 @@
             تنظیمات
           </div>
         </h3>
-        <div class="ui toggle checkbox">
+        <!-- <div class="ui toggle checkbox">
           <input type="checkbox" />
           <label>حالت شب</label>
+        </div> -->
+        <div style="display:inline-block">
+          <label>حالت شب</label>
+          <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider" />
+            <span class="slider round"></span>
+          </label>
         </div>
       </div>
     </div>
 
     <!-- Grid Part -->
     <div class="ui container">
-        <div class="ui four column grid" id="fourColGrid">
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-            <div class="ui center aligned column">
-              <div class="ui segment" id="card">Card</div>
-            </div>
-          </div>
+      <div class="ui four column grid" id="fourColGrid">
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">Card</div>
+        </div>
+      </div>
     </div>
 
     <div class="ui three column padded grid" id="threeColGrid">
@@ -261,7 +284,7 @@
         <div class="ui segment" id="card">Card</div>
       </div>
     </div>
-    <script>
+    <!-- <script>
       $(".ui.toggle")
         .checkbox()
         .first()
@@ -304,6 +327,6 @@
       //     // document.getElementById("modeBox").checked = true;
       //   }
       // }
-    </script>
+    </script> -->
   </body>
 </html>
