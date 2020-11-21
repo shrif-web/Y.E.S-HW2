@@ -1,87 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"/>
+    <link href="header.css"		rel="stylesheet" />
+    <link href="rightbar.css"	rel="stylesheet" />
+    <link href="theme.css"		rel="stylesheet" />
+    <link href="data.css"		rel="stylesheet" />
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-  
 	<title>yes.io</title>
 </head>
 <body>
-	<table class="ui celled table">
-	  <thead>
-	    <tr>
-	      <th>رتبه</th>
-	      <th>نام تیم</th>
-	      <th>دانشگاه</th>
-	      <th>امتیاز</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>عرشیا</td>
-	      <td class="selectable">
-	        <a href="http://yes.io">وای.ای.اس</a>
-	      </td>
-	      <td class="selectable"><a href="http://sharif.edu">شریف</a></td>
-	      <td class="positive">۱۰۰</td>
-	    </tr>
-	    <tr>
-	      <td>عبدی</td>
-	      <td class="selectable">
-	        <a href="http://yes.io">وای.ای.اس</a>
-	      </td>
-	      <td class="selectable"><a href="http://sharif.edu">شریف</a></td>
-	      <td class="positive">۱۰۰</td>
-	    </tr>
-	    <tr>
-	      <td>بهار</td>
-	      <td class="selectable">
-	        <a href="http://yes.io">وای.ای.اس</a>
-	      </td>
-	      <td class="selectable"><a href="http://sharif.edu">شریف</a></td>
-	      <td class="positive">۱۰۰</td>
-	    </tr>
-	    
-	    <tr>
-	      <td>Emmanuel Macron</td>
-	      <td class="selectable">
-	        <a href="https://www.gouvernement.fr/en/news">ابلیس فرانسه</a>
-	      </td>
-	      <td class="selectable"><a href="https://www.epfl.ch/en/">EPFL</a></td>
-	      <td class="warning">۵۰</td>
-	    </tr>
+	<div class="ui fixed borderless huge menu" id="header">
+      <div class="ui container grid">
+        <div class="row">
+          <div class="item">
+            <div class="ui inverted button">
+              ورود
+            </div>
+          </div>
 
-	    <tr>
-	      <td>François Hollande</td>
-	      <td class="selectable">
-	        <a href="https://www.gouvernement.fr/en/news">ابلیس فرانسه</a>
-	      </td>
-	      <td class="selectable"><a href="https://www.epfl.ch/en/">EPFL</a></td>
-	      <td class="warning">۵۰</td>
-	    </tr>
-			
-	    <tr>
-	      <td>Donald.j Trump</td>
-	      <td class="selectable">
-	        <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
-	      </td>
-	      <td class="selectable"><a href="https://www.mit.edu/">MIT</a></td>
-	      <td class="negative">۲۰</td>
-	    </tr>
+          <div class="item">
+            <div class="ui inverted button" onclick="onBtnClick()">
+              ثبت‌نام
+            </div>
+          </div>
 
-	    <tr>
-	      <td>Joe Biden</td>
-	      <td class="selectable">
-	        <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
-	      </td>
-	      <td class="selectable"><a href="https://www.mit.edu/">MIT</a></td>
-	      <td class="negative">۲۰</td>
-	    </tr>
-	  </tbody>
-	</table>
+          <div class="right menu">
+            <a class="item" id="hoverable">داده‌ها</a>
+            <a class="active item">خانه</a>
+
+            <a class="item">
+              <img
+                class="ui image"
+                id="headerIcon"
+                src="../resources/blue_logo_200x200_copy.png"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  	<div class="ui blue inverted right fixed vertical menu" id="rightBar">
+      <div style="margin-right: 30px;">
+        <h2 class="ui header">
+          <div class="content">
+            اعضای تیم
+          </div>
+        </h2>
+        <div class="ui sub header">عرشیا</div>
+        <div class="ui sub header">بهار</div>
+        <div class="ui sub header">محمدرضا</div>
+      </div>
+      <div></div>
+
+      <div style="margin-right: 30px;margin-top: 40px;">
+        <h3 class="ui header">
+          <div class="content">
+            تنظیمات
+          </div>
+        </h3>
+        <div class="ui red toggle checkbox">
+          <input type="checkbox" />
+          <label>حالت شب</label>
+        </div>
+      </div>
+    </div>
+
+	<div class="ui one column centered grid" id="table" >
+	  <div class=" column ">
+	  	<table class="ui striped inverted blue celled table">
+			  <thead>
+			    <tr>
+			      <th>رتبه</th>
+			      <th>تیم</th>
+			      <th>دانشگاه</th>
+			      <th>امتیاز</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>عرشیا</td>
+			      <td class="selectable">
+			        <a href="http://yes.io">وای.ای.اس</a>
+			      </td>
+			      <td class="selectable"><a href="http://sharif.edu">شریف</a></td>
+			      <td class="positive">۱۰۰</td>
+			    </tr>
+			    <tr>
+			      <td>عبدی</td>
+			      <td class="selectable">
+			        <a href="http://yes.io">وای.ای.اس</a>
+			      </td>
+			      <td class="selectable"><a href="http://sharif.edu">شریف</a></td>
+			      <td class="ui inverted positive">۱۰۰</td>
+			    </tr>
+			    <tr>
+			      <td>بهار</td>
+			      <td class="selectable">
+			        <a href="http://yes.io">وای.ای.اس</a>
+			      </td>
+			      <td class="selectable"><a href="http://sharif.edu">شریف</a></td>
+			      <td class="positive">۱۰۰</td>
+			    </tr>
+			    
+			    <tr>
+			      <td>Emmanuel Macron</td>
+			      <td class="selectable">
+			        <a href="https://www.gouvernement.fr/en/news">ابلیس فرانسه</a>
+			      </td>
+			      <td class="selectable"><a href="https://www.epfl.ch/en/">EPFL</a></td>
+			      <td class="warning">۵۰</td>
+			    </tr>
+
+			    <tr>
+			      <td>François Hollande</td>
+			      <td class="selectable">
+			        <a href="https://www.gouvernement.fr/en/news">ابلیس فرانسه</a>
+			      </td>
+			      <td class="selectable"><a href="https://www.epfl.ch/en/">EPFL</a></td>
+			      <td class="warning">۵۰</td>
+			    </tr>
+					
+			    <tr>
+			      <td>Donald.j Trump</td>
+			      <td class="selectable">
+			        <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
+			      </td>
+			      <td class="selectable"><a href="https://www.mit.edu/">MIT</a></td>
+			      <td class="negative">۲۰</td>
+			    </tr>
+
+			    <tr>
+			      <td>Joe Biden</td>
+			      <td class="selectable">
+			        <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
+			      </td>
+			      <td class="selectable"><a href="https://www.mit.edu/">MIT</a></td>
+			      <td class="negative">۲۰</td>
+			    </tr>
+			  </tbody>
+		</table>
+	  </div>
+	  <div class="four column centered row" style="padding: 13px;">
+	    <div class=""><button class="ui left floated button blue inverted">پیشین</button></div>
+	    <div class=" "><button class="ui right floated button blue inverted">پسین</button></div>
+	  </div>
+	</div>
 </body>
 </html>

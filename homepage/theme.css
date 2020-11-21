@@ -4,7 +4,7 @@
   --color-itemHover: #e4eff2;
   --color-shadow: #cee6ed;
   --color-rightbar: #ff414d;
-  --font-color: black;
+  /*--font-color: white;*/
 }
 
 .theme-dark {
@@ -12,6 +12,6 @@
   --color-grid: #363636;
   --color-itemHover: #919191;
   --color-shadow: #9ec3ff;
-  --color-rightbar: #005073;
+  --color-rightbar: #0050ff;
   --font-color: white;
 }
