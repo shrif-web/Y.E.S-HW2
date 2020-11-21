@@ -7,7 +7,7 @@
     <link href="header2.css" rel="stylesheet" />
     <link href="homepage.css" rel="stylesheet" />
     <link href="theme.css" rel="stylesheet" />
-    <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'> -->
 
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -24,7 +24,34 @@
     <!-- <div id="header"></div> -->
 
     <!-- Header -->
-    <div class="ui fixed borderless huge menu" id="newHeader">
+
+    <div class="ui fluid menu" id="newHeader">
+      <div class="item">
+        <div class="ui inverted button">
+          ورود
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="ui inverted button" onclick="onBtnClick()" style="width: 50px;">
+          ثبت‌نام
+        </div>
+      </div>
+      <div class="right menu">
+        <a class="item">داده‌ها</a>
+        <a class="active item">خانه</a>
+
+        <a class="item" style="width: 300px;margin-right: -9px;">
+          <img
+            class="ui image"
+            id="headerIcon"
+            src="../files/blue_logo_200x200_copy.png"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- <div class="ui fixed borderless huge menu" id="newHeader">
       <div class="ui container grid">
         <div class="row">
           <div class="item">
@@ -43,7 +70,7 @@
             <a class="item" id="hoverable">داده‌ها</a>
             <a class="active item">خانه</a>
 
-            <a class="item">
+            <a class="item" style="width: 300px;right: 0px;">
               <img
                 class="ui image"
                 id="headerIcon"
@@ -53,7 +80,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Right Bar -->
     <div class="ui right fixed vertical menu" id="rightBar">

@@ -21,6 +21,7 @@
 }
 
 #newHeader {
+  background-color: var(--color-header);
   border-radius: 0rem;
   height: 90px;
   position: fixed;
@@ -89,7 +90,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 120px;
+  width: 90px;
   align-items: center;
   vertical-align: middle;
 }
@@ -125,6 +126,7 @@
   object-fit: contain;
   align-content: center;
   vertical-align: middle;
+  margin: auto;
 }
 
 #headerRight {
