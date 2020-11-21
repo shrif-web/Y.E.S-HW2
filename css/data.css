@@ -1,16 +1,28 @@
 @import "theme.css";
 
-td,th,a,table{
-	text-align: center !important;
+td,
+th,
+a,
+table {
+  text-align: center !important;
 }
 
 #table {
-  position: absolute;
+  /* position: absolute;
   margin: 10px;
   margin-right: 300px;
   right: 10px;
   left: 0px;
   overflow: auto;
   top: 100px;
-  /*text-align: center !important;*/
+  text-align: center !important; */
+  position: absolute;
+  right: 300px;
+  left: 0px;
+  overflow: auto;
+  height: calc(100% - 100px);
+  top: 100px;
+  margin: auto;
+  max-width: 1000px;
+  padding: 2%;
 }
