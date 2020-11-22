@@ -40,8 +40,9 @@ table {
   left: 0px;
   overflow: auto;
   height: calc(100% - 100px);
-  top: 100px;
   margin: auto;
   max-width: 1000px;
   padding: 4%;
+  top: 250px;
+  /*bottom: 350px;*/
 }
