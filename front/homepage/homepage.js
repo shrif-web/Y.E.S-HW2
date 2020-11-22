@@ -5,10 +5,25 @@ function onMainHomeLoad() {
     window.location = "mobile_homepage.html";
   }
 
-  // In index1.html
   if (window.innerWidth >= 600) {
     window.location = "pc_homepage.html";
   }
+}
+
+function onLoadPC() {
+  console.log("onLoadPC")
+  if (window.innerWidth < 600) {
+    window.location = "mobile_homepage.html";
+  }
+  onLoad();
+}
+
+function onLoadMobile() {
+  console.log("onLoadMobile")
+  if (window.innerWidth >= 600) {
+    window.location = "pc_homepage.html";
+  }
+  onLoad();
 }
 
 function onLoad() {
