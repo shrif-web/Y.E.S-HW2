@@ -1,5 +1,9 @@
-@import 'theme.css';
-@import 'header2.css';
+@import "theme.css";
+@import "header2.css";
+
+* {
+  font-family: var(--font-family) !important;
+}
 
 #headerBody {
   border-radius: 0rem;
@@ -100,7 +104,8 @@
   vertical-align: middle; */
 }
 
-#headerButton1, #headerButton2 {
+#headerButton1,
+#headerButton2 {
   background-color: var(--color-button);
   margin: 10px;
 }

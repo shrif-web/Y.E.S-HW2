@@ -1,10 +1,15 @@
 @import "theme.css";
 
+* {
+  font-family: var(--font-family) !important;
+}
+
 td,
 th,
 a,
 table {
   text-align: center !important;
+  /* font-family: var(--font-family); */
 }
 
 #table {
@@ -17,4 +22,5 @@ table {
   margin: auto;
   max-width: 1000px;
   padding: 4%;
+  /* font-family: var(--font-family); */
 }

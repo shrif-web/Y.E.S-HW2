@@ -6,6 +6,7 @@
   --color-rightbar: #ff414d;
   --color-button: #34a4eb;
   --font-color: black;
+  --font-family: sahel;
 }
 
 .theme-dark {
@@ -16,4 +17,5 @@
   --color-rightbar: #005073;
   --color-button: transparent;
   --font-color: white;
+  --font-family: sahel;
 }
