@@ -1,5 +1,10 @@
 @import "theme.css";
 
+:root {
+  --font-size-mobile: 20px;
+  --font-size-laptop:15px;
+}
+
 *:not(.icon) {
   font-family: var(--font-family) !important;
 }

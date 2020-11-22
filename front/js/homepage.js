@@ -1,20 +1,10 @@
-{/* <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> */}
-
 function onMainHomeLoad() {
   console.log("silaaaaam to the main homepage");
 
-  // if (window.innerWidth < 600) {
-  //   window.location = "mobile_homepage.html";
-  // }
-
-  // if (window.innerWidth >= 600) {
-  //   window.location = "pc_homepage.html";
-  // }
 }
 
 function onLoadPC() {
-  // console.log("------", $(window).width(), $(document).width())
-  console.log("????", window.screen.width, window.screen.height)
+
   console.log("onLoadPC", window.innerWidth, window.innerHeight)
   if (window.screen.width < 600) {
     window.location = "mobile_homepage.html";
