@@ -50,6 +50,9 @@
 #card {
   border-radius: 2rem;
   box-shadow: none;
+  margin: 10px;
+  border-width: 0.3rem;
+  border-color: var(--color-card-border);
   transition: box-shadow 1.5s;
 }
 

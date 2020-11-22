@@ -5,6 +5,7 @@
   --color-shadow: #cee6ed;
   --color-rightbar: #ff414d;
   --color-button: #34a4eb;
+  --color-card-border: grey;
   --font-color: black;
   --font-family: sahel;
 }
@@ -16,6 +17,7 @@
   --color-shadow: #9ec3ff;
   --color-rightbar: #005073;
   --color-button: transparent;
+  --color-card-border: #007db3;
   --font-color: white;
   --font-family: sahel;
 }
