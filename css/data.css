@@ -1,6 +1,6 @@
 @import "theme.css";
 
-* {
+*:not(.icon) {
   font-family: var(--font-family) !important;
 }
 
@@ -9,7 +9,6 @@ th,
 a,
 table {
   text-align: center !important;
-  /* font-family: var(--font-family); */
 }
 
 #table {
@@ -22,5 +21,4 @@ table {
   margin: auto;
   max-width: 1000px;
   padding: 4%;
-  /* font-family: var(--font-family); */
 }

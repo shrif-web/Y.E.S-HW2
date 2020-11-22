@@ -4,12 +4,12 @@ function onButtonClick() {
 }
 
 function onLoad() {
-  var theme = parent.document.URL.substring(
-    parent.document.URL.indexOf("=") + 1,
-    parent.document.URL.length
-  );
-  console.log("themeeeeee:", theme);
-  setTheme(theme);
+  // var theme = parent.document.URL.substring(
+  //   parent.document.URL.indexOf("=") + 1,
+  //   parent.document.URL.length
+  // );
+  // console.log("themeeeeee:", theme);
+  // setTheme(theme);
   //   document.getElementById("slider").checked = false
 }
 
