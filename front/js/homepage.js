@@ -1,13 +1,13 @@
 function onMainHomeLoad() {
   console.log("silaaaaam to the main homepage");
 
-  if (window.innerWidth < 600) {
-    window.location = "mobile_homepage.html";
-  }
+  // if (window.innerWidth < 600) {
+  //   window.location = "mobile_homepage.html";
+  // }
 
-  if (window.innerWidth >= 600) {
-    window.location = "pc_homepage.html";
-  }
+  // if (window.innerWidth >= 600) {
+  //   window.location = "pc_homepage.html";
+  // }
 }
 
 function onLoadPC() {
