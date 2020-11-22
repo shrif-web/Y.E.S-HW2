@@ -25,7 +25,7 @@ body > .ui.container {
   color: #fff;
 }
 
-.ui .item:hover {
+.ui .item:hover:not(#texts) {
   background: var(--color-itemHover) !important;
   color: #fff !important;
   border-bottom: 1px solid #fff;

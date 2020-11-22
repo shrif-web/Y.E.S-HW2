@@ -6,6 +6,7 @@
   --color-rightbar: #ff414d;
   --color-button: #34a4eb;
   --color-card-border: grey;
+  --color-card-back: white;
   --font-color: black;
   --font-family: sahel;
 }
@@ -14,10 +15,11 @@
   --color-header: #595959;
   --color-grid: #363636;
   --color-itemHover: #919191;
-  --color-shadow: #9ec3ff;
+  --color-shadow: #0094d3af;
   --color-rightbar: #005073;
   --color-button: transparent;
   --color-card-border: #007db3;
+  --color-card-back: grey;
   --font-color: white;
   --font-family: sahel;
 }
