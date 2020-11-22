@@ -33,15 +33,15 @@ table {
 
 }
 #card_holder {
-  /*direction: rtl;*/
-  /*text-align: center !important;*/
-  /*position: absolute;*/
-  /*right: 0px;*/
-  /*left: 0px;*/
-  /*overflow: auto;*/
-  /*height: calc(100% - 100px);*/
-  /*margin: auto;*/
-  /*max-width: 1000px;*/
-  /*padding: 4%;*/
-  /*top: 250px;*/
+  direction: rtl;
+  text-align: center !important;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  overflow: auto;
+  height: calc(100% - 100px);
+  margin: auto;
+  max-width: 1000px;
+  padding: 4%;
+  top: 250px;
 }

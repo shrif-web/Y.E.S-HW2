@@ -49,14 +49,14 @@ function toggleTheme() {
 
   if (slider.checked) {
     setTheme("theme-dark");
-    document.getElementById("headerButton1").classList.add("inverted");
-    document.getElementById("headerButton2").classList.add("inverted");
+    // document.getElementById("headerButton1").classList.add("inverted");
+    // document.getElementById("headerButton2").classList.add("inverted");
     document.getElementById("headerIcon").src =
       "../resources/blue_logo_200x200.png";
   } else {
     setTheme("theme-light");
-    document.getElementById("headerButton1").classList.remove("inverted");
-    document.getElementById("headerButton2").classList.remove("inverted");
+    // document.getElementById("headerButton1").classList.remove("inverted");
+    // document.getElementById("headerButton2").classList.remove("inverted");
     document.getElementById("headerIcon").src =
       "../resources/multi_logo_200x200_copy.png";
   }

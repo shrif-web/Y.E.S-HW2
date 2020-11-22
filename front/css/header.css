@@ -5,15 +5,15 @@
   font-family: var(--font-family) !important;
 }
 
-#headerBody {
+/* #headerBody {
   border-radius: 0rem;
   top: 0px;
   height: 100px;
   background-color: #c6c9cf;
-  position: fixed;
+  position: fixed; */
   /* position: -webkit-sticky;
   position: sticky; */
-  top: 0;
+  /* top: 0;
   padding: 10px;
   z-index: 1;
   align-content: center;
@@ -23,9 +23,9 @@
   flex: 1 0 auto;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
     0 10px 20px 0 rgba(0, 0, 0, 0.19);
-}
+} */
 
-#newHeader {
+#headerBody {
   background-color: var(--color-header);
   border-radius: 0rem;
   height: 90px;
@@ -72,7 +72,7 @@
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-#registerButton {
+/* #registerButton {
   flex: auto;
   display: flex;
   flex-wrap: wrap;
@@ -89,7 +89,7 @@
   justify-content: left;
   width: 150px;
   align-items: center;
-}
+} */
 
 #headerButton {
   /* flex: auto;
@@ -110,7 +110,7 @@
   margin: 10px;
 }
 
-#homeButton {
+/* #homeButton {
   flex: auto;
   display: flex;
   flex-wrap: wrap;
@@ -122,14 +122,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
-}
+} */
 
-#searchbar {
+/* #searchbar {
   flex: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-}
+} */
 
 #headerIcon {
   /* flex: auto;
@@ -145,13 +145,13 @@
   margin: auto;
 }
 
-#headerRight {
+/* #headerRight {
   flex: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
   vertical-align: middle;
-}
+} */
 
 @media (min-width: 680px) {
   a#logoItem.item {
@@ -159,3 +159,45 @@
     margin-right: -9px;
   }
 }
+
+body > .ui.container {
+  margin-top: 6em;
+}
+.offices {
+  color: #fff;
+}
+.flags a {
+  padding: 0.012em;
+}
+
+/* Nav */
+.ui.fixed.borderless.menu {
+  z-index: 2;
+  background-color: var(--color-header);
+}
+
+.ui .button {
+  min-width: 100px;
+}
+
+.ui .item {
+  color: #fff;
+}
+
+.ui .item:hover:not(#texts) {
+  background: var(--color-itemHover) !important;
+  color: #fff !important;
+  border-bottom: 1px solid #fff;
+}
+
+.ui .item.active {
+  background: #00ba49;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+
+.ui.fixed.borderless.menu .row > a.header.item {
+  font-size: 1.2em;
+}
+
