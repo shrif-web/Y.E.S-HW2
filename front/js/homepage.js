@@ -1,26 +1,20 @@
 function onMainHomeLoad() {
   console.log("silaaaaam to the main homepage");
 
-  if (window.innerWidth < 600) {
-    window.location = "mobile_homepage.html";
-  }
-
-  if (window.innerWidth >= 600) {
-    window.location = "pc_homepage.html";
-  }
 }
 
 function onLoadPC() {
-  console.log("onLoadPC")
-  if (window.innerWidth < 600) {
+
+  console.log("onLoadPC", window.innerWidth, window.innerHeight)
+  if (window.screen.width < 600) {
     window.location = "mobile_homepage.html";
   }
   onLoad();
 }
 
 function onLoadMobile() {
-  console.log("onLoadMobile")
-  if (window.innerWidth >= 600) {
+  console.log("onLoadMobile", window.innerWidth, window.innerHeight)
+  if (window.screen.width >= 600) {
     window.location = "pc_homepage.html";
   }
   onLoad();
