@@ -8,14 +8,6 @@ table {
 }
 
 #table {
-  /* position: absolute;
-  margin: 10px;
-  margin-right: 300px;
-  right: 10px;
-  left: 0px;
-  overflow: auto;
-  top: 100px;
-  text-align: center !important; */
   position: absolute;
   right: 300px;
   left: 0px;

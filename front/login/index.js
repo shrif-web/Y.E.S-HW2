@@ -13,7 +13,7 @@ function themeToggle() {
 
 //TODO:more presise implementation
 function resizeFunc() {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 1000) {
         document.getElementById("picframe").style.display = "none";
         document.getElementById("mainContainer").style.width = "360px";
     } else {

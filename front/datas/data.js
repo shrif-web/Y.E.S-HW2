@@ -1,34 +1,30 @@
-function onMainHomeLoad() {
-  console.log("silaaaaam to the main homepage");
-
-  if (window.innerWidth < 600) {
-    window.location = "mobile_homepage.html";
-  }
-
-  // In index1.html
-  if (window.innerWidth >= 600) {
-    window.location = "pc_homepage.html";
-  }
+function onButtonClick() {
+  console.log("on button clicked!");
+  // location.href = "../data.html";
 }
 
 function onLoad() {
-  document.getElementById("slider").checked = false;
-  console.log("here", localStorage.getItem("theme"));
+  var theme = parent.document.URL.substring(
+    parent.document.URL.indexOf("=") + 1,
+    parent.document.URL.length
+  );
+  console.log("themeeeeee:", theme);
+  setTheme(theme);
+  //   document.getElementById("slider").checked = false
 }
 
-function onDataClick() {
-  var curTheme = localStorage.getItem("theme");
-  console.log("curTheme in Home:", curTheme);
-  // window.location.href = "../datas/data.html?theme=" + curTheme;
-}
+function onHomeClick() {
+    var curTheme = localStorage.getItem("theme");
+    window.location.href = "../homepage/pc_homepage.html?theme=" + curTheme;
+  }
 
 function setTheme(themeName) {
-  console.log("in set theme", themeName);
   localStorage.setItem("theme", themeName);
   document.documentElement.className = themeName;
 }
 
 function toggleTheme() {
+  console.log("here");
   slider = document.getElementById("slider");
 
   if (slider.checked) {
