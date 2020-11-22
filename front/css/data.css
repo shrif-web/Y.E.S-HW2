@@ -23,13 +23,10 @@ table {
   padding: 4%;
 }
 
-
-
-
-################### mobile view ##################
 .summary{
-    text-align: center !important;
+  text-align: center;
 }
+
 .data_card{
   margin-left: auto !important;
   margin-right: auto !important;
