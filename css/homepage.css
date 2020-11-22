@@ -4,6 +4,18 @@
   font-family: var(--font-family) !important;
 }
 
+@media only screen and (max-width: 599px) {
+  #pcHomepage {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #mobileHomepage {
+    display: none;
+  }
+}
+
 .body {
   background-color: var(--color-grid);
   overflow: hidden;

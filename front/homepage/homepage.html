@@ -19,7 +19,7 @@
     <link href="../../css/theme.css" rel="stylesheet" />
     <link href="../../css/slider.css" rel="stylesheet" />
 
-    <script src="homepage.js"></script>
+    <script src="../../js/homepage.js"></script>
     <!-- <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       crossorigin="anonymous"
@@ -32,11 +32,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.js"></script>
     <script type="text/javascript"></script>
+    <script>
+      $(function() {
+        $("#pcHomepage").load("pc_homepage.html");
+        $("#mobileHomepage").load("mobile_homepage.html");
+      });
+    </script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
   </head>
 
   <body class="body" onload="onMainHomeLoad()" onresize="onMainHomeLoad()">
-    <div>Main Homepgae</div>
+    <!-- <div>Main Homepgae</div> -->
+    <div id="pc_homepage"></div>
+    <div id="mobile_homepage"></div>
   </body>
 </html>
