@@ -4,7 +4,7 @@
     <title>Mobile Homepage</title>
 
     <!-- <link rel='icon' href='test_favicon.png' type= 'image/png'> -->
-    <link rel="icon" type="image/png" href="https://example.com/favicon.png"/>
+    <link rel="icon" type="image/png" href="https://example.com/favicon.png" />
 
     <link href="../../css/header.css" rel="stylesheet" />
     <link href="../../css/header2.css" rel="stylesheet" />
@@ -17,11 +17,9 @@
       type="text/css"
     />
 
-    <link rel="shortcut icon" 
-    href="test_favicon.png">
+    <link rel="shortcut icon" href="test_favicon.png" />
 
-    <link rel="apple-touch-icon" 
-    href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
     <script src="homepage.js"></script>
     <!-- <script
@@ -102,6 +100,7 @@
       </div>
 
       <!-- Grid Part -->
+      <!-- <div class="pusher"> -->
       <div class="ui fluid one column centered grid" id="mobileGrid">
         <div class="column">
           <div class="ui center aligned column">
@@ -268,35 +267,36 @@
         </div>
       </div>
     </div>
+  <!-- </div> -->
 
     <div class="pusher">
-      <!-- Header -->
-      <div class="ui fixed borderless huge menu" id="newHeader">
-        <div class="ui container grid">
-          <div class="row">
-            <a class="item" id="sidebarButton">
-              <i class="sidebar icon"></i>
+    <!-- Header -->
+    <div class="ui fixed borderless huge menu" id="newHeader">
+      <div class="ui container grid">
+        <div class="row">
+          <a class="item" id="sidebarButton">
+            <i class="sidebar icon"></i>
+          </a>
+          <div class="right menu">
+            <a class="item">
+              <img
+                class="ui image"
+                src="../../resources/multi_logo_200x200_copy.png"
+                id="headerIcon"
+              />
             </a>
-            <div class="right menu">
-              <a class="item">
-                <img
-                  class="ui image"
-                  src="../../resources/multi_logo_200x200_copy.png"
-                  id="headerIcon"
-                />
-              </a>
-            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Footer -->
-      <div class="ui four item menu" id="mobileFooter">
-        <a class="item">ثبت‌نام</a>
-        <a class="item">ورود</a>
-        <a class="item">داده‌ها</a>
-        <a class="active item">خانه</a>
-      </div>
+    <!-- Footer -->
+    <div class="ui four item menu" id="mobileFooter">
+      <a class="item">ثبت‌نام</a>
+      <a class="item">ورود</a>
+      <a class="item">داده‌ها</a>
+      <a class="active item">خانه</a>
+    </div>
     </div>
 
     <script
@@ -312,6 +312,7 @@
         $(".ui.sidebar")
           .sidebar({ context: $("#app") })
           .sidebar("setting", "transition", "overlay")
+          .sidebar("setting", "mobileTransition", "overlay")
           .sidebar("toggle");
       });
     </script>
