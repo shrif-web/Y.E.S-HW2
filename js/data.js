@@ -11,11 +11,21 @@ function onLoad() {
   // console.log("themeeeeee:", theme);
   // setTheme(theme);
   //   document.getElementById("slider").checked = false
+
+  var theme = localStorage.getItem("theme");
+  if (theme == 'theme-dark') {
+    document.getElementById("slider").checked = true;
+  } else {
+    document.getElementById("slider").checked = false;
+  }
+  // document.getElementById("slider").checked = false;
+  console.log("here", localStorage.getItem("theme"));
+  setTheme(localStorage.getItem('theme'))
 }
 
 function onHomeClick() {
     var curTheme = localStorage.getItem("theme");
-    window.location.href = "../homepage/pc_homepage.html?theme=" + curTheme;
+    window.location.href = "../homepage/pc_homepage.html";
   }
 
 function setTheme(themeName) {

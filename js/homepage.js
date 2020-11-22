@@ -27,14 +27,21 @@ function onLoadMobile() {
 }
 
 function onLoad() {
-  document.getElementById("slider").checked = false;
+  var theme = localStorage.getItem("theme");
+  if (theme == 'theme-dark') {
+    document.getElementById("slider").checked = true;
+  } else {
+    document.getElementById("slider").checked = false;
+  }
+  // document.getElementById("slider").checked = false;
   console.log("here", localStorage.getItem("theme"));
+  setTheme(localStorage.getItem('theme'))
 }
 
 function onDataClick() {
   var curTheme = localStorage.getItem("theme");
   console.log("curTheme in Home:", curTheme);
-  // window.location.href = "../datas/data.html?theme=" + curTheme;
+  window.location.href = "../datas/data.html";
 }
 
 function setTheme(themeName) {
