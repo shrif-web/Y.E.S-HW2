@@ -33,31 +33,7 @@
       <link rel="stylesheet" href="../plugins/animated-page-transition-master/css/reset.css"> <!-- CSS reset -->
       <link rel="stylesheet" href="../plugins/animated-page-transition-master/css/style.css"> <!-- Resource style -->
       <script src="../plugins/animated-page-transition-master/js/modernizr.js"></script> <!-- Modernizr -->
-
-
-    <script>
-    $(document).ready(function(){
-      $("p").click(function(){
-        $(this).hide();
-      });
-    });
-     function loadIt() {
-            $.ajax({
-                url: "../login",
-                cache: false,
-                success: function (data) {
-                    $("#content").empty();
-                    console.log("i did it");
-                    $(data).hide().appendTo($("#body")).slideDown();
-                },
-                error: function () {
-                    alert("something went wrong");
-                }
-            });
-        }
-    </script>
-
-    <script type="text/javascript"></script>
+    <!-- <script type="text/javascript"></script> -->
     <script src="../js/data.js"></script>
   </head>
 
