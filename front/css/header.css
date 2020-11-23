@@ -5,26 +5,6 @@
   font-family: var(--font-family) !important;
 }
 
-/* #headerBody {
-  border-radius: 0rem;
-  top: 0px;
-  height: 100px;
-  background-color: #c6c9cf;
-  position: fixed; */
-  /* position: -webkit-sticky;
-  position: sticky; */
-  /* top: 0;
-  padding: 10px;
-  z-index: 1;
-  align-content: center;
-  align-items: center;
-  display: inline-flex;
-  flex-direction: row;
-  flex: 1 0 auto;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2),
-    0 10px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
 #headerBody {
   background-color: var(--color-header);
   border-radius: 0rem;
@@ -48,11 +28,6 @@
   position: fixed;
   padding: 10px;
   z-index: 2;
-  /* align-content: center;
-  align-items: center; */
-  /* display: inline-flex; */
-  /* flex-direction: row; */
-  /* flex: 1 0 auto; */
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -64,44 +39,11 @@
   position: fixed;
   padding: 10px;
   z-index: 2;
-  /* align-content: center;
-  align-items: center; */
-  /* display: inline-flex; */
-  /* flex-direction: row; */
-  /* flex: 1 0 auto; */
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* #registerButton {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  width: auto;
-  text-align: center;
-  align-content: center;
-}
-
-#enterButton {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  width: 150px;
-  align-items: center;
-} */
-
 #headerButton {
-  /* flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left; */
-  /* max-width: 90px; */
-
   margin: 10px;
-  /* width: auto;
-  align-items: center;
-  vertical-align: middle; */
 }
 
 #headerButton1,
@@ -110,33 +52,7 @@
   margin: 10px;
 }
 
-/* #homeButton {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-}
-
-#datasButton {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-} */
-
-/* #searchbar {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-} */
-
 #headerIcon {
-  /* flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right; */
-
   max-width: auto;
   height: 60px;
   object-fit: contain;
@@ -144,14 +60,6 @@
   vertical-align: middle;
   margin: auto;
 }
-
-/* #headerRight {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  vertical-align: middle;
-} */
 
 @media (min-width: 680px) {
   a#logoItem.item {

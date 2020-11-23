@@ -1,32 +1,34 @@
-function onButtonClick() {
-  console.log("on button clicked!");
-  // location.href = "../data.html";
-}
-
 function onLoad() {
-  // var theme = parent.document.URL.substring(
-  //   parent.document.URL.indexOf("=") + 1,
-  //   parent.document.URL.length
-  // );
-  // console.log("themeeeeee:", theme);
-  // setTheme(theme);
-  //   document.getElementById("slider").checked = false
-
   var theme = localStorage.getItem("theme");
-  if (theme == 'theme-dark') {
+  if (theme == "theme-dark") {
     document.getElementById("slider").checked = true;
   } else {
     document.getElementById("slider").checked = false;
   }
   // document.getElementById("slider").checked = false;
   console.log("here", localStorage.getItem("theme"));
-  setTheme(localStorage.getItem('theme'))
+  setTheme(localStorage.getItem("theme"));
+}
+
+function onLoadPC() {
+  if (window.screen.width < 600) {
+    window.location = "mobile_homepage.html";
+  }
+  onLoad();
+}
+
+function onLoadMobile() {
+  console.log("onLoadMobile", window.innerWidth, window.innerHeight);
+  if (window.screen.width >= 600) {
+    window.location = "pc_homepage.html";
+  }
+  onLoad();
 }
 
 function onHomeClick() {
-    var curTheme = localStorage.getItem("theme");
-    window.location.href = "../homepage/pc_homepage.html";
-  }
+  var curTheme = localStorage.getItem("theme");
+  window.location.href = "../homepage/pc_homepage.html";
+}
 
 function setTheme(themeName) {
   localStorage.setItem("theme", themeName);

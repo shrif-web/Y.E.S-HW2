@@ -5,7 +5,6 @@ function onMainHomeLoad() {
 
 function onLoadPC() {
 
-  console.log("onLoadPC", window.innerWidth, window.innerHeight)
   if (window.screen.width < 600) {
     window.location = "mobile_homepage.html";
   }

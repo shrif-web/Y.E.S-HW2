@@ -23,25 +23,25 @@ table {
   padding: 4%;
 }
 
-.summary{
+.summary {
   text-align: center;
 }
 
-.data_card{
+.data_card {
   margin-left: auto !important;
   margin-right: auto !important;
-
 }
+
+
 #card_holder {
-  direction: rtl;
-  text-align: center !important;
+  overflow: auto;
+  height: calc(100% - 170px);
+  top: 90px; 
   position: absolute;
+  bottom: 80px;
+  margin: auto;
+  padding: 20px;
   right: 0px;
   left: 0px;
-  overflow: auto;
-  height: calc(100% - 100px);
-  margin: auto;
-  max-width: 1000px;
-  padding: 4%;
-  top: 250px;
 }
+

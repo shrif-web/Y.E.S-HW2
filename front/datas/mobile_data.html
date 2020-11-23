@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html class="theme-light">
   <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
 
-    <title>Mobile data</title>
+    <title>Mobile Data</title>
 
-
-    <link rel="icon" type="image/png" href="https://example.com/favicon.png"/>
-    <!-- <link href="../css/header.css" rel="stylesheet" /> -->
-    <link href="../css/header2.css" rel="stylesheet" />
-    <!-- <link href="../css/theme.css" rel="stylesheet" /> -->
+    <link rel="icon" type="image/png" href="https://example.com/favicon.png" />
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/data.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
+    <link href="../css/homepage.css" rel="stylesheet" />
+
     <link
       href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css"
       rel="stylesheet"
       type="text/css"
     />
 
-    <link rel="shortcut icon" 
-    href="test_favicon.png">
+    <link rel="shortcut icon" href="test_favicon.png" />
 
-    <link rel="apple-touch-icon" 
-    href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <script src="homepage.js"></script>
+    <script src="../js/homepage.js"></script>
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
     <script type="text/javascript"></script>
-
   </head>
-  <body >
+  <body onload="onLoadMobile()" onresize="onLoadMobile()">
     <div id="app">
-    <!-- Sidebar -->
+      <!-- Sidebar -->
       <div class="ui sidebar inverted vertical menu">
         <div class="ui vertical menu" id="rightBar">
           <div style="margin-right: 30px;">
@@ -45,9 +42,6 @@
                 اعضای تیم
               </div>
             </h2>
-            <!-- <div class="ui sub header">عرشیا</div>
-            <div class="ui sub header">بهار</div>
-            <div class="ui sub header">محمدرضا</div> -->
             <div class="ui relaxed divided list">
               <div class="item" id="texts">
                 <i class="large github middle aligned icon"></i>
@@ -93,180 +87,180 @@
         </div>
       </div>
 
-
-		
-
-      <div class="ui raised very padded text center centered container segment" id="card_holder">
-      	<div class="ui card data_card" >
-          <div class="content">
-            <div class="header">عرشیا</div>
-          </div>
-          <div class="content ">
-            <h4 class="ui sub header">وای.ای.اس</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary ">
-                     <a>دانشگاه: شریف</a>
+      <div
+        class="ui fluid raised very padded text center centered container "
+        id="card_holder"
+      >
+        <div class="column" style="margin-bottom: 50px;">
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">عرشیا</div>
+            </div>
+            <div class="content ">
+              <h4 class="ui sub header">وای.ای.اس</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary ">
+                      <a>دانشگاه: شریف</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۱۰۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۱۰۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui card data_card">
-          <div class="content">
-            <div class="header">بهار</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">وای.ای.اس</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>دانشگاه: شریف</a>
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">بهار</div>
+            </div>
+            <div class="content">
+              <h4 class="ui sub header">وای.ای.اس</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <a>دانشگاه: شریف</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۱۰۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۱۰۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui card data_card">
-          <div class="content">
-            <div class="header">محمد رضا</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">وای.ای.اس</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>دانشگاه: شریف</a>
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">محمد رضا</div>
+            </div>
+            <div class="content">
+              <h4 class="ui sub header">وای.ای.اس</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <a>دانشگاه: شریف</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۱۰۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۱۰۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui card data_card">
-          <div class="content">
-            <div class="header">Emmanuel Macron</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">ابلیس فرانسه</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>دانشگاه: EPFL</a>
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">Emmanuel Macron</div>
+            </div>
+            <div class="content">
+              <h4 class="ui sub header">ابلیس فرانسه</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <a>دانشگاه: EPFL</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۵۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۵۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui card data_card">
-          <div class="content">
-            <div class="header">François Hollande</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">ابلیس فرانسه</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>دانشگاه: EPFL</a>
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">François Hollande</div>
+            </div>
+            <div class="content">
+              <h4 class="ui sub header">ابلیس فرانسه</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <a>دانشگاه: EPFL</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۵۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۵۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui card data_card">
-          <div class="content">
-            <div class="header">Donald.j Trump</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">آمریکا خون‌خوار</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>دانشگاه: MIT</a>
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">Donald.j Trump</div>
+            </div>
+            <div class="content">
+              <h4 class="ui sub header">آمریکا خون‌خوار</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <a>دانشگاه: MIT</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۲۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۲۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui card data_card">
-          <div class="content">
-            <div class="header">Joe Biden</div>
-          </div>
-          <div class="content">
-            <h4 class="ui sub header">آمریکا خون‌خوار</h4>
-            <div class="ui small feed">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     <a>دانشگاه: MIT</a>
+          <div class="ui card data_card">
+            <div class="content">
+              <div class="header">Joe Biden</div>
+            </div>
+            <div class="content">
+              <h4 class="ui sub header">آمریکا خون‌خوار</h4>
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      <a>دانشگاه: MIT</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                     امتیاز: ۲۰
+                <div class="event">
+                  <div class="content">
+                    <div class="summary">
+                      امتیاز: ۲۰
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-        <div class="four column centered row" style="margin: 100px;">
+          <div class="two column centered row" style="padding: 20px;">
             <div class="">
               <button class="ui left floated button blue inverted">
                 پیشین
@@ -278,12 +272,13 @@
               </button>
             </div>
           </div>
-
-	</div>
+        </div>
+      </div>
+    </div>
 
     <div class="pusher">
       <!-- Header -->
- <!--      <div class="ui fixed borderless huge menu" id="newHeader">
+      <div class="ui fixed borderless huge menu" id="newHeader">
         <div class="ui container grid">
           <div class="row">
             <a class="item" id="sidebarButton">
@@ -293,14 +288,14 @@
               <a class="item">
                 <img
                   class="ui image"
-                  src="../resources/multi_logo_200x200.png"
+                  src="../resources/multi_logo_200x200_copy.png"
                   id="headerIcon"
                 />
               </a>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <!-- Footer -->
       <div class="ui four item menu" id="mobileFooter">
@@ -309,9 +304,6 @@
         <a class="active item">داده‌ها</a>
         <a class="item">خانه</a>
       </div>
-
-
-
     </div>
 
     <script
