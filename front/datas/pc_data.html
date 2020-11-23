@@ -32,6 +32,22 @@
     <script type="text/javascript"></script>
     <script src="../js/data.js"></script>
 
+    <script type="text/javascript">
+        function loadIt() {
+            $.ajax({
+                url: "homepage",
+                cache: false,
+                success: function (data) {
+                    $("#content").empty();
+                    $(data).hide().appendTo($("#content")).slideDown();
+                },
+                error: function () {
+                    alert("something went wrong");
+                }
+            });
+        }
+    </script>
+
   </head>
 
   <body class="body" onload="onLoadPC()" onresize="onLoadPC()">
@@ -46,7 +62,8 @@
 
       <div class="right menu">
         <a class="active item">داده‌ها</a>
-        <a class="item" onclick="onHomeClick()">خانه</a>
+        <!-- <a class="item" onclick="onHomeClick()">خانه</a> -->
+        <a class="item" onclick="loadIt()">خانه</a>
 
         <a class="item" id="logoItem">
           <img
