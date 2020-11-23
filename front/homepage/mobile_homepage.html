@@ -15,11 +15,10 @@
  -->
 
     <link href="../css/header.css" rel="stylesheet" />
-    <link href="../css/homepage.css" rel="stylesheet" />
     <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
-    <link href="../css/responsive.css" rel="stylesheet" />
     <link href="../css/rightbar.css" rel="stylesheet" />
+    <link href="../css/homepage.css" rel="stylesheet" />
     <link
       href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css"
       rel="stylesheet"
@@ -311,7 +310,7 @@
       $("#sidebarButton").click(function() {
         $(".ui.sidebar")
           .sidebar({ context: $("#app") })
-          .sidebar("setting", "transition", "overlay")
+          .sidebar("setting", "mobileTransition", "overlay")
           .sidebar("toggle");
       });
     </script>

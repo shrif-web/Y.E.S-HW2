@@ -45,16 +45,17 @@ table {
   text-align: center;
 }
 
-
-#card_holder {
-  overflow: auto;
-  height: calc(100% - 170px);
-  top: 90px; 
-  position: absolute;
-  bottom: 80px;
-  margin: auto;
-  padding: 20px;
-  right: 0px;
-  left: 0px;
+#card {
+  background-color: var(--color-card-back)
 }
 
+#card_holder {
+  background-color: var(--color-grid);
+  top: 90px;
+  padding: 20px;
+  position: absolute;
+  overflow: auto;
+  right: 0px;
+  left: 0px;
+  bottom: 80px;
+}
