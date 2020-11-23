@@ -34,18 +34,7 @@
 
     <script type="text/javascript">
         function loadIt() {
-            $.ajax({
-                url: "../homepage",
-                cache: false,
-                success: function (data) {
-                    $("#body").empty();
-                    console.log("body ro empty kardam");
-                    $(data).hide().appendTo($("#body")).slideDown();
-                },
-                error: function () {
-                    alert("something went wrong");
-                }
-            });
+            $("#body").load("../homepage");
         }
     </script>
 
