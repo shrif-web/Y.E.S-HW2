@@ -13,6 +13,7 @@
     <link href="../css/homepage.css" rel="stylesheet" />
     <link href="../css/boxi.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
+    <link href="../css/rightbar.css" rel="stylesheet" />
 
 
     <link
@@ -319,7 +320,7 @@
       $("#sidebarButton").click(function() {
         $(".ui.sidebar")
           .sidebar({ context: $("#app") })
-          .sidebar("setting", "transition", "overlay")
+          .sidebar("setting", "mobileTransition", "overlay")
           .sidebar("toggle");
       });
     </script>

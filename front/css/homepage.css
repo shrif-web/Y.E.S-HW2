@@ -30,7 +30,7 @@
   color: var(--font-color) !important;
 }
 
-#rightBar {
+/* #rightBar {
   position: fixed;
   padding: 20px;
   top: 90px;
@@ -41,7 +41,7 @@
   float: right;
   direction: rtl;
   background-color: var(--color-rightbar);
-}
+} */
 
 @media only screen and (max-width: 999px) {
   #fourColGrid {
