@@ -30,16 +30,23 @@
     /> -->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <link rel="stylesheet" href="../plugins/animated-page-transition-master/css/reset.css"> <!-- CSS reset -->
-    <link rel="stylesheet" href="../plugins/animated-page-transition-master/css/style.css"> <!-- Resource style -->
-    <script src="../plugins/animated-page-transition-master/js/modernizr.js"></script> <!-- Modernizr -->
-    <!-- <script type="text/javascript"></script> -->
+    
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="../dist/css/animsition.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- animsition.js -->
+    <script src="../dist/js/animsition.min.js"></script>
+    
     <script src="../js/data.js"></script>
   </head>
 
   <body class="body" onload="onLoadPC()" onresize="onLoadPC()" id="body">
   
-    <a class="cd-btn" href="../anime/about.html" data-type="page-transition">Start animation</a>
+    <div class="animsition">
+      <a href="../login" class="animsition-link">animsition link 1</a>
+      <a href="./page2" class="animsition-link">animsition link 2</a>
+    </div>
 
     <!-- Header -->
 <!--     <div class="ui fluid menu" id="headerBody">
