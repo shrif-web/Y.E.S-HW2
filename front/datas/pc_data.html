@@ -39,6 +39,7 @@
                 cache: false,
                 success: function (data) {
                     $("#content").empty();
+                    console.log("content ro empty kardam");
                     $(data).hide().appendTo($("#content")).slideDown();
                 },
                 error: function () {
