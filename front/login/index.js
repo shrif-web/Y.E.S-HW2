@@ -45,7 +45,7 @@ function unhovericon() {
 }
 
 function resizeFunc() {
-    if (window.innerWidth <= 600) {
+    if (window.screen.width <= 600) {
         document.getElementById("picframe").style.display = "none";
         document.getElementById("raisedsegment").style.width = "332px";
     } else {
