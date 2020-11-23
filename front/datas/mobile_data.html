@@ -6,14 +6,18 @@
 
     <title>Mobile Data</title>
 
-    <link rel="icon" type="image/png" href="https://example.com/favicon.png" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR">
+    <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-16x16.png">
+    <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-32x32.png">
+
     <link href="../css/header.css" rel="stylesheet" />
     <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/data.css" rel="stylesheet" />
     <link href="../css/homepage.css" rel="stylesheet" />
     <link href="../css/boxi.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
-    <link href="../css/rightbar.css" rel="stylesheet" />
 
 
     <link
@@ -21,10 +25,6 @@
       rel="stylesheet"
       type="text/css"
     />
-
-    <link rel="shortcut icon" href="test_favicon.png" />
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
     <script src="../js/homepage.js"></script>
 
@@ -320,7 +320,7 @@
       $("#sidebarButton").click(function() {
         $(".ui.sidebar")
           .sidebar({ context: $("#app") })
-          .sidebar("setting", "mobileTransition", "overlay")
+          .sidebar("setting", "transition", "overlay")
           .sidebar("toggle");
       });
     </script>
