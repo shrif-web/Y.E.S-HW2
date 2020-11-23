@@ -19,7 +19,7 @@
   --color-rightbar: #005073;
   --color-button: #007db3;
   --color-card-border: #007db3;
-  --color-card-back: grey;
+  --color-card-back: rgba(233, 233, 233, 0.705);
   --font-color: white;
   --font-family: sahel;
 }

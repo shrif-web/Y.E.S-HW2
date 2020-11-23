@@ -10,7 +10,6 @@
     <link href="../css/header.css" rel="stylesheet" />
     <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/data.css" rel="stylesheet" />
-    <link href="../css/homepage.css" rel="stylesheet" />
     <link href="../css/boxi.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
     <link href="../css/rightbar.css" rel="stylesheet" />
@@ -89,12 +88,9 @@
         </div>
       </div>
 
-      <div
-        class="ui fluid raised very padded text center centered container "
-        id="card_holder"
-      >
-        <div class="column" style="margin-bottom: 50px;">
-          <div class="ui card data_card boxi">
+      <div class="ui one column centered grid" id="card_holder">
+        <div class="column" style="margin-bottom: 20px;">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">عرشیا</div>
             </div>
@@ -118,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">بهار</div>
             </div>
@@ -142,7 +138,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">محمد رضا</div>
             </div>
@@ -166,7 +162,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">Emmanuel Macron</div>
             </div>
@@ -190,7 +186,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">François Hollande</div>
             </div>
@@ -214,7 +210,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">Donald.j Trump</div>
             </div>
@@ -238,7 +234,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi">
+          <div class="ui card data_card boxi" id="card">
             <div class="content">
               <div class="header">Joe Biden</div>
             </div>
@@ -262,7 +258,7 @@
               </div>
             </div>
           </div>
-          <div class="two column centered row" style="padding: 20px;">
+          <div class="two column centered row" style="padding: 20px;margin-bottom: 10px;">
             <div class="">
               <button class="ui left floated button blue inverted">
                 پیشین
@@ -319,7 +315,7 @@
       $("#sidebarButton").click(function() {
         $(".ui.sidebar")
           .sidebar({ context: $("#app") })
-          .sidebar("setting", "mobileTransition", "overlay")
+          .sidebar("setting", "transition", "overlay")
           .sidebar("toggle");
       });
     </script>
