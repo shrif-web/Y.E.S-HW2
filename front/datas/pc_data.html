@@ -38,11 +38,11 @@
     });
      function loadIt() {
             $.ajax({
-                url: "about.html",
+                url: "../homepage",
                 cache: false,
                 success: function (data) {
                     $("#content").empty();
-                    $(data).hide().appendTo($("#content")).slideDown();
+                    $(data).hide().appendTo($("#body")).slideDown();
                 },
                 error: function () {
                     alert("something went wrong");
@@ -62,9 +62,9 @@
  -->
   </head>
 
-  <body class="body" onload="onLoadPC()" onresize="onLoadPC()" id="body">
+  <body class="body" onload="onLoadPC()" onresize="onLoadPC()">
   
-    <p>If you click on me, I will disappear.</p>
+    <p id="body">If you click on me, I will disappear.</p>
     <p>Click me away!</p>
     <p>Click me too!</p>
 
