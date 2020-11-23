@@ -34,6 +34,7 @@
 .boxi {
   font-size: 3vw !important;
   border: 0.35rem solid !important;
+  border-radius: 1rem;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30 !important;
   animation: borderRotate var(--d) linear infinite forwards !important;
 }
