@@ -36,17 +36,30 @@
         $(this).hide();
       });
     });
+     function loadIt() {
+            $.ajax({
+                url: "about.html",
+                cache: false,
+                success: function (data) {
+                    $("#content").empty();
+                    $(data).hide().appendTo($("#content")).slideDown();
+                },
+                error: function () {
+                    alert("something went wrong");
+                }
+            });
+        }
     </script>
 
     <script type="text/javascript"></script>
     <script src="../js/data.js"></script>
 
-    <script type="text/javascript">
+<!--     <script type="text/javascript">
         function loadIt() {
             $("#body").load("../homepage");
         }
     </script>
-
+ -->
   </head>
 
   <body class="body" onload="onLoadPC()" onresize="onLoadPC()" id="body">
@@ -56,7 +69,7 @@
     <p>Click me too!</p>
 
     <!-- Header -->
-   <!--  <div class="ui fluid menu" id="headerBody">
+    <div class="ui fluid menu" id="headerBody">
       <div class="ui blue button" id="headerButton1">
         ورود
       </div>
@@ -78,8 +91,8 @@
         </a>
       </div>
     </div>
- -->
-<!--     <div class="ui right fixed vertical menu" id="rightBar">
+
+    <div class="ui right fixed vertical menu" id="rightBar">
       <div style="margin-right: 30px;">
         <h2 class="ui header">
           <div class="content">
@@ -133,7 +146,7 @@
         </div>
       </div>
     </div>
- -->
+
     <!-- Grid Part -->
     <div class="ui container">
       <div id="table">
