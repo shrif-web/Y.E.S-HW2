@@ -30,19 +30,6 @@
   color: var(--font-color) !important;
 }
 
-/* #rightBar {
-  position: fixed;
-  padding: 20px;
-  top: 90px;
-  width: 300px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 1;
-  float: right;
-  direction: rtl;
-  background-color: var(--color-rightbar);
-} */
-
 @media only screen and (max-width: 999px) {
   #fourColGrid {
     display: none;

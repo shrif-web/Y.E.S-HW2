@@ -6,15 +6,15 @@ function onMainHomeLoad() {
 function onLoadPC() {
 
   if (window.screen.width < 600) {
-    window.location = "mobile_homepage.html";
+    window.location = "../homepage/mobile_homepage.html";
   }
   onLoad();
 }
 
 function onLoadMobile() {
-  console.log("onLoadMobile", window.innerWidth, window.innerHeight)
+  // console.log("onLoadMobile", window.innerWidth, window.innerHeight)
   if (window.screen.width >= 600) {
-    window.location = "pc_homepage.html";
+    window.location = "../homepage/pc_homepage.html";
   }
   onLoad();
 }
@@ -31,9 +31,8 @@ function onLoad() {
   setTheme(localStorage.getItem('theme'))
 }
 
+ 
 function onDataClick() {
-  var curTheme = localStorage.getItem("theme");
-  console.log("curTheme in Home:", curTheme);
   window.location.href = "../datas/data.html";
 }
 

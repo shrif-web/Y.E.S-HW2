@@ -6,21 +6,25 @@ function onLoad() {
     document.getElementById("slider").checked = false;
   }
   // document.getElementById("slider").checked = false;
-  console.log("here", localStorage.getItem("theme"));
+  // console.log("here", localStorage.getItem("theme"));
   setTheme(localStorage.getItem("theme"));
+}
+
+function onHomeClick() {
+  window.location = "../homepage/homepage.html";
 }
 
 function onLoadPC() {
   if (window.screen.width < 600) {
-    window.location = "mobile_homepage.html";
+    window.location = "../datas/mobile_data.html";
   }
   onLoad();
 }
 
 function onLoadMobile() {
-  console.log("onLoadMobile", window.innerWidth, window.innerHeight);
+  // console.log("onLoadMobile", window.innerWidth, window.innerHeight);
   if (window.screen.width >= 600) {
-    window.location = "pc_homepage.html";
+    window.location = "../datas/pc_data.html";
   }
   onLoad();
 }
