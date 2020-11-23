@@ -1,5 +1,4 @@
 @import "theme.css";
-@import "header2.css";
 
 *:not(.icon) {
   font-family: var(--font-family) !important;
