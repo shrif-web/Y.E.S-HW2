@@ -42,6 +42,7 @@
                 cache: false,
                 success: function (data) {
                     $("#content").empty();
+                    console.log("i did it");
                     $(data).hide().appendTo($("#body")).slideDown();
                 },
                 error: function () {
