@@ -1,24 +1,56 @@
+const bluelogosrc = "../resources/blue_logo.png";
+const blacklogosrc = "../resources/black_logo.png";
+const multilogosrc = "../resources/multi_logo.png";
+const signinsrc = "../resources/signinpic.gif";
+const signupsrc = "../resources/signuppic.jpg";
+const errlightsrc = "../resources/errpiclight.jpg";
+const errdarksrc = "../resources/errpicdark.jpg";
+
+function loadFunc() {
+    resizeFunc();
+    document.getElementById("picframe").src = signinsrc;
+    loadtheme(1);
+}
+
+var theme = 1;
 function themeToggle() {
     document.documentElement.classList.toggle('light');
     document.documentElement.classList.toggle('dark');
-
-    img = document.getElementById("imageid");
-    if (img.src.search("blue_logo_200x200.png") > 0) {
-        img.src = "../resources/black_logo_200x200.png";
-    } else {
-        img.src = "../resources/blue_logo_200x200.png";
-    }
-
+    theme = (theme == 1) ? 0 : 1;
+    loadiconimg();
 }
 
-//TODO:more presise implementation
+function loadtheme(themeid) {
+    if (themeid != theme) {
+        themeToggle();
+    }
+    loadiconimg();
+}
+
+function loadiconimg(){
+    img = document.getElementById("logoimageid");
+    if (theme == 1) {
+        img.src = bluelogosrc;
+    } else if (theme == 0) {
+        img.src = blacklogosrc;
+    }
+}
+
+function hovericon() {
+    document.getElementById("logoimageid").src = multilogosrc;
+}
+
+function unhovericon() {
+    document.getElementById("logoimageid").src = (theme == 1) ? bluelogosrc : blacklogosrc;
+}
+
 function resizeFunc() {
-    if (window.innerWidth < 1000) {
+    if (window.screen.width <= 600) {
         document.getElementById("picframe").style.display = "none";
-        document.getElementById("mainContainer").style.width = "360px";
+        document.getElementById("raisedsegment").style.width = "332px";
     } else {
         document.getElementById("picframe").style.display = "block";
-        document.getElementById("mainContainer").style.width = "1000px";
+        document.getElementById("raisedsegment").style.width = "1000px";
     }
 }
 
@@ -29,17 +61,20 @@ function changetab(mode) {
     var suform = document.getElementById("signUpForm");
     var sibtab = document.getElementById("sibtn");
     var subtab = document.getElementById("subtn");
+    var picFrame = document.getElementById("picframe");
     if (mode == 'si' && tabNum == 1) {
         hSlide(siform, -315, 15, 30, 1);
         hSlide(suform, 15, 345, 30, 1);
         sibtab.setAttribute('style', "  background-color: var(--tab_button_active); color: var(--tab_button_active_font);");
         subtab.setAttribute('style', "  background-color: var(--tab_button); color: var(--tab_button_font);");
+        picFrame.src = signinsrc;
         tabNum = 0;
     } else if (mode == 'su' && tabNum == 0) {
         hSlide(siform, 15, -315, 30, 1);
         hSlide(suform, 345, 15, 30, 1);
         subtab.setAttribute('style', "  background-color: var(--tab_button_active); color: var(--tab_button_active_font);");
         sibtab.setAttribute('style', "  background-color: var(--tab_button); color: var(--tab_button_font);");
+        picFrame.src = signupsrc;
         tabNum = 1;
     }
 }
@@ -57,7 +92,7 @@ function validateEmail(email) {
 }
 
 function signInFormValidation() {
-    container = document.getElementById("formcontainer");
+    container = document.getElementById("raisedsegment");
     cssVars = getComputedStyle(document.documentElement);
     form = document.getElementById("signInForm");
     mail_input = document.getElementById("siemail");
@@ -66,15 +101,17 @@ function signInFormValidation() {
     err_list = document.getElementById("sierrlist");
     mail_field = document.getElementById("sim");
     pass_field = document.getElementById("sip");
+    picFrame = document.getElementById("picframe");
     mail = document.getElementById("siemail").getElementsByTagName("*")[0].value;
     pass = document.getElementById("sipass").getElementsByTagName("*")[0].value;
     pass = document.getElementById("sipass").getElementsByTagName("*")[0].value;
-    form.style.marginTop = "120px";
+    form.style.marginTop = "150px";
     formStepDecrease = 15;
     mail_input.className = "field";
     pass_input.className = "field";
     mail_field.style.borderColor = cssVars.getPropertyValue('--field');
     pass_field.style.borderColor = cssVars.getPropertyValue('--field');
+    picFrame.src = signinsrc;
     err_message.style.display = "none";
     err_list.innerHTML = "";
     err = false;
@@ -106,12 +143,13 @@ function signInFormValidation() {
     if (err) {
         unfade(err_message);
         shake(container, 20, 15, 0, 0);
+        picFrame.src = (theme == 1) ? errlightsrc : errdarksrc;
     }
 
 }
 
 function signUpFormValidation() {
-    container = document.getElementById("formcontainer");
+    container = document.getElementById("raisedsegment");
     cssVars = getComputedStyle(document.documentElement);
     form = document.getElementById("signUpForm");
     mail_input = document.getElementById("suemail");
@@ -124,11 +162,12 @@ function signUpFormValidation() {
     pass_field = document.getElementById("sup");
     repass_field = document.getElementById("surp");
     checkbox_lable = document.getElementById("chl");
+    picFrame = document.getElementById("picframe");
     mail = document.getElementById("suemail").getElementsByTagName("*")[0].value;
     pass = document.getElementById("supass").getElementsByTagName("*")[0].value;
     repass = document.getElementById("surepass").getElementsByTagName("*")[0].value;
     checkbox = document.getElementById("chbox")
-    form.style.marginTop = "75px";
+    form.style.marginTop = "110px";
     formStepDecrease = 13;
     mail_input.className = "field";
     pass_input.className = "field";
@@ -138,6 +177,7 @@ function signUpFormValidation() {
     pass_field.style.borderColor = cssVars.getPropertyValue('--field');
     repass_field.style.borderColor = cssVars.getPropertyValue('--field');
     checkbox_lable.style.color = cssVars.getPropertyValue('--field');
+    picFrame.src = signupsrc;
     err_message.style.display = "none";
     err_list.innerHTML = "";
     err = false;
@@ -193,13 +233,15 @@ function signUpFormValidation() {
     if (err) {
         unfade(err_message);
         shake(container, 20, 15, 0, 0);
+        picFrame.src = (theme == 1) ? errlightsrc : errdarksrc;
     }
 
 }
 
 function loginPageHide() {
     container = document.getElementById("bodycontainer");
-    vswipe(container, "rtl", 0.1, 5, function () {
+    vslide(container, 0, -1000, 10, 1);
+    fade(container, function () {
         document.getElementById("lpshup").style.display = "block";        // for testing
     });
 }
@@ -207,9 +249,8 @@ function loginPageHide() {
 function loginPageShowUp() {
     document.getElementById("lpshup").style.display = "none";        // for testing
     container = document.getElementById("bodycontainer");
-    vswipe(container, "ltr", 0.1, 5, function () {
-        resizeFunc();
-    });
+    vslide(container, -300, 0, 10, 1);
+    unfade(container);
 }
 
 //animation functions
@@ -266,7 +307,20 @@ function hSlide(element, x0, x1, step, fps) {
     }, fps);
 }
 
-async function transition(element, x0, y0, x1, y1, xstep, ystep, fps) {
+
+function vslide(element, y0, y1, step, fps) {
+    var up = y0;
+    var dir = (y0 < y1) ? "utd" : "dtu";
+    var timer = setInterval(function () {
+        up = (dir == "utd") ? up + step : up - step;
+        element.style.marginTop = up + 'px'
+        if ((dir == "utd" && up >= y1) || (dir == "dtu" && up <= y1)) {
+            clearInterval(timer);
+        }
+    }, fps);
+}
+
+function transition(element, x0, y0, x1, y1, xstep, ystep, fps) {
     xstep = (xstep * (x1 - x0) < 0) ? xstep * -1 : xstep;
     ystep = (ystep * (y1 - y0) < 0) ? ystep * -1 : ystep;
     var timer = setInterval(function () {
@@ -298,26 +352,4 @@ function shake(element, shakeCount, domain, marginLeft, marginTop) {
     transition(element, x0, y0, x0, y0, 1, 1, 1);
     element.style.left = x0 + 'px';
     element.style.top = y0 + 'px';
-}
-
-function vswipe(element, dir, step, fps, nf) {
-    if (dir == "ltr") {
-        element.style.display = "block";
-    }
-    var width = (dir == "ltr") ? 0.01 : 1;
-    var timer = setInterval(function () {
-        console.log(width);
-        if ((dir == "ltr" && width >= 1) || (dir == "rtl" && width < 0.01)) {
-            clearInterval(timer);
-            element.style.width = (dir == "ltr") ? "100%" : "0%";
-            if (dir == "rtl") {
-                element.style.display = "none";
-            }
-            nf();
-        }
-        element.style.width = width * 100 + '%';
-        element.style.opacity = width;
-        element.style.filter = 'alpha(opacity=' + width * 100 + ")";
-        width = (dir == "ltr") ? width + width * step : width - width * step;
-    }, fps);
 }

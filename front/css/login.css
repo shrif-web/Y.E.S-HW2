@@ -14,7 +14,7 @@
   --field_selected: #11232e;
   --link: #325e7a;
   --link_hover: #10202b;
-  --chbox_font:#325e7a;
+  --chbox_font: #325e7a;
   --err_box: #f1d7d7;
   --err_box_font: #9f3a38;
 }
@@ -35,7 +35,7 @@
   --field_selected: #030303;
   --link: #325e7a;
   --link_hover: #10202b;
-  --chbox_font:#325e7a;
+  --chbox_font: #325e7a;
   --err_box: #f1d7d7;
   --err_box_font: #9f3a38;
 }
@@ -56,13 +56,17 @@
   --field_selected: #969696;
   --link: #3b3b3b;
   --link_hover: #0f0f0f;
-  --chbox_font:#f1f1f1;
+  --chbox_font: #f1f1f1;
   --err_box: #f1d7d7;
   --err_box_font: #9f3a38;
 }
 
 body {
   font-family: sahel;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  white-space:nowrap;
+  background-color: var(--body);
 }
 
 a {
@@ -74,8 +78,8 @@ a {
 }
 
 #bodycontainer {
-  background-color: var(--body);
   height: 100%;
+  position: relative;
 }
 
 #backtohomelink {
@@ -96,34 +100,39 @@ a {
   color: var(--link_hover) !important;
 }
 
+#imageid {
+  max-width: 100%;
+  height: auto;
+}
+
 #mainicon {
-  padding-left: 30% !important;
   margin-top: 30px !important;
+  min-height: 20px;
+  max-height: auto;
+  margin-right: 7%;
 }
 
 #mainContainer {
-  margin-left: 100px;
-  margin-top: 75px;
-  width: 1000px;
   border-radius: 0px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 #raisedsegment {
   border-radius: 0px;
+  margin: 0 auto;
+  width: 1000px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 #picframe {
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  width: 47%;
   background-color: var(--tab);
-}
-
-#bigimgframe {
   height: 470px;
-  width: 99.9%;
+  width: 100%;
+  max-width: 668px;
   border: none;
 }
 
@@ -141,10 +150,12 @@ a {
 
 #tabbtns {
   cursor: pointer;
+  position: absolute;
 }
 
 #sibtn {
   font-family: sahel;
+  width: 165.5px;
   border-radius: 0px;
   background-color: var(--tab_button_active);
   color: var(--tab_button_active_font);
@@ -156,6 +167,7 @@ a {
 
 #subtn {
   font-family: sahel;
+  width: 165.5px;
   border-radius: 0px;
   background-color: var(--tab_button);
   color: var(--tab_button_font);
@@ -185,7 +197,7 @@ a {
 
 #signInForm {
   margin-left: 15px;
-  margin-top: 120px;
+  margin-top: 150px;
   position: absolute;
 }
 
@@ -264,7 +276,7 @@ a {
 
 #signUpForm {
   margin-left: 345px;
-  margin-top: 75px;
+  margin-top: 110px;
   position: absolute;
 }
 

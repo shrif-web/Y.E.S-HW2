@@ -11,28 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.0/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
     <script src="../js/login.js"></script>
 </head>
 
-<body onresize="resizeFunc()" onload="resizeFunc()">
+<body onresize="resizeFunc()" onload="loadFunc()">
     <button id="lpshup" onclick="loginPageShowUp()">show up</button>
     <div id="bodycontainer" class="ui grid">
-        <div class="two column row">
+        <div id="topgrid" class="two column row">
             <div id="backtohomelink" class="left floated column" onclick="loginPageHide()"><a id="bcki"><i
                         class="caret left icon"></i>بازگشت به
                     خانه</a></div>
-            <div id="mainicon" class="right floated column"><img id="imageid" class="ui small image" onclick="themeToggle()"
-                    src="../resources/blue_logo_200x200.png"> </div>
+            <div id="mainicon"><img id="logoimageid" class="ui small image" onclick="themeToggle()" onmouseover="hovericon()" onmouseout="unhovericon()"> </div>
         </div>
-        <div id="mainContainer" class="ui container">
+        <div id="mainContainer">
             <div id="raisedsegment" class="ui raised segments">
-                <div class="ui horizontal segments">
-                    <div id="picframe" class="ui segment">
-                        <img id="bigimgframe" class="ui image" src="../resources/gresizeFunc.gif">
-                    </div>
+                <div id="verticalcontainer" class="ui horizontal segments">
+                    <img id="picframe">
                     <div id="formcontainer" class="ui segment">
-                        <!-- issue in zoom-->
                         <div id="tabbtns" class="ui two attached buttons">
                             <button id="sibtn" class="ui button" onclick="changetab('si')">ورود</button>
                             <button id="subtn" class="ui button" onclick="changetab('su')">ثبت نام</button>
