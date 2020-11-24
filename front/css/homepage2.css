@@ -57,12 +57,14 @@
   #threeColGrid {
     background-color: var(--color-grid);
     position: absolute;
-    right: 0px;
+    right: 300px;
     left: 0px;
     overflow: auto;
     margin: auto;
     max-width: 1000px;
-    padding: 5%;
+    top: 90px;
+    /* padding: 5%; */
+
   }
 }
 
