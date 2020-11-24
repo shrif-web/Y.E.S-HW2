@@ -9,14 +9,14 @@ function onHomepage2Load() {
       sidebar.classList.remove("visible");
     }
     if (sidebar.classList.contains("right")) {
-      sidebar.classList.remove("right")
+      sidebar.classList.remove("right");
     }
   } else {
     if (!sidebar.classList.contains("visible")) {
       sidebar.classList.add("visible");
     }
     if (!sidebar.classList.contains("right")) {
-      sidebar.classList.add("right")
+      sidebar.classList.add("right");
     }
   }
 }
@@ -32,15 +32,26 @@ function toggleTheme() {
 
   if (slider.checked) {
     setTheme("theme-dark");
-    // document.getElementById("headerButton1").classList.add("inverted");
-    // document.getElementById("headerButton2").classList.add("inverted");
     document.getElementById("headerIcon").src =
       "../resources/blue_logo_200x200.png";
   } else {
     setTheme("theme-light");
-    // document.getElementById("headerButton1").classList.remove("inverted");
-    // document.getElementById("headerButton2").classList.remove("inverted");
     document.getElementById("headerIcon").src =
       "../resources/multi_logo_200x200_copy.png";
   }
+}
+
+function onDataClick() {
+  console.log("table:", document.getElementById("table"));
+  console.log("mobileData:", document.getElementById("mobileData"));
+
+  if (window.screen.width >= 600) {
+    document.getElementById("table").style.display = "block";
+  } else {
+    document.getElementById("mobileData").style.display = "block";
+  }
+
+  document.getElementById("mobileGrid").style.display = "none";
+  document.getElementById("threeColGrid").style.display = "none";
+  document.getElementById("fourColGrid").style.display = "none";
 }

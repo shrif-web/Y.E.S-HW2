@@ -61,6 +61,18 @@
   }
 }
 
+@media only screen and (min-width: 599px) {
+  #mobileData {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #table {
+    display: none;
+  }
+}
+
 #sidebar {
   margin: 0 auto;
   width: 300px;
@@ -127,4 +139,54 @@
 
 .body {
   background-color: var(--color-grid);
+}
+
+td,
+th,
+a,
+table {
+  text-align: center !important;
+}
+
+#table {
+  position: absolute;
+  right: 300px;
+  left: 0px;
+  overflow: auto;
+  height: calc(100% - 100px);
+  top: 100px;
+  margin: auto;
+  max-width: 1000px;
+  padding: 4%;
+
+  display: none;
+}
+
+.summary {
+  text-align: center;
+}
+
+.data_card {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+#card {
+  background-color: var(--color-card-back);
+}
+
+#mobileData {
+  background-color: var(--color-grid);
+  top: 90px;
+  padding: 20px;
+  position: fixed !important;
+  overflow: auto;
+  width: 100%;
+  height: calc(100% - 80px);
+  right: 0px;
+  left: 0px;
+  bottom: 80px !important;
+
+  display: none;
 }
