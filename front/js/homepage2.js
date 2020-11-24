@@ -1,8 +1,8 @@
 function onHomepage2Load() {
-  console.log("rightbar:", document.getElementById("rightBar"));
-  console.log("sidebar:", document.getElementById("sidebar"));
+  // console.log("rightbar:", document.getElementById("rightBar"));
+  // console.log("sidebar:", document.getElementById("sidebar"));
   var sidebar = document.getElementById("sidebar");
-  var menu = document.getElementById("rightBar");
+  // var menu = document.getElementById("rightBar");
 
   if (window.screen.width < 600) {
     if (sidebar.classList.contains("visible")) {
