@@ -116,12 +116,16 @@ a {
   border-radius: 0px;
   margin: 0 auto;
   padding-top: 100px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 #raisedsegment {
   border-radius: 0px;
   margin: 0 auto;
   width: 1000px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 #picframe {
