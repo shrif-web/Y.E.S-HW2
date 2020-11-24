@@ -24,6 +24,7 @@
     right: 0px;
     left: 0px;
     bottom: 90px !important;
+    background-color: var(--color-grid);
   }
 
   #sidebar {
@@ -51,6 +52,18 @@
     height: calc(100% - 90px);
     overflow: hidden;
   }
+
+  #fourColGrid,
+  #threeColGrid {
+    background-color: var(--color-grid);
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    overflow: auto;
+    margin: auto;
+    max-width: 1000px;
+    padding: 5%;
+  }
 }
 
 #sidebar {
@@ -59,7 +72,7 @@
   top: 90px;
   padding: 20px;
   overflow: hidden;
-  
+
   direction: rtl;
 }
 
@@ -74,21 +87,6 @@
   /* bottom: 0px !important; */
   /* float: right; */
   direction: rtl;
-}
-
-#fourColGrid,
-#threeColGrid {
-  background-color: var(--color-grid);
-  position: absolute;
-  /* right: 300px; */
-  right: 0px;
-  left: 0px;
-  overflow: auto;
-  height: calc(100% - 90px);
-  top: 90px;
-  margin: auto;
-  max-width: 1000px;
-  padding: 2%;
 }
 
 .ui.segment {
