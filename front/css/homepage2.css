@@ -1,0 +1,117 @@
+@import "theme.css";
+
+@media only screen and (max-width: 999px) {
+  #fourColGrid {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  #threeColGrid {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #threeColGrid {
+    height: calc(100% - 180px);
+    width: 100%;
+    top: 90px;
+    margin: 5px;
+    padding: 20px;
+    position: fixed !important;
+    overflow: auto;
+    right: 0px;
+    left: 0px;
+    bottom: 90px !important;
+  }
+
+  #sidebar {
+    max-height: calc(100% - 180px);
+    bottom: 90px;
+    position: fixed !important;
+  }
+
+  #rightBar {
+    height: calc(100% - 180px);
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #sidebar {
+    right: 0 !important;
+    bottom: 0px;
+    float: right;
+    max-height: calc(100% - 90px);
+    position: fixed !important;
+  }
+
+  #rightBar {
+    height: calc(100% - 90px);
+    overflow: hidden;
+  }
+}
+
+#sidebar {
+  margin: 0 auto;
+  width: 300px;
+  top: 90px;
+  padding: 20px;
+  overflow: hidden;
+  
+  direction: rtl;
+}
+
+#rightBar {
+  background-color: var(--color-rightbar);
+  height: 100%;
+  width: 300px;
+  top: 0px;
+  overflow: hidden;
+  padding: 20px;
+  position: fixed !important;
+  /* bottom: 0px !important; */
+  /* float: right; */
+  direction: rtl;
+}
+
+#fourColGrid,
+#threeColGrid {
+  background-color: var(--color-grid);
+  position: absolute;
+  right: 300px;
+  left: 0px;
+  overflow: auto;
+  height: calc(100% - 90px);
+  top: 90px;
+  margin: auto;
+  max-width: 1000px;
+  padding: 2%;
+}
+
+.ui.segment {
+  height: 100px;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#card {
+  border-radius: 2rem;
+  box-shadow: none;
+  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-width: 0.3rem;
+  border-color: var(--color-card-border);
+  background-color: var(--color-card-back);
+  transition: box-shadow 1.5s;
+}
+
+#card:hover {
+  cursor: pointer;
+  box-shadow: -5px -5px 10px 2px var(--color-shadow),
+    5px 5px 10px 2px var(--color-shadow), 5px -5px 10px 2px var(--color-shadow),
+    -5px 5px 10px 2px var(--color-shadow);
+}

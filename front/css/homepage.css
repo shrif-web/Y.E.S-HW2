@@ -70,13 +70,15 @@
 
 #mobileGrid {
   background-color: var(--color-grid);
+  height: calc(100% - 170px);
+  width: 100%;
   top: 90px;
   padding: 20px;
-  position: absolute;
+  position: fixed !important;
   overflow: auto;
   right: 0px;
   left: 0px;
-  bottom: 90px;
+  bottom: 80px !important;
 }
 
 #fourColGrid {

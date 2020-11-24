@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 
-<html class="theme-light" >
+<html class="theme-light">
   <head>
     <title>Homepage</title>
 
-    <link rel="shortcut icon" 
-    href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="shortcut icon"
+      href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR">
-    <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-16x16.png">
-    <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-32x32.png">
-
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR"
+    />
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="../resources/blue_favicon/favicon-16x16.png"
+    />
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="../resources/blue_favicon/favicon-32x32.png"
+    />
 
     <link href="../css/header.css" rel="stylesheet" />
     <link href="../css/homepage.css" rel="stylesheet" />
     <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
     <link href="../css/rightbar.css" rel="stylesheet" />
-    <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
+    <link
+      href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <script src="../js/homepage.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
-    
-    <script type="text/javascript"></script>
 
+    <script type="text/javascript"></script>
   </head>
 
-  <body class="body"  onload="onLoadPC()" onresize="onLoadPC()">
-
+  <body class="body" onload="onLoadPC()" onresize="onLoadPC()">
     <!-- Header -->
     <div class="ui fluid menu" id="headerBody">
       <div class="ui blue button" id="headerButton1">
         ورود
       </div>
-      <div class="ui blue button" id="headerButton2" onclick="onButtonClick()">
+      <!-- id="headerButton2" -->
+      <div class="ui blue button" id="sidebarButton" onclick="onButtonClick()">
         ثبت‌نام
       </div>
 
@@ -57,52 +73,60 @@
       </div>
     </div>
 
-    <div class="ui right fixed vertical menu" id="rightBar">
-      <div style="margin-right: 30px;">
-        <h2 class="ui header">
-          <div class="content">
-            اعضای تیم
-          </div>
-        </h2>
-        <div class="ui relaxed divided list">
-          <div class="item" id="texts">
-            <i class="large github middle aligned icon"></i>
+    <!-- Side bar -->
+    <div class="ui sidebar">
+      <div class="ui fixed vertical menu" id="rightBar">
+        <div style="margin-right: 30px;">
+          <h2 class="ui header">
             <div class="content">
-              <a class="header" href="https://github.com/ArshiAAkhavan"
-                >عرشیا اخوان</a
-              >
+              اعضای تیم
             </div>
-          </div>
-          <div class="item" id="texts">
-            <i class="large github middle aligned icon" ></i>
-            <div class="content">
-              <a class="header" href="https://github.com/baharkhd" id="texts">بهار خدابخشیان</a>
+          </h2>
+          <div class="ui relaxed divided list">
+            <div class="item" id="texts">
+              <i class="large github middle aligned icon"></i>
+              <div class="content">
+                <a class="header" href="https://github.com/ArshiAAkhavan"
+                  >عرشیا اخوان</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="item" id="texts">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a class="header" href="https://github.com/mohammadrezaabdi" id="texts"
-                >محمدرضا عبدی</a
-              >
+            <div class="item" id="texts">
+              <i class="large github middle aligned icon"></i>
+              <div class="content">
+                <a class="header" href="https://github.com/baharkhd" id="texts"
+                  >بهار خدابخشیان</a
+                >
+              </div>
+            </div>
+            <div class="item" id="texts">
+              <i class="large github middle aligned icon"></i>
+              <div class="content">
+                <a
+                  class="header"
+                  href="https://github.com/mohammadrezaabdi"
+                  id="texts"
+                  >محمدرضا عبدی</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div style="margin-right: 30px;margin-top: 40px;">
-        <h3 class="ui header">
-          <div class="content">
-            تنظیمات
+        <div style="margin-right: 30px;margin-top: 40px;">
+          <h3 class="ui header">
+            <div class="content">
+              تنظیمات
+            </div>
+          </h3>
+
+          <div style="display:inline-block">
+            <label>حالت شب</label>
+            <label id="switch" class="switch">
+              <input type="checkbox" onchange="toggleTheme()" id="slider" />
+              <span class="slider round"></span>
+            </label>
           </div>
-        </h3>
-
-        <div style="display:inline-block">
-          <label>حالت شب</label>
-          <label id="switch" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slider" />
-            <span class="slider round"></span>
-          </label>
         </div>
       </div>
     </div>
@@ -112,269 +136,357 @@
       <div class="ui four column grid" id="fourColGrid">
         <div class="ui center aligned column">
           <div class="ui segment" id="card">
-              <i class="globe icon"></i>
+            <i class="globe icon"></i>
             Web Programming Fall 99-00
           </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
         <div class="ui center aligned column">
-          <div class="ui segment" id="card"><i class="globe icon"></i>
-            Web Programming Fall 99-00</div>
+          <div class="ui segment" id="card">
+            <i class="globe icon"></i> Web Programming Fall 99-00
+          </div>
         </div>
       </div>
     </div>
 
     <div class="ui three column padded grid" id="threeColGrid">
-        <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-                <i class="globe icon"></i>
-              Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card"><i class="globe icon"></i>
-              Web Programming Fall 99-00</div>
-          </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i>
+          Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
+      <div class="ui center aligned column">
+        <div class="ui segment" id="card">
+          <i class="globe icon"></i> Web Programming Fall 99-00
+        </div>
+      </div>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <script>
+      $("#sidebarButton").click(function() {
+        console.log("here?");
+        $(".ui.sidebar")
+          .sidebar({ context: $("#app") })
+          .sidebar("setting", "mobileTransition", "overlay")
+          .sidebar("toggle");
+      });
+    </script>
+
+    <script>
+      document.getElementById("slider").addEventListener("change", e => {
+        this.checkboxValue = e.target.checked ? "on" : "off";
+        console.log(this.checkboxValue);
+      });
+    </script>
+
     <script>
       document.getElementById("slider").addEventListener("change", e => {
         this.checkboxValue = e.target.checked ? "on" : "off";

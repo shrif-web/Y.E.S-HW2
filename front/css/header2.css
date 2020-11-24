@@ -1,17 +1,28 @@
 @import "theme.css";
-@import "header2.css";
 
 *:not(.icon) {
   font-family: var(--font-family) !important;
 }
 
-#headerBody {
+@media screen and (max-width:600px) {
+    #desktopHeader {
+        display: none;
+    }
+}
+
+@media screen and (min-width:601px) {
+    #mobileHeader, #mobileFooter{
+        display: none;
+    }
+}
+
+#desktopHeader, #mobileHeader {
   background-color: var(--color-header);
   border-radius: 0rem;
   height: 90px;
   position: fixed;
   top: 0;
-  display: flex;
+  /* display: flex; */
   padding: 10px;
   z-index: 2;
   align-content: center;
@@ -20,26 +31,16 @@
     0 10px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-#footerBody {
-  border-radius: 0rem;
-  bottom: 0px;
-  height: 80px;
-  background-color: darkgrey;
-  position: fixed;
-  /* padding: 10px; */
-  z-index: 2;
-  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
-}
 
 #mobileFooter {
   border-radius: 0rem;
   bottom: 0px;
-  height: 80px;
+  height: 90px;
   background-color: var(--color-header);
   position: fixed;
   /* padding: 10px; */
   z-index: 2;
-  /* box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 #headerButton {

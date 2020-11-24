@@ -4,6 +4,10 @@
   font-family: var(--font-family) !important;
 }
 
+.body {
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 599px) {
   #pcData {
     display: none;
@@ -53,9 +57,11 @@ table {
   background-color: var(--color-grid);
   top: 90px;
   padding: 20px;
-  position: absolute;
+  position: fixed !important;
   overflow: auto;
+  width: 100%;
+  height: calc(100% - 80px);
   right: 0px;
   left: 0px;
-  bottom: 80px;
+  bottom: 80px !important;
 }

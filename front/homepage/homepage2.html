@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html class="theme-light">
   <head>
-    <title>Mobile Homepage</title>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <title>Second Homepage</title>
 
-    <!-- <link rel='icon' href='test_favicon.png' type= 'image/png'> -->
-    <link rel="icon" type="image/png" href="https://example.com/favicon.png" />
+    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-
-    <!-- favicon -->
-    <!--     <link rel="apple-touch-icon" sizes="180x180" href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR">
-    <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-16x16.png">
-    <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-32x32.png">
- -->
-
-    <link href="../css/header.css" rel="stylesheet" />
-    <link href="../css/theme.css" rel="stylesheet" />
-    <link href="../css/slider.css" rel="stylesheet" />
-    <link href="../css/rightbar.css" rel="stylesheet" />
-    <link href="../css/homepage.css" rel="stylesheet" />
     <link
       href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css"
       rel="stylesheet"
       type="text/css"
     />
 
-    <link rel="shortcut icon" href="test_favicon.png" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR"
+    />
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="../resources/blue_favicon/favicon-16x16.png"
+    />
+    <link
+      rel="alternate icon"
+      type="image/png"
+      href="../resources/blue_favicon/favicon-32x32.png"
+    />
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link href="../css/header2.css" rel="stylesheet" />
+    <link href="../css/theme.css" rel="stylesheet" />
+    <link href="../css/slider.css" rel="stylesheet" />
+    <link href="../css/homepage2.css" rel="stylesheet" />
 
-    <script src="../js/homepage.js"></script>
+    <script src="../js/homepage2.js"></script>
+
+    <meta charset="UTF-8" />
 
     <link
       rel="stylesheet"
@@ -37,10 +45,43 @@
     />
     <script type="text/javascript"></script>
   </head>
-  <body onload="onLoadMobile()" onresize="onLoadMobile()">
+
+  <body
+    onload="onHomepage2Load()"
+    onresize="onHomepage2Load()"
+    style="position: relative;"
+  >
+    <!-- Desktop Header -->
+    <div class="ui fluid menu" id="desktopHeader">
+      <div class="ui blue button" id="headerButton1">
+        ورود
+      </div>
+      <div class="ui blue button" id="headerButton2" onclick="onButtonClick()">
+        ثبت‌نام
+      </div>
+
+      <div class="right menu">
+        <a class="item" onclick="onDataClick()">داده‌ها</a>
+        <a class="active item">خانه</a>
+
+        <a class="item" id="logoItem">
+          <img
+            class="ui image"
+            id="headerIcon"
+            src="../resources/blue_logo_200x200.png"
+          />
+        </a>
+      </div>
+    </div>
+
     <div id="app">
       <!-- Sidebar -->
-      <div class="ui sidebar inverted vertical menu">
+
+      <div
+        class="ui sidebar inverted vertical fixed menu"
+        id="sidebar"
+        style="overflow: hidden;"
+      >
         <div class="ui fixed vertical menu" id="rightBar">
           <div style="margin-right: 30px;">
             <h2 class="ui header">
@@ -98,63 +139,11 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="ui vertical menu" id="rightBar">
-          <div style="margin-right: 30px;">
-            <h2 class="ui header">
-              <div class="content">
-                اعضای تیم
-              </div>
-            </h2>
-            <div class="ui relaxed divided list">
-              <div class="item" id="texts">
-                <i class="large github middle aligned icon"></i>
-                <div class="content">
-                  <a class="header" href="https://github.com/ArshiAAkhavan">
-                    عرشیا اخوان</a
-                  >
-                </div>
-              </div>
-              <div class="item" id="texts">
-                <i class="large github middle aligned icon"></i>
-                <div class="content">
-                  <a class="header" href="https://github.com/baharkhd"
-                    >بهار خدابخشیان</a
-                  >
-                </div>
-              </div>
-              <div class="item" id="texts">
-                <i class="large github middle aligned icon"></i>
-                <div class="content">
-                  <a class="header" href="https://github.com/mohammadrezaabdi"
-                    >محمدرضا عبدی</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-right: 30px;margin-top: 40px;">
-            <h3 class="ui header">
-              <div class="content">
-                تنظیمات
-              </div>
-            </h3>
-            <div style="display:inline-block">
-              <label>حالت شب</label>
-              <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider" />
-                <span class="slider round"></span>
-              </label>
-            </div>
-          </div>
-        </div> -->
       </div>
 
-      <!-- Grid Part -->
-      <!-- one column centered  -->
-      <div class="fluid grid container" id="mobileGrid">
-        <div class="ui column">
+      <!-- Grid -->
+      <div class="ui fluid container">
+        <div class="ui four column grid" id="fourColGrid">
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
               <i class="globe icon"></i>
@@ -206,69 +195,15 @@
               <i class="globe icon"></i> Web Programming Fall 99-00
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="ui fluid container">
+        <div class="ui stackable three column grid" id="threeColGrid">
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+              <i class="globe icon"></i>
+              Web Programming Fall 99-00
             </div>
           </div>
           <div class="ui center aligned column">
@@ -318,11 +253,14 @@
           </div>
         </div>
       </div>
+
+    </div>
     </div>
 
+    <!-- Mobile Header and Footer -->
     <div class="pusher">
       <!-- Header -->
-      <div class="ui fixed borderless huge menu" id="headerBody">
+      <div class="ui fixed borderless huge menu" id="mobileHeader">
         <div class="ui container grid">
           <div class="row">
             <a class="item" id="sidebarButton">
@@ -360,18 +298,11 @@
 
     <script>
       $("#sidebarButton").click(function() {
-        console.log("here?");
+        console.log("here???");
         $(".ui.sidebar")
           .sidebar({ context: $("#app") })
           .sidebar("setting", "mobileTransition", "overlay")
           .sidebar("toggle");
-      });
-    </script>
-
-    <script>
-      document.getElementById("slider").addEventListener("change", e => {
-        this.checkboxValue = e.target.checked ? "on" : "off";
-        console.log(this.checkboxValue);
       });
     </script>
   </body>
