@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- class="theme-light" -->
 <html class="theme-light">
   <head>
     <title>Datas</title>
@@ -28,30 +27,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
     />
-  
-    <script type="text/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/data.js"></script>
-
-    <script type="text/javascript">
-        function loadIt() {
-            $.ajax({
-                url: "../homepage",
-                cache: false,
-                success: function (data) {
-                    $("#body").empty();
-                    console.log("body ro empty kardam");
-                    $(data).hide().appendTo($("#body")).slideDown();
-                },
-                error: function () {
-                    alert("something went wrong");
-                }
-            });
-        }
-    </script>
-
   </head>
 
   <body class="body" onload="onLoadPC()" onresize="onLoadPC()" id="body">
+  
+
     <!-- Header -->
     <div class="ui fluid menu" id="headerBody">
       <div class="ui blue button" id="headerButton1">
@@ -63,8 +46,7 @@
 
       <div class="right menu">
         <a class="active item">داده‌ها</a>
-        <!-- <a class="item" onclick="onHomeClick()">خانه</a> -->
-        <a class="item" onclick="loadIt()">خانه</a>
+        <a class="item" onclick="onHomeClick()">nخانه</a>
 
         <a class="item" id="logoItem">
           <img
@@ -248,5 +230,10 @@
         this.checkboxValue = e.target.checked ? "on" : "off";
       });
     </script>
+    <div class="cd-cover-layer"></div>
+    <div class="cd-loading-bar"></div>
+    <script src="../plugins/animated-page-transition-master/js/jquery-2.1.1.js"></script>
+    <script src="../plugins/animated-page-transition-master/js/main.js"></script> <!-- Resource jQuery -->
+
   </body>
 </html>
