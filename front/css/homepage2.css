@@ -14,17 +14,7 @@
 
 @media only screen and (max-width: 600px) {
   #threeColGrid {
-    height: calc(100% - 180px);
-    width: 100%;
-    top: 90px;
-    margin: 5px;
-    padding: 20px;
-    position: fixed !important;
-    overflow: auto;
-    right: 0px;
-    left: 0px;
-    bottom: 90px !important;
-    background-color: var(--color-grid);
+    display: none;
   }
 
   #sidebar {
@@ -39,7 +29,11 @@
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 600px) {
+  #mobileGrid {
+    display: none;
+  }
+
   #sidebar {
     right: 0 !important;
     bottom: 0px;
@@ -63,8 +57,7 @@
     margin: auto;
     max-width: 1000px;
     top: 90px;
-    /* padding: 5%; */
-
+    padding: 5%;
   }
 }
 
@@ -118,11 +111,20 @@
     -5px 5px 10px 2px var(--color-shadow);
 }
 
-#content {
+#mobileGrid {
   background-color: var(--color-grid);
-  width: calc(100% - 300px);
-  height: calc(100% - 90px);
+  height: calc(100% - 170px);
+  width: 100%;
   top: 90px;
-  right: 300px;
-  position: fixed;
+  padding: 20px;
+  position: fixed !important;
+  overflow: auto;
+  right: 0px;
+  left: 0px;
+  bottom: 80px !important;
+  padding: 2%;
+}
+
+.body {
+  background-color: var(--color-grid);
 }
