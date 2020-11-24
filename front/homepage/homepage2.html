@@ -62,8 +62,8 @@
       </div>
 
       <div class="right menu">
-        <a class="item" onclick="onDataClick()">داده‌ها</a>
-        <a class="active item">خانه</a>
+        <a class="item" onclick="onDataClick()" id="dataButton1">داده‌ها</a>
+        <a class="active item" onclick="onHomeClick()" id="homeButton1">خانه</a>
 
         <a class="item" id="logoItem">
           <img
@@ -101,8 +101,8 @@
       <div class="ui four item menu" id="mobileFooter">
         <a class="item">ثبت‌نام</a>
         <a class="item">ورود</a>
-        <a class="item" onclick="onDataClick()">داده‌ها</a>
-        <a class="active item">خانه</a>
+        <a class="item" onclick="onDataClick()" id="dataButton2">داده‌ها</a>
+        <a class="active item" onclick="onHomeClick()" id="homeButton2">خانه</a>
       </div>
     </div>
 
@@ -175,145 +175,239 @@
       <!-- Grid -->
       <!-- <div class="pusher"> -->
       <div class="ui container" id="mainContainer">
-        <div class="ui four column grid" id="fourColGrid">
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i>
-              Web Programming Fall 99-00
+        <div id="homeContent">
+          <div class="ui four column grid" id="fourColGrid">
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i>
+                Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
             </div>
           </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+
+          <div class="ui three column padded grid" id="threeColGrid">
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i>
+                Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
+            </div>
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
             </div>
           </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+          <div class="ui column" id="mobileGrid">
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i>
+                Web Programming Fall 99-00
+              </div>
             </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
             </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+            <div class="ui center aligned column">
+              <div class="ui segment" id="card">
+                <i class="globe icon"></i> Web Programming Fall 99-00
+              </div>
             </div>
           </div>
         </div>
+        <div id="dataContent" style="display: none;">
+          <div id="table">
+            <div class="ui one column centered grid">
+              <div class=" column ">
+                <table class="ui striped inverted blue celled table">
+                  <thead>
+                    <tr>
+                      <th>رتبه</th>
+                      <th>تیم</th>
+                      <th>دانشگاه</th>
+                      <th>امتیاز</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Emmanuel Macron</td>
+                      <td class="selectable">
+                        <a href="https://www.gouvernement.fr/en/news"
+                          >ابلیس فرانسه</a
+                        >
+                      </td>
+                      <td class="selectable">
+                        <a href="https://www.epfl.ch/en/">EPFL</a>
+                      </td>
+                      <td class="warning">۵۰</td>
+                    </tr>
 
-        <div class="ui three column padded grid" id="threeColGrid">
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i>
-              Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-        </div>
-        <div class="ui column" id="mobileGrid">
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i>
-              Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
-          </div>
-        </div>
-        <div id="table">
-          <div class="ui one column centered grid">
-            <div class=" column ">
-              <table class="ui striped inverted blue celled table">
-                <thead>
-                  <tr>
-                    <th>رتبه</th>
-                    <th>تیم</th>
-                    <th>دانشگاه</th>
-                    <th>امتیاز</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Emmanuel Macron</td>
-                    <td class="selectable">
-                      <a href="https://www.gouvernement.fr/en/news"
-                        >ابلیس فرانسه</a
-                      >
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.epfl.ch/en/">EPFL</a>
-                    </td>
-                    <td class="warning">۵۰</td>
-                  </tr>
+                    <tr>
+                      <td>François Hollande</td>
+                      <td class="selectable">
+                        <a href="https://www.gouvernement.fr/en/news"
+                          >ابلیس فرانسه</a
+                        >
+                      </td>
+                      <td class="selectable">
+                        <a href="https://www.epfl.ch/en/">EPFL</a>
+                      </td>
+                      <td class="warning">۵۰</td>
+                    </tr>
 
-                  <tr>
-                    <td>François Hollande</td>
-                    <td class="selectable">
-                      <a href="https://www.gouvernement.fr/en/news"
-                        >ابلیس فرانسه</a
-                      >
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.epfl.ch/en/">EPFL</a>
-                    </td>
-                    <td class="warning">۵۰</td>
-                  </tr>
+                    <tr>
+                      <td>Donald.j Trump</td>
+                      <td class="selectable">
+                        <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
+                      </td>
+                      <td class="selectable">
+                        <a href="https://www.mit.edu/">MIT</a>
+                      </td>
+                      <td class="negative">۲۰</td>
+                    </tr>
 
-                  <tr>
-                    <td>Donald.j Trump</td>
-                    <td class="selectable">
-                      <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.mit.edu/">MIT</a>
-                    </td>
-                    <td class="negative">۲۰</td>
-                  </tr>
-
-                  <tr>
-                    <td>Joe Biden</td>
-                    <td class="selectable">
-                      <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.mit.edu/">MIT</a>
-                    </td>
-                    <td class="negative">۲۰</td>
-                  </tr>
-                </tbody>
-              </table>
+                    <tr>
+                      <td>Joe Biden</td>
+                      <td class="selectable">
+                        <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
+                      </td>
+                      <td class="selectable">
+                        <a href="https://www.mit.edu/">MIT</a>
+                      </td>
+                      <td class="negative">۲۰</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="four column centered row" style="padding: 13px;">
+                <div class="">
+                  <button class="ui left floated button blue inverted">
+                    پیشین
+                  </button>
+                </div>
+                <div class=" ">
+                  <button class="ui right floated button blue inverted">
+                    پسین
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="four column centered row" style="padding: 13px;">
+          </div>
+
+          <div class="ui column" id="mobileData">
+            <div class="ui card data_card boxi" id="card">
+              <div class="content">
+                <div class="header">عرشیا</div>
+              </div>
+              <div class="content ">
+                <h4 class="ui sub header">وای.ای.اس</h4>
+                <div class="ui small feed">
+                  <div class="event">
+                    <div class="content">
+                      <div class="summary ">
+                        <a>دانشگاه: شریف</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event">
+                    <div class="content">
+                      <div class="summary">
+                        امتیاز: ۱۰۰
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui card data_card boxi" id="card">
+              <div class="content">
+                <div class="header">بهار</div>
+              </div>
+              <div class="content">
+                <h4 class="ui sub header">وای.ای.اس</h4>
+                <div class="ui small feed">
+                  <div class="event">
+                    <div class="content">
+                      <div class="summary">
+                        <a>دانشگاه: شریف</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event">
+                    <div class="content">
+                      <div class="summary">
+                        امتیاز: ۱۰۰
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui card data_card boxi" id="card">
+              <div class="content">
+                <div class="header">محمدرضا</div>
+              </div>
+              <div class="content">
+                <h4 class="ui sub header">وای.ای.اس</h4>
+                <div class="ui small feed">
+                  <div class="event">
+                    <div class="content">
+                      <div class="summary">
+                        <a>دانشگاه: شریف</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event">
+                    <div class="content">
+                      <div class="summary">
+                        امتیاز: ۱۰۰
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="two column centered row"
+              style="padding: 20px;margin-bottom: 20px;max-width: 300px;display: flex;justify-content: center;margin: auto;"
+            >
               <div class="">
                 <button class="ui left floated button blue inverted">
                   پیشین
@@ -324,96 +418,6 @@
                   پسین
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ui column" id="mobileData">
-          <div class="ui card data_card boxi" id="card">
-            <div class="content">
-              <div class="header">عرشیا</div>
-            </div>
-            <div class="content ">
-              <h4 class="ui sub header">وای.ای.اس</h4>
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="content">
-                    <div class="summary ">
-                      <a>دانشگاه: شریف</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      امتیاز: ۱۰۰
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui card data_card boxi" id="card">
-            <div class="content">
-              <div class="header">بهار</div>
-            </div>
-            <div class="content">
-              <h4 class="ui sub header">وای.ای.اس</h4>
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      <a>دانشگاه: شریف</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      امتیاز: ۱۰۰
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui card data_card boxi" id="card">
-            <div class="content">
-              <div class="header">محمدرضا</div>
-            </div>
-            <div class="content">
-              <h4 class="ui sub header">وای.ای.اس</h4>
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      <a>دانشگاه: شریف</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      امتیاز: ۱۰۰
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="stackable two column centered row"
-            style="padding: 20px;margin-bottom: 20px;max-width: 300px;display: flex;justify-content: center;margin: auto;"
-          >
-            <div class="">
-              <button class="ui left floated button blue inverted">
-                پیشین
-              </button>
-            </div>
-            <div class=" ">
-              <button class="ui right floated button blue inverted">
-                پسین
-              </button>
             </div>
           </div>
         </div>
