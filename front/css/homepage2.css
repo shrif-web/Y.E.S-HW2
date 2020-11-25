@@ -1,5 +1,9 @@
 @import "theme.css";
 
+body {
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 999px) {
   #fourColGrid {
     display: none;
@@ -71,6 +75,7 @@
   #fourColGrid,
   #threeColGrid {
     /*background-color: var(--color-grid);*/
+    width: calc(100% - 300px);
     position: absolute;
     right: 300px;
     left: 0px;
@@ -90,15 +95,27 @@
   vertical-align: middle;
 }
 
+.ui.center.aligned.column {
+  margin: 0px;
+  /* max-width: 250px; */
+}
+
 #card {
   color: var(--font-color) !important;
   border-radius: 2rem;
   box-shadow: none;
   height: 250px;
-  /*min-width: 150px;*/
-  margin: 10px;
+  /* min-width: 150px; */
+  max-width: 250px;
+  /* margin: 5px; */
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+
+
+  /* margin: 10px;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 15px; */
   border-width: 0.3rem;
   border-color: var(--color-card-border);
   background-color: var(--color-card-back);
@@ -117,20 +134,6 @@
   box-shadow: -5px -5px 10px 2px var(--color-shadow),
     5px 5px 10px 2px var(--color-shadow), 5px -5px 10px 2px var(--color-shadow),
     -5px 5px 10px 2px var(--color-shadow);
-}
-
-#mobileGrid {
-  /*background-color: var(--color-grid);*/
-  height: calc(100% - 170px);
-  width: 100%;
-  top: 90px;
-  padding: 20px;
-  position: fixed !important;
-  overflow: auto;
-  right: 0px;
-  left: 0px;
-  bottom: 80px !important;
-  padding: 2%;
 }
 
 .body {
@@ -168,15 +171,12 @@ table {
   text-align: center;
 }
 
-#card {
-  background-color: var(--color-card-back);
-}
-
 #mainContainer {
   padding-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
+  /* margin: auto; */
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -203,8 +203,9 @@ table {
   margin-top: 0px !important;
   position: absolute !important;
   width: 100% !important;
-  height: calc(100% - 180px);
+  top: 100px;
   bottom: 90px;
+
   overflow: auto;
 }
 
@@ -213,7 +214,7 @@ table {
   margin-top: 0px !important;
   position: absolute !important;
   width: 100% !important;
-  height: calc(100% - 180px);
+  top: 100px;
   bottom: 90px;
   overflow: auto;
 }
