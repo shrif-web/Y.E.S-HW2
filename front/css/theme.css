@@ -1,15 +1,26 @@
 .theme-light {
-  --color-header: #cee6ed;
-  --color-grid: #cccccc;
-  --color-itemHover: #e4eff2;
-  --color-shadow: #cee6ed;
-  --color-rightbar: #ff414d;
-  --color-button: #34a4eb;
-  --color-card-border: grey;
-  --color-card-back: white;
-  --font-color: black;
+  --color-header: #6BBB9C;
+  --color-grid: #7B5D5E70;
+  --color-itemHover: #EBD083;
+  --color-shadow: white;
+  --color-rightbar: #EBD083;
+  --color-button: #FE6E78;
+  --color-card-border: #6BBB9C;
+  --color-card-back: #EBD083;
+  
+  --a-color: #7B5D5E;
+  --icon-color:#7B5D5E;
+  --font-color: white;
   --font-family: sahel;
+
 }
+
+/*
+#EBD083
+
+#6BBB9C
+
+#FE6E78*/
 
 .theme-dark {
   --color-header: #595959;
@@ -22,4 +33,7 @@
   --color-card-back: rgba(233, 233, 233, 0.705);
   --font-color: white;
   --font-family: sahel;
+  --a-color: white;
+  --icon-color: white;
+
 }

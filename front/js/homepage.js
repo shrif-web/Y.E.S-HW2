@@ -40,6 +40,7 @@ function setTheme(themeName) {
   console.log("in set theme", themeName);
   localStorage.setItem("theme", themeName);
   document.documentElement.className = themeName;
+  toggleTheme();
 }
 
 function toggleTheme() {

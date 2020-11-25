@@ -1,4 +1,14 @@
 /* The switch - the box around the slider */
+
+#texts{
+  color: var(--icon-color);
+}
+.slider_h2{
+    /*color: var(--a-color);*/
+}
+.switch_label{
+    color: var(--a-color);
+}
 .switch {
     position: relative;
     display: inline-block;
@@ -8,7 +18,7 @@
   }
   
   /* Hide default HTML checkbox */
-  .switch input {
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;

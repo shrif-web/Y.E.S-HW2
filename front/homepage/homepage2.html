@@ -34,6 +34,7 @@
     <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
     <link href="../css/homepage2.css" rel="stylesheet" />
+    <link href="../css/boxi.css" rel="stylesheet" />
 
     <script src="../js/homepage2.js"></script>
 
@@ -69,7 +70,7 @@
           <img
             class="ui image"
             id="headerIcon"
-            src="../resources/blue_logo_200x200.png"
+            src="../resources/multi_logo_200x200_copy.png"
           />
         </a>
       </div>
@@ -98,10 +99,10 @@
 
     <!-- Footer -->
     <div class="ui four item  menu" id="mobileFooter">
-      <a class="item">ثبت‌نام</a>
-      <a class="item">ورود</a>
-      <a class="item" onclick="onDataClick()" id="dataButton2">داده‌ها</a>
-      <a class="active item" onclick="onHomeClick()" id="homeButton2">خانه</a>
+      <a class="item"id="footerButton" >ثبت‌نام</a>
+      <a class="item" id="footerButton">ورود</a>
+      <a class="item" onclick="onDataClick()" id="footerButton">داده‌ها</a>
+      <a class="active item" onclick="onHomeClick()" id="footerButton">خانه</a>
     </div>
 
     <!-- Sidebar -->
@@ -116,7 +117,7 @@
           <div class="item" id="texts">
             <i class="large github middle aligned icon"></i>
             <div class="content">
-              <a class="header" href="https://github.com/ArshiAAkhavan"
+              <a class="name_link" href="https://github.com/ArshiAAkhavan"
                 >عرشیا اخوان</a
               >
             </div>
@@ -124,7 +125,7 @@
           <div class="item" id="texts">
             <i class="large github middle aligned icon"></i>
             <div class="content">
-              <a class="header" href="https://github.com/baharkhd" id="texts"
+              <a class="name_link" href="https://github.com/baharkhd" id="texts"
                 >بهار خدابخشیان</a
               >
             </div>
@@ -133,7 +134,7 @@
             <i class="large github middle aligned icon"></i>
             <div class="content">
               <a
-                class="header"
+                class="name_link"
                 href="https://github.com/mohammadrezaabdi"
                 id="texts"
                 >محمدرضا عبدی</a
@@ -145,13 +146,13 @@
 
       <div style="margin-right: 30px;margin-top: 40px;">
         <h3 class="ui header">
-          <div class="content">
+          <div class="content slider_h2">
             تنظیمات
           </div>
         </h3>
 
         <div style="display:inline-block">
-          <label>حالت شب</label>
+          <label class="switch_label">حالت شب</label>
           <label id="switch" class="switch">
             <input type="checkbox" onchange="toggleTheme()" id="slider" />
             <span class="slider round"></span>
@@ -166,76 +167,73 @@
         <div class="ui four column grid" id="fourColGrid">
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i>
-              Web Programming Fall 99-00
+              <img class="ui image" id="card_img" src="../resources/milf.jpg">
             </div>
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+              <img class="ui image" id="card_img" src="../resources/milf.jpg">
             </div>
           </div>
           <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+              <div class="ui segment" id="card">
+              <img class="ui image" id="card_img" src="../resources/milf.jpg">
             </div>
           </div>
           <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+              <div class="ui segment" id="card">
+              <img class="ui image" id="card_img" src="../resources/milf.jpg">
             </div>
           </div>
           <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
+             <div class="ui segment" id="card">
+              <img class="ui image" id="card_img" src="../resources/milf.jpg">
             </div>
           </div>
         </div>
 
         <div class="ui three column padded grid" id="threeColGrid">
           <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <i class="globe icon"></i>
-              Web Programming Fall 99-00
+              <div class="ui segment" id="card">
+              <img class="ui image" id="card_img" src="../resources/milf.jpg">
             </div>
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
           </div>
         </div>
         <div class="ui column" id="mobileGrid">
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i>
-              Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div> 
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
           </div>
           <div class="ui center aligned column">
             <div class="ui segment" id="card">
-              <i class="globe icon"></i> Web Programming Fall 99-00
-            </div>
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
           </div>
         </div>
       </div>
@@ -243,7 +241,7 @@
         <div id="table">
           <div class="ui one column centered grid">
             <div class=" column ">
-              <table class="ui striped inverted blue celled table">
+              <table class="ui striped inverted teal celled table">
                 <thead>
                   <tr>
                     <th>رتبه</th>
@@ -305,12 +303,12 @@
             </div>
             <div class="four column centered row" style="padding: 13px;">
               <div class="">
-                <button class="ui left floated button blue inverted">
+                <button class="dataDirButton ui left floated button red">
                   پیشین
                 </button>
               </div>
               <div class=" ">
-                <button class="ui right floated button blue inverted">
+                <button class="dataDirButton ui right floated button red">
                   پسین
                 </button>
               </div>
@@ -396,12 +394,12 @@
             style="padding: 20px;margin-bottom: 20px;max-width: 300px;display: flex;justify-content: center;margin: auto;"
           >
             <div class="">
-              <button class="ui left floated button blue inverted">
+              <button class="dataDirButton ui left floated button red">
                 پیشین
               </button>
             </div>
             <div class=" ">
-              <button class="ui right floated button blue inverted">
+              <button class="dataDirButton ui right floated button red">
                 پسین
               </button>
             </div>

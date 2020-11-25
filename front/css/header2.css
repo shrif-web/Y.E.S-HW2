@@ -4,6 +4,13 @@
   font-family: var(--font-family) !important;
 }
 
+.name_link{
+  color: var(--a-color) !important;
+  font-weight: bold;
+}
+
+
+
 @media screen and (max-width:600px) {
     #desktopHeader {
         display: none;
@@ -41,6 +48,13 @@
   /* padding: 10px; */
   z-index: 2;
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#homeButton1,
+#dataButton1,
+#footerButton{
+  font-weight: bold;
+  color: var(--font-color);
 }
 
 #headerButton {
@@ -109,4 +123,6 @@ body > .ui.container {
 .ui.fixed.borderless.menu .row > a.header.item {
   font-size: 1.2em;
 }
+
+
 
