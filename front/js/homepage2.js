@@ -1,24 +1,5 @@
 function onHomepage2Load() {
-  // console.log("rightbar:", document.getElementById("rightBar"));
-  // console.log("sidebar:", document.getElementById("sidebar"));
   var sidebar = document.getElementById("sidebar");
-  // var menu = document.getElementById("rightBar");
-
-  // if (window.screen.width < 600) {
-  //   if (sidebar.classList.contains("visible")) {
-  //     sidebar.classList.remove("visible");
-  //   }
-  //   if (sidebar.classList.contains("right")) {
-  //     sidebar.classList.remove("right");
-  //   }
-  // } else {
-  //   if (!sidebar.classList.contains("visible")) {
-  //     sidebar.classList.add("visible");
-  //   }
-  //   if (!sidebar.classList.contains("right")) {
-  //     sidebar.classList.add("right");
-  //   }
-  // }
 }
 
 function setTheme(themeName) {
@@ -34,10 +15,23 @@ function toggleTheme() {
     setTheme("theme-dark");
     document.getElementById("headerIcon").src =
       "../resources/blue_logo_200x200.png";
+    document.getElementById("headerIconMobile").src =
+      "../resources/blue_logo_200x200.png";
+    document.getElementById("dataTable").classList.remove("teal")
+      console.log("you are your mother");
+    document.getElementById("dataTable").classList.add("blue");
+      console.log("you are your mother");
   } else {
     setTheme("theme-light");
     document.getElementById("headerIcon").src =
       "../resources/multi_logo_200x200_copy.png";
+    document.getElementById("headerIconMobile").src =
+      "../resources/multi_logo_200x200_copy.png";
+    
+    document.getElementById("dataTable").classList.remove("blue")
+      console.log("you are your mother");
+    document.getElementById("dataTable").classList.add("teal");
+      console.log("you are your mother");
   }
 }
 
