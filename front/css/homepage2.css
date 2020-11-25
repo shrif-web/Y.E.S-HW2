@@ -230,3 +230,339 @@ table {
 i {
   color: var(--icon-color);
 }
+
+
+a {
+  cursor: pointer;
+}
+
+#lbodycontainer {
+  margin-top: -1000px;
+  margin-left: 0px;
+  position: absolute;
+  height: 120%;
+  width: 100%;
+  font-family: sahel;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  white-space:nowrap;
+  background-color: var(--login-body);
+  display:none;
+  z-index: 4;
+}
+
+#lbacktohomelink {
+  margin-top: 55px !important;
+  padding-left: 10% !important;
+  color: var(--login-link);
+}
+
+#lbacktohomelink:hover {
+  color: var(--login-link_hover);
+}
+
+#lbcki {
+  color: var(--login-link) !important;
+}
+
+#lbcki:hover {
+  color: var(--login-link_hover) !important;
+}
+
+#limageid {
+  max-width: 100%;
+  height: auto;
+}
+
+#lmainicon {
+  margin-top: 30px !important;
+  min-height: 20px;
+  max-height: auto;
+  margin-right: 7%;
+}
+
+#lmainContainer {
+  border-radius: 0px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+#lraisedsegment {
+  border-radius: 0px;
+  margin: 0 auto;
+  width: 1000px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+#lpicframe {
+  background-color: var(--login-tab);
+  height: 470px;
+  width: 100%;
+  max-width: 668px;
+  border: none;
+}
+
+#lformcontainer {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  height: 470px;
+  border: none;
+  background-color: var(--login-tab);
+  overflow: hidden;
+  position: relative;
+}
+
+#ltabbtns {
+  cursor: pointer;
+  position: absolute;
+}
+
+#lsibtn {
+  font-family: sahel;
+  width: 165.5px;
+  border-radius: 0px;
+  background-color: var(--login-tab_button_active);
+  color: var(--login-tab_button_active_font);
+}
+
+#lsibtn:hover {
+  background-color: var(--login-tab_button_hover_disable);
+}
+
+#lsubtn {
+  font-family: sahel;
+  width: 165.5px;
+  border-radius: 0px;
+  background-color: var(--login-tab_button);
+  color: var(--login-tab_button_font);
+}
+
+#lsubtn:hover {
+  background-color: var(--login-tab_button_hover);
+}
+
+#lsisubbtn {
+  background-color: var(--login-submit_button);
+  color: var(--login-submit_buttton_font);
+}
+
+#lsisubbtn:hover {
+  background-color: var(--login-submit_button_hover);
+}
+
+#lsusubbtn {
+  background-color: var(--login-submit_button);
+  color: var(--login-submit_buttton_font);
+}
+
+#lsusubbtn:hover {
+  background-color: var(--login-submit_button_hover);
+}
+
+#lsignInForm {
+  margin-left: 15px;
+  margin-top: 150px;
+  position: absolute;
+}
+
+#lsim {
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  border-color: var(--login-field);
+  color: var(--login-field);
+}
+
+#lsim ::placeholder {
+  color: var(--login-field);
+}
+
+#lsim:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
+}
+
+#lsim:focus::placeholder {
+  color: var(--login-field_selected);
+}
+
+#lsip {
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  margin-top: 10px;
+  border-color: var(--login-field);
+  color: var(--login-field);
+}
+
+#lsip ::placeholder {
+  color: var(--login-field);
+}
+
+#lsip:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
+}
+
+#lsip:focus::placeholder {
+  color: var(--login-field_selected);
+}
+
+#lsisubbtn {
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  margin-top: 10px;
+}
+
+#lsierrmsg {
+  margin-top: 25px;
+  width: 300px;
+  display: none;
+  background-color: var(--login-err_box);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--login-err_box_font);
+  color: var(--login-err_box_font);
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+#lsicli {
+  margin-top: 5px;
+  margin-left: 5px;
+  float: left;
+}
+
+#lsierrlist {
+  font-family: sahel;
+}
+
+#lsignUpForm {
+  margin-left: 345px;
+  margin-top: 110px;
+  position: absolute;
+}
+
+#lsum {
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  border-color: var(--login-field);
+  color: var(--login-field);
+}
+
+#lsum ::placeholder {
+  color: var(--login-field);
+}
+
+#lsum:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
+}
+
+#lsum:focus::placeholder {
+  color: var(--login-field_selected);
+}
+
+#lsup {
+  margin-top: 8px;
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  border-color: var(--login-field);
+  color: var(--login-field);
+}
+
+#lsup ::placeholder {
+  color: var(--login-field);
+}
+
+#lsup:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
+}
+
+#lsup:focus::placeholder {
+  color: var(--login-field_selected);
+}
+
+#lsurp {
+  margin-top: 8px;
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  border-color: var(--login-field);
+  color: var(--login-field);
+}
+
+#lsurp ::placeholder {
+  color: var(--login-field);
+}
+
+#lsurp:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
+}
+
+#lsurp:focus::placeholder {
+  color: var(--login-field_selected);
+}
+
+#lsuchbox {
+  margin-right: 15px;
+  margin-top: 8px;
+  cursor: default;
+}
+
+#lchbox:checked + label {
+  color: var(--login-field_selected);
+}
+
+#lchbox[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px var(--login-field) !important;
+}
+
+#lchl {
+  font-family: sahel;
+  color: var(--login-chbox_font);
+}
+
+#lchl:hover {
+  color: var(--login-field_selected);
+}
+
+#lsusubbtn {
+  margin-top: 8px;
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+}
+
+#lsuerrmsg {
+  margin-top: 25px;
+  width: 300px;
+  display: none;
+  background-color: var(--login-err_box);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--login-err_box_font);
+  color: var(--login-err_box_font);
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+#lsucli {
+  margin-top: 5px;
+  margin-left: 5px;
+  float: left;
+}
+
+#lsuerrlist {
+  font-family: sahel;
+}

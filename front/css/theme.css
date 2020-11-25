@@ -40,3 +40,69 @@
   --icon-color: white;
 
 }
+
+
+
+/* for login */
+:root {
+  --login-body: #d3e4ee;
+  --login-tab: #ffffff;
+  --login-tab_button_active: #ffffff;
+  --login-tab_button: #3a6c8a;
+  --login-tab_button_hover: #283238;
+  --login-tab_button_hover_disable: #ffffff;
+  --login-tab_button_active_font: #193d53;
+  --login-tab_button_font: #ffffff;
+  --login-submit_button: #035a8d;
+  --login-submit_button_hover: #042f47;
+  --login-submit_buttton_font: #ffffff;
+  --login-field: #3a6c8a;
+  --login-field_selected: #11232e;
+  --login-link: #325e7a;
+  --login-link_hover: #10202b;
+  --login-chbox_font: #325e7a;
+  --login-err_box: #f1d7d7;
+  --login-err_box_font: #9f3a38;
+}
+
+:root.light {
+  --login-body: #d3e4ee;
+  --login-tab: #ffffff;
+  --login-tab_button_active: #ffffff;
+  --login-tab_button: #3a6c8a;
+  --login-tab_button_hover: #283238;
+  --login-tab_button_hover_disable: #ffffff;
+  --login-tab_button_active_font: #193d53;
+  --login-tab_button_font: #ffffff;
+  --login-submit_button: #035a8d;
+  --login-submit_button_hover: #042f47;
+  --login-submit_buttton_font: #ffffff;
+  --login-field: #a3a6a8;
+  --login-field_selected: #030303;
+  --login-link: #325e7a;
+  --login-link_hover: #10202b;
+  --login-chbox_font: #325e7a;
+  --login-err_box: #f1d7d7;
+  --login-err_box_font: #9f3a38;
+}
+
+:root.dark {
+  --login-body: #e0e0e0;
+  --login-tab: #272626;
+  --login-tab_button_active: #272626;
+  --login-tab_button: #a4a6a7;
+  --login-tab_button_hover: #ffffff;
+  --login-tab_button_hover_disable: #272626;
+  --login-tab_button_active_font: #ffffff;
+  --login-tab_button_font: #181818;
+  --login-submit_button: #d6d7d8;
+  --login-submit_button_hover: #ffffff;
+  --login-submit_buttton_font: #0f0f0f;
+  --login-field: #000000;
+  --login-field_selected: #969696;
+  --login-link: #3b3b3b;
+  --login-link_hover: #0f0f0f;
+  --login-chbox_font: #f1f1f1;
+  --login-err_box: #f1d7d7;
+  --login-err_box_font: #9f3a38;
+}
