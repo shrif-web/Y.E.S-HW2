@@ -17,61 +17,61 @@
 
 <body onresize="resizeFunc()" onload="loadFunc()">
     <button id="lpshup" onclick="loginPageShowUp()">show up</button>
-    <div id="bodycontainer" class="ui grid">
-        <div id="topgrid" class="two column row">
-            <div id="backtohomelink" class="left floated column" onclick="loginPageHide()"><a id="bcki"><i
+    <div id="lbodycontainer" class="ui grid">
+        <div id="ltopgrid" class="two column row">
+            <div id="lbacktohomelink" class="left floated column" onclick="loginPageHide()"><a id="lbcki"><i
                         class="caret left icon"></i>بازگشت به
                     خانه</a></div>
-            <div id="mainicon"><img id="logoimageid" class="ui small image" onclick="themeToggle()" onmouseover="hovericon()" onmouseout="unhovericon()"> </div>
+            <div id="lmainicon"><img id="llogoimageid" class="ui small image" onclick="themeToggle()" onmouseover="hovericon()" onmouseout="unhovericon()"> </div>
         </div>
-        <div id="mainContainer">
-            <div id="raisedsegment" class="ui raised segments">
-                <div id="verticalcontainer" class="ui horizontal segments">
-                    <img id="picframe">
-                    <div id="formcontainer" class="ui segment">
-                        <div id="tabbtns" class="ui two attached buttons">
-                            <button id="sibtn" class="ui button" onclick="changetab('si')">ورود</button>
-                            <button id="subtn" class="ui button" onclick="changetab('su')">ثبت نام</button>
+        <div id="lmainContainer">
+            <div id="lraisedsegment" class="ui raised segments">
+                <div id="lverticalcontainer" class="ui horizontal segments">
+                    <img id="lpicframe">
+                    <div id="lformcontainer" class="ui segment">
+                        <div id="ltabbtns" class="ui two attached buttons">
+                            <button id="lsibtn" class="ui button" onclick="changetab('si')">ورود</button>
+                            <button id="lsubtn" class="ui button" onclick="changetab('su')">ثبت نام</button>
                         </div>
-                        <div id="signInForm" class="ui form">
-                            <div id="siemail" class="field">
-                                <input id="sim" class="field" type="text" name="email" placeholder="ایمیل" dir="rtl">
+                        <div id="lsignInForm" class="ui form">
+                            <div id="lsiemail" class="field">
+                                <input id="lsim" class="field" type="text" name="email" placeholder="ایمیل" dir="rtl">
                             </div>
-                            <div id="sipass" class="field">
-                                <input id="sip" type="password" name="password" placeholder="رمز عبور" dir="rtl">
+                            <div id="lsipass" class="field">
+                                <input id="lsip" type="password" name="password" placeholder="رمز عبور" dir="rtl">
                             </div>
-                            <button id="sisubbtn" class="ui button" type="submit"
+                            <button id="lsisubbtn" class="ui button" type="submit"
                                 onclick="signInFormValidation()">ورود</button>
-                            <div id="sierrmsg" dir="rtl">
-                                <i id="sicli" class="close icon"
+                            <div id="lsierrmsg" dir="rtl">
+                                <i id="lsicli" class="close icon"
                                     onclick="closeErrMsg('sierrmsg', 'signInForm', '120px')"></i>
-                                <ul id="sierrlist" class="list">
+                                <ul id="lsierrlist" class="list">
                                 </ul>
                             </div>
                         </div>
-                        <div id="signUpForm" class="ui form">
-                            <div id="suemail" class="field">
-                                <input id="sum" type="text" name="email" placeholder="ایمیل" dir="rtl">
+                        <div id="lsignUpForm" class="ui form">
+                            <div id="lsuemail" class="field">
+                                <input id="lsum" type="text" name="email" placeholder="ایمیل" dir="rtl">
                             </div>
-                            <div id="supass" class="field">
-                                <input id="sup" type="password" name="password" placeholder="رمز عبور" dir="rtl">
+                            <div id="lsupass" class="field">
+                                <input id="lsup" type="password" name="password" placeholder="رمز عبور" dir="rtl">
                             </div>
-                            <div id="surepass" class="field">
-                                <input id="surp" type="password" name="retype-password" placeholder="تکرار رمز عبور"
+                            <div id="lsurepass" class="field">
+                                <input id="lsurp" type="password" name="retype-password" placeholder="تکرار رمز عبور"
                                     dir="rtl">
                             </div>
-                            <div id="suchbox" class="field" dir="rtl">
+                            <div id="lsuchbox" class="field" dir="rtl">
                                 <div class="ui checkbox" dir="rtl">
-                                    <input id="chbox" type="checkbox" tabindex="0">
-                                    <label id="chl">قوانین و شرایط را میپذیرم.</label>
+                                    <input id="lchbox" type="checkbox" tabindex="0">
+                                    <label id="lchl">قوانین و شرایط را میپذیرم.</label>
                                 </div>
                             </div>
-                            <button id="susubbtn" class="ui button" type="submit"
+                            <button id="lsusubbtn" class="ui button" type="submit"
                                 onclick="signUpFormValidation()">ارسال</button>
-                            <div id="suerrmsg" dir="rtl">
-                                <i id="sucli" class="close icon"
+                            <div id="lsuerrmsg" dir="rtl">
+                                <i id="lsucli" class="close icon"
                                     onclick="closeErrMsg('suerrmsg', 'signUpForm', '75px')"></i>
-                                <ul id="suerrlist" class="list">
+                                <ul id="lsuerrlist" class="list">
                                 </ul>
                             </div>
                         </div>
