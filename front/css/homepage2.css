@@ -12,8 +12,12 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   #threeColGrid {
+    display: none;
+  }
+
+  #table {
     display: none;
   }
 
@@ -31,6 +35,10 @@
 
 @media only screen and (min-width: 600px) {
   #mobileGrid {
+    display: none;
+  }
+
+  #mobileData {
     display: none;
   }
 
@@ -58,18 +66,6 @@
     max-width: 1000px;
     top: 90px;
     padding: 5%;
-  }
-}
-
-@media only screen and (min-width: 599px) {
-  #mobileData {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #table {
-    display: none;
   }
 }
 
@@ -137,6 +133,21 @@
   padding: 2%;
 }
 
+#mobileData {
+  background-color: var(--color-grid);
+  height: calc(100% - 170px);
+  width: 100%;
+  top: 90px;
+  padding: 20px;
+  position: fixed !important;
+  overflow: auto;
+  right: 0px;
+  left: 0px;
+  margin-bottom: 20px;
+  bottom: 80px !important;
+  padding: 2%;
+}
+
 .body {
   background-color: var(--color-grid);
 }
@@ -158,8 +169,6 @@ table {
   margin: auto;
   max-width: 1000px;
   padding: 4%;
-
-  display: none;
 }
 
 .summary {
@@ -174,19 +183,4 @@ table {
 
 #card {
   background-color: var(--color-card-back);
-}
-
-#mobileData {
-  background-color: var(--color-grid);
-  top: 90px;
-  padding: 20px;
-  position: fixed !important;
-  overflow: auto;
-  width: 100%;
-  height: calc(100% - 80px);
-  right: 0px;
-  left: 0px;
-  bottom: 80px !important;
-
-  display: none;
 }

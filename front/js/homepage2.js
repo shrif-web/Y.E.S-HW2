@@ -4,21 +4,21 @@ function onHomepage2Load() {
   var sidebar = document.getElementById("sidebar");
   // var menu = document.getElementById("rightBar");
 
-  if (window.screen.width < 600) {
-    if (sidebar.classList.contains("visible")) {
-      sidebar.classList.remove("visible");
-    }
-    if (sidebar.classList.contains("right")) {
-      sidebar.classList.remove("right");
-    }
-  } else {
-    if (!sidebar.classList.contains("visible")) {
-      sidebar.classList.add("visible");
-    }
-    if (!sidebar.classList.contains("right")) {
-      sidebar.classList.add("right");
-    }
-  }
+  // if (window.screen.width < 600) {
+  //   if (sidebar.classList.contains("visible")) {
+  //     sidebar.classList.remove("visible");
+  //   }
+  //   if (sidebar.classList.contains("right")) {
+  //     sidebar.classList.remove("right");
+  //   }
+  // } else {
+  //   if (!sidebar.classList.contains("visible")) {
+  //     sidebar.classList.add("visible");
+  //   }
+  //   if (!sidebar.classList.contains("right")) {
+  //     sidebar.classList.add("right");
+  //   }
+  // }
 }
 
 function setTheme(themeName) {
@@ -42,16 +42,25 @@ function toggleTheme() {
 }
 
 function onDataClick() {
-  console.log("table:", document.getElementById("table"));
-  console.log("mobileData:", document.getElementById("mobileData"));
+  document.getElementById("homeContent").style.display = 'none';
+  document.getElementById("dataContent").style.display = 'block';
 
-  if (window.screen.width >= 600) {
-    document.getElementById("table").style.display = "block";
-  } else {
-    document.getElementById("mobileData").style.display = "block";
-  }
+  document.getElementById("homeButton1").classList.remove("active")
+  document.getElementById("homeButton2").classList.remove("active")
 
-  document.getElementById("mobileGrid").style.display = "none";
-  document.getElementById("threeColGrid").style.display = "none";
-  document.getElementById("fourColGrid").style.display = "none";
+  document.getElementById("dataButton1").classList.add("active")
+  document.getElementById("dataButton2").classList.add("active")
+  
+
+}
+
+function onHomeClick() {
+  document.getElementById("dataContent").style.display = 'none';
+  document.getElementById("homeContent").style.display = 'block';
+
+  document.getElementById("homeButton1").classList.add("active")
+  document.getElementById("homeButton2").classList.add("active")
+
+  document.getElementById("dataButton1").classList.remove("active")
+  document.getElementById("dataButton2").classList.remove("active")
 }
