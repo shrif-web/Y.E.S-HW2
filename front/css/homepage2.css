@@ -249,3 +249,7 @@ table {
   background-color: var(--color-button) !important;
   margin: 10px;
 }
+
+i{
+  color: var(--icon-color);
+}
