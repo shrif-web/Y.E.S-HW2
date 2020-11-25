@@ -44,10 +44,10 @@ function onDataClick() {
     hSlide(document.getElementById("dataContent"), 0, 1200, 30, 1);
 
     document.getElementById("homeButton1").classList.remove("active");
-    document.getElementById("homeButton2").classList.remove("active");
+    // document.getElementById("homeButton2").classList.remove("active");
 
     document.getElementById("dataButton1").classList.add("active");
-    document.getElementById("dataButton2").classList.add("active");
+    // document.getElementById("dataButton2").classList.add("active");
     homePageCurrentTab = 'data';
   }
 }
@@ -58,10 +58,10 @@ function onHomeClick() {
     hSlide(document.getElementById("homeContent"), 1200, 0, 30, 1);
 
     document.getElementById("homeButton1").classList.add("active");
-    document.getElementById("homeButton2").classList.add("active");
+    // document.getElementById("homeButton2").classList.add("active");
 
     document.getElementById("dataButton1").classList.remove("active");
-    document.getElementById("dataButton2").classList.remove("active");
+    // document.getElementById("dataButton2").classList.remove("active");
     homePageCurrentTab = 'home';
   }
 }
