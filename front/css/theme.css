@@ -10,6 +10,7 @@
   
   --a-color: #7B5D5E;
   --icon-color:#7B5D5E;
+  --title-color: #FE6E78;
   --font-color: white;
   --font-family: sahel;
 
@@ -30,10 +31,12 @@
   --color-rightbar: #005073;
   --color-button: #007db3;
   --color-card-border: #007db3;
-  --color-card-back: rgba(233, 233, 233, 0.705);
+  --color-card-back: #2A628F;
+
   --font-color: white;
+  --title-color: #141B41;
   --font-family: sahel;
-  --a-color: white;
+  --a-color: #98B9F2;
   --icon-color: white;
 
 }
