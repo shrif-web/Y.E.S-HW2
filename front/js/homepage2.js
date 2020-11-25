@@ -14,9 +14,9 @@ function toggleTheme() {
   if (slider.checked) {
     setTheme("theme-dark");
     document.getElementById("headerIcon").src =
-      "../resources/blue_logo_200x200.png";
+      "../resources/blue_logo_200x200_copy.png";
     document.getElementById("headerIconMobile").src =
-      "../resources/blue_logo_200x200.png";
+      "../resources/blue_logo_200x200_copy.png";
     document.getElementById("dataTable").classList.remove("teal")
     document.getElementById("dataTable").classList.add("blue");
   } else {
