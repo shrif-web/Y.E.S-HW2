@@ -198,6 +198,48 @@ table {
   background-color: var(--color-card-back);
 }
 
+#mainContainer {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  overflow: hidden !important;
+  height: 1000px !important;
+  width: 2000px;
+  margin-left: 0px !important;
+}
+
+#homeContent {
+  margin-left: 0px !important;
+  margin-top: -100px !important;
+  position: relative !important;
+  width: 100%!important;
+  height: 100% !important;
+}
+
+#dataContent {
+  margin-left: -1200px !important;
+  margin-top: -900px !important;
+  position: relative !important;
+  width: 100%!important;
+  height: 100% !important;
+}
+
+#mobileGrid{
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+  position: relative !important;
+  width: 100%!important;
+  height: 100% !important;
+}
+
+#mobileData{
+  margin-left: 0px !important;
+  margin-top: -1000px !important;
+  position: relative !important;
+  width: 100%!important;
+  height: 100% !important;
+}
 .dataDirButton {
   background-color: var(--color-button) !important;
   margin: 10px;

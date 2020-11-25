@@ -41,24 +41,45 @@ function toggleTheme() {
   }
 }
 
+// tab switching handler
+var homePageCurrentTab = 'home';
+
 function onDataClick() {
-  document.getElementById("homeContent").style.display = "none";
-  document.getElementById("dataContent").style.display = "block";
+  if (homePageCurrentTab != 'data') {
+    hSlide(document.getElementById("homeContent"), 0, 1200, 30, 1);
+    hSlide(document.getElementById("dataContent"), 0, 1200, 30, 1);
 
-  document.getElementById("homeButton1").classList.remove("active");
-  document.getElementById("homeButton2").classList.remove("active");
+    document.getElementById("homeButton1").classList.remove("active");
+    document.getElementById("homeButton2").classList.remove("active");
 
-  document.getElementById("dataButton1").classList.add("active");
-  document.getElementById("dataButton2").classList.add("active");
+    document.getElementById("dataButton1").classList.add("active");
+    document.getElementById("dataButton2").classList.add("active");
+    homePageCurrentTab = 'data';
+  }
 }
 
 function onHomeClick() {
-  document.getElementById("dataContent").style.display = "none";
-  document.getElementById("homeContent").style.display = "block";
+  if (homePageCurrentTab != 'home') {
+    hSlide(document.getElementById("dataContent"), 1200, 0, 30, 1);
+    hSlide(document.getElementById("homeContent"), 1200, 0, 30, 1);
 
-  document.getElementById("homeButton1").classList.add("active");
-  document.getElementById("homeButton2").classList.add("active");
+    document.getElementById("homeButton1").classList.add("active");
+    document.getElementById("homeButton2").classList.add("active");
 
-  document.getElementById("dataButton1").classList.remove("active");
-  document.getElementById("dataButton2").classList.remove("active");
+    document.getElementById("dataButton1").classList.remove("active");
+    document.getElementById("dataButton2").classList.remove("active");
+    homePageCurrentTab = 'home';
+  }
+}
+
+function hSlide(element, x0, x1, step, fps) {
+  var left = x0;
+  var dir = (x0 < x1) ? "ltr" : "rtl";
+  var timer = setInterval(function () {
+    left = (dir == "ltr") ? left + step : left - step;
+    element.style.left = left + 'px'
+    if ((dir == "ltr" && left >= x1) || (dir == "rtl" && left <= x1)) {
+      clearInterval(timer);
+    }
+  }, fps);
 }
