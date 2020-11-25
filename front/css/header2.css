@@ -34,7 +34,7 @@
 
 #mobileFooter {
   border-radius: 0rem;
-  bottom: 0px;
+  bottom: -15px;
   height: 90px;
   background-color: var(--color-header);
   position: fixed;

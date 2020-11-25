@@ -21,15 +21,27 @@
     display: none;
   }
 
-  #sidebar {
-    max-height: calc(100% - 180px);
-    bottom: 90px;
+  #rightBar {
     position: fixed !important;
+    padding: 20px;
+    top: 70px;
+    width: 300px;
+    left: -300px;
+    bottom: 90px;
+    z-index: 1;
+    overflow: hidden;
+    direction: rtl;
+    background-color: var(--color-rightbar);
+    height: calc(100% - 160px);
+    transition: left 0.5s;
   }
 
-  #rightBar {
-    height: calc(100% - 180px);
-    overflow: hidden;
+  #rightBar.hide {
+    left: -300px;
+  }
+
+  #rightBar.hide {
+    left: 0px;
   }
 }
 
@@ -42,17 +54,31 @@
     display: none;
   }
 
-  #sidebar {
-    right: 0 !important;
-    bottom: 0px;
-    float: right;
-    max-height: calc(100% - 90px);
-    position: fixed !important;
-  }
-
   #rightBar {
-    height: calc(100% - 90px);
+    position: fixed !important;
+    padding: 20px;
+    top: 70px;
+    width: 300px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
     overflow: hidden;
+    direction: rtl;
+    background-color: var(--color-rightbar);
+    height: calc(100% - 70px);
+    /* height: calc(100% - 90px);
+    bottom: 90px;
+    overflow: hidden;
+    display: block;
+    right: 0px;
+
+    background-color: var(--color-rightbar);
+    width: 300px;
+    top: 90px;
+    overflow: hidden;
+    padding: 20px;
+    position: fixed !important;
+    direction: rtl; */
   }
 
   #fourColGrid,
@@ -67,29 +93,6 @@
     top: 90px;
     padding: 5%;
   }
-}
-
-#sidebar {
-  margin: 0 auto;
-  width: 300px;
-  top: 90px;
-  padding: 20px;
-  overflow: hidden;
-
-  direction: rtl;
-}
-
-#rightBar {
-  background-color: var(--color-rightbar);
-  height: 100%;
-  width: 300px;
-  top: 0px;
-  overflow: hidden;
-  padding: 20px;
-  position: fixed !important;
-  /* bottom: 0px !important; */
-  /* float: right; */
-  direction: rtl;
 }
 
 .ui.segment {
