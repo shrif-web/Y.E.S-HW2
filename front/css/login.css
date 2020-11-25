@@ -1,64 +1,64 @@
 :root {
-  --body: #d3e4ee;
-  --tab: #ffffff;
-  --tab_button_active: #ffffff;
-  --tab_button: #3a6c8a;
-  --tab_button_hover: #283238;
-  --tab_button_hover_disable: #ffffff;
-  --tab_button_active_font: #193d53;
-  --tab_button_font: #ffffff;
-  --submit_button: #035a8d;
-  --submit_button_hover: #042f47;
-  --submit_buttton_font: #ffffff;
-  --field: #3a6c8a;
-  --field_selected: #11232e;
-  --link: #325e7a;
-  --link_hover: #10202b;
-  --chbox_font: #325e7a;
-  --err_box: #f1d7d7;
-  --err_box_font: #9f3a38;
+  --login-body: #d3e4ee;
+  --login-tab: #ffffff;
+  --login-tab_button_active: #ffffff;
+  --login-tab_button: #3a6c8a;
+  --login-tab_button_hover: #283238;
+  --login-tab_button_hover_disable: #ffffff;
+  --login-tab_button_active_font: #193d53;
+  --login-tab_button_font: #ffffff;
+  --login-submit_button: #035a8d;
+  --login-submit_button_hover: #042f47;
+  --login-submit_buttton_font: #ffffff;
+  --login-field: #3a6c8a;
+  --login-field_selected: #11232e;
+  --login-link: #325e7a;
+  --login-link_hover: #10202b;
+  --login-chbox_font: #325e7a;
+  --login-err_box: #f1d7d7;
+  --login-err_box_font: #9f3a38;
 }
 
 :root.light {
-  --body: #d3e4ee;
-  --tab: #ffffff;
-  --tab_button_active: #ffffff;
-  --tab_button: #3a6c8a;
-  --tab_button_hover: #283238;
-  --tab_button_hover_disable: #ffffff;
-  --tab_button_active_font: #193d53;
-  --tab_button_font: #ffffff;
-  --submit_button: #035a8d;
-  --submit_button_hover: #042f47;
-  --submit_buttton_font: #ffffff;
-  --field: #a3a6a8;
-  --field_selected: #030303;
-  --link: #325e7a;
-  --link_hover: #10202b;
-  --chbox_font: #325e7a;
-  --err_box: #f1d7d7;
-  --err_box_font: #9f3a38;
+  --login-body: #d3e4ee;
+  --login-tab: #ffffff;
+  --login-tab_button_active: #ffffff;
+  --login-tab_button: #3a6c8a;
+  --login-tab_button_hover: #283238;
+  --login-tab_button_hover_disable: #ffffff;
+  --login-tab_button_active_font: #193d53;
+  --login-tab_button_font: #ffffff;
+  --login-submit_button: #035a8d;
+  --login-submit_button_hover: #042f47;
+  --login-submit_buttton_font: #ffffff;
+  --login-field: #a3a6a8;
+  --login-field_selected: #030303;
+  --login-link: #325e7a;
+  --login-link_hover: #10202b;
+  --login-chbox_font: #325e7a;
+  --login-err_box: #f1d7d7;
+  --login-err_box_font: #9f3a38;
 }
 
 :root.dark {
-  --body: #e0e0e0;
-  --tab: #272626;
-  --tab_button_active: #272626;
-  --tab_button: #a4a6a7;
-  --tab_button_hover: #ffffff;
-  --tab_button_hover_disable: #272626;
-  --tab_button_active_font: #ffffff;
-  --tab_button_font: #181818;
-  --submit_button: #d6d7d8;
-  --submit_button_hover: #ffffff;
-  --submit_buttton_font: #0f0f0f;
-  --field: #000000;
-  --field_selected: #969696;
-  --link: #3b3b3b;
-  --link_hover: #0f0f0f;
-  --chbox_font: #f1f1f1;
-  --err_box: #f1d7d7;
-  --err_box_font: #9f3a38;
+  --login-body: #e0e0e0;
+  --login-tab: #272626;
+  --login-tab_button_active: #272626;
+  --login-tab_button: #a4a6a7;
+  --login-tab_button_hover: #ffffff;
+  --login-tab_button_hover_disable: #272626;
+  --login-tab_button_active_font: #ffffff;
+  --login-tab_button_font: #181818;
+  --login-submit_button: #d6d7d8;
+  --login-submit_button_hover: #ffffff;
+  --login-submit_buttton_font: #0f0f0f;
+  --login-field: #000000;
+  --login-field_selected: #969696;
+  --login-link: #3b3b3b;
+  --login-link_hover: #0f0f0f;
+  --login-chbox_font: #f1f1f1;
+  --login-err_box: #f1d7d7;
+  --login-err_box_font: #9f3a38;
 }
 
 body {
@@ -66,7 +66,7 @@ body {
   overflow-x: scroll;
   overflow-y: scroll;
   white-space:nowrap;
-  background-color: var(--body);
+  background-color: var(--login-body);
 }
 
 a {
@@ -77,42 +77,42 @@ a {
   display: none;
 }
 
-#bodycontainer {
+#lbodycontainer {
   height: 100%;
   position: relative;
 }
 
-#backtohomelink {
+#lbacktohomelink {
   margin-top: 55px !important;
   padding-left: 10% !important;
-  color: var(--link);
+  color: var(--login-link);
 }
 
-#backtohomelink:hover {
-  color: var(--link_hover);
+#lbacktohomelink:hover {
+  color: var(--login-link_hover);
 }
 
-#bcki {
-  color: var(--link) !important;
+#lbcki {
+  color: var(--login-link) !important;
 }
 
-#bcki:hover {
-  color: var(--link_hover) !important;
+#lbcki:hover {
+  color: var(--login-link_hover) !important;
 }
 
-#imageid {
+#limageid {
   max-width: 100%;
   height: auto;
 }
 
-#mainicon {
+#lmainicon {
   margin-top: 30px !important;
   min-height: 20px;
   max-height: auto;
   margin-right: 7%;
 }
 
-#mainContainer {
+#lmainContainer {
   border-radius: 0px;
   margin: 0 auto;
   padding-top: 100px;
@@ -120,7 +120,7 @@ a {
   padding-right: 0px !important;
 }
 
-#raisedsegment {
+#lraisedsegment {
   border-radius: 0px;
   margin: 0 auto;
   width: 1000px;
@@ -128,272 +128,272 @@ a {
   padding-right: 0px !important;
 }
 
-#picframe {
-  background-color: var(--tab);
+#lpicframe {
+  background-color: var(--login-tab);
   height: 470px;
   width: 100%;
   max-width: 668px;
   border: none;
 }
 
-#formcontainer {
+#lformcontainer {
   padding-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
   height: 470px;
   border: none;
-  background-color: var(--tab);
+  background-color: var(--login-tab);
   overflow: hidden;
   position: relative;
 }
 
-#tabbtns {
+#ltabbtns {
   cursor: pointer;
   position: absolute;
 }
 
-#sibtn {
+#lsibtn {
   font-family: sahel;
   width: 165.5px;
   border-radius: 0px;
-  background-color: var(--tab_button_active);
-  color: var(--tab_button_active_font);
+  background-color: var(--login-tab_button_active);
+  color: var(--login-tab_button_active_font);
 }
 
-#sibtn:hover {
-  background-color: var(--tab_button_hover_disable);
+#lsibtn:hover {
+  background-color: var(--login-tab_button_hover_disable);
 }
 
-#subtn {
+#lsubtn {
   font-family: sahel;
   width: 165.5px;
   border-radius: 0px;
-  background-color: var(--tab_button);
-  color: var(--tab_button_font);
+  background-color: var(--login-tab_button);
+  color: var(--login-tab_button_font);
 }
 
-#subtn:hover {
-  background-color: var(--tab_button_hover);
+#lsubtn:hover {
+  background-color: var(--login-tab_button_hover);
 }
 
-#sisubbtn {
-  background-color: var(--submit_button);
-  color: var(--submit_buttton_font);
+#lsisubbtn {
+  background-color: var(--login-submit_button);
+  color: var(--login-submit_buttton_font);
 }
 
-#sisubbtn:hover {
-  background-color: var(--submit_button_hover);
+#lsisubbtn:hover {
+  background-color: var(--login-submit_button_hover);
 }
 
-#susubbtn {
-  background-color: var(--submit_button);
-  color: var(--submit_buttton_font);
+#lsusubbtn {
+  background-color: var(--login-submit_button);
+  color: var(--login-submit_buttton_font);
 }
 
-#susubbtn:hover {
-  background-color: var(--submit_button_hover);
+#lsusubbtn:hover {
+  background-color: var(--login-submit_button_hover);
 }
 
-#signInForm {
+#lsignInForm {
   margin-left: 15px;
   margin-top: 150px;
   position: absolute;
 }
 
-#sim {
+#lsim {
   width: 300px;
   border-radius: 0px;
   font-family: sahel;
-  border-color: var(--field);
-  color: var(--field);
+  border-color: var(--login-field);
+  color: var(--login-field);
 }
 
-#sim ::placeholder {
-  color: var(--field);
+#lsim ::placeholder {
+  color: var(--login-field);
 }
 
-#sim:focus {
-  border-color: var(--field_selected);
-  color: var(--field_selected);
+#lsim:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
 }
 
-#sim:focus::placeholder {
-  color: var(--field_selected);
+#lsim:focus::placeholder {
+  color: var(--login-field_selected);
 }
 
-#sip {
-  width: 300px;
-  border-radius: 0px;
-  font-family: sahel;
-  margin-top: 10px;
-  border-color: var(--field);
-  color: var(--field);
-}
-
-#sip ::placeholder {
-  color: var(--field);
-}
-
-#sip:focus {
-  border-color: var(--field_selected);
-  color: var(--field_selected);
-}
-
-#sip:focus::placeholder {
-  color: var(--field_selected);
-}
-
-#sisubbtn {
+#lsip {
   width: 300px;
   border-radius: 0px;
   font-family: sahel;
   margin-top: 10px;
+  border-color: var(--login-field);
+  color: var(--login-field);
 }
 
-#sierrmsg {
+#lsip ::placeholder {
+  color: var(--login-field);
+}
+
+#lsip:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
+}
+
+#lsip:focus::placeholder {
+  color: var(--login-field_selected);
+}
+
+#lsisubbtn {
+  width: 300px;
+  border-radius: 0px;
+  font-family: sahel;
+  margin-top: 10px;
+}
+
+#lsierrmsg {
   margin-top: 25px;
   width: 300px;
   display: none;
-  background-color: var(--err_box);
+  background-color: var(--login-err_box);
   border-width: 1px;
   border-style: solid;
-  border-color: var(--err_box_font);
-  color: var(--err_box_font);
+  border-color: var(--login-err_box_font);
+  color: var(--login-err_box_font);
   padding-bottom: 1px;
   padding-top: 1px;
 }
 
-#sicli {
+#lsicli {
   margin-top: 5px;
   margin-left: 5px;
   float: left;
 }
 
-#sierrlist {
+#lsierrlist {
   font-family: sahel;
 }
 
-#signUpForm {
+#lsignUpForm {
   margin-left: 345px;
   margin-top: 110px;
   position: absolute;
 }
 
-#sum {
+#lsum {
   width: 300px;
   border-radius: 0px;
   font-family: sahel;
-  border-color: var(--field);
-  color: var(--field);
+  border-color: var(--login-field);
+  color: var(--login-field);
 }
 
-#sum ::placeholder {
-  color: var(--field);
+#lsum ::placeholder {
+  color: var(--login-field);
 }
 
-#sum:focus {
-  border-color: var(--field_selected);
-  color: var(--field_selected);
+#lsum:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
 }
 
-#sum:focus::placeholder {
-  color: var(--field_selected);
+#lsum:focus::placeholder {
+  color: var(--login-field_selected);
 }
 
-#sup {
+#lsup {
   margin-top: 8px;
   width: 300px;
   border-radius: 0px;
   font-family: sahel;
-  border-color: var(--field);
-  color: var(--field);
+  border-color: var(--login-field);
+  color: var(--login-field);
 }
 
-#sup ::placeholder {
-  color: var(--field);
+#lsup ::placeholder {
+  color: var(--login-field);
 }
 
-#sup:focus {
-  border-color: var(--field_selected);
-  color: var(--field_selected);
+#lsup:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
 }
 
-#sup:focus::placeholder {
-  color: var(--field_selected);
+#lsup:focus::placeholder {
+  color: var(--login-field_selected);
 }
 
-#surp {
+#lsurp {
   margin-top: 8px;
   width: 300px;
   border-radius: 0px;
   font-family: sahel;
-  border-color: var(--field);
-  color: var(--field);
+  border-color: var(--login-field);
+  color: var(--login-field);
 }
 
-#surp ::placeholder {
-  color: var(--field);
+#lsurp ::placeholder {
+  color: var(--login-field);
 }
 
-#surp:focus {
-  border-color: var(--field_selected);
-  color: var(--field_selected);
+#lsurp:focus {
+  border-color: var(--login-field_selected);
+  color: var(--login-field_selected);
 }
 
-#surp:focus::placeholder {
-  color: var(--field_selected);
+#lsurp:focus::placeholder {
+  color: var(--login-field_selected);
 }
 
-#suchbox {
+#lsuchbox {
   margin-right: 15px;
   margin-top: 8px;
   cursor: default;
 }
 
-#chbox:checked + label {
-  color: var(--field_selected);
+#lchbox:checked + label {
+  color: var(--login-field_selected);
 }
 
-#chbox[type="checkbox"]:checked {
-  box-shadow: 0 0 0 3px var(--field) !important;
+#lchbox[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px var(--login-field) !important;
 }
 
-#chl {
+#lchl {
   font-family: sahel;
-  color: var(--chbox_font);
+  color: var(--login-chbox_font);
 }
 
-#chl:hover {
-  color: var(--field_selected);
+#lchl:hover {
+  color: var(--login-field_selected);
 }
 
-#susubbtn {
+#lsusubbtn {
   margin-top: 8px;
   width: 300px;
   border-radius: 0px;
   font-family: sahel;
 }
 
-#suerrmsg {
+#lsuerrmsg {
   margin-top: 25px;
   width: 300px;
   display: none;
-  background-color: var(--err_box);
+  background-color: var(--login-err_box);
   border-width: 1px;
   border-style: solid;
-  border-color: var(--err_box_font);
-  color: var(--err_box_font);
+  border-color: var(--login-err_box_font);
+  color: var(--login-err_box_font);
   padding-bottom: 1px;
   padding-top: 1px;
 }
 
-#sucli {
+#lsucli {
   margin-top: 5px;
   margin-left: 5px;
   float: left;
 }
 
-#suerrlist {
+#lsuerrlist {
   font-family: sahel;
 }

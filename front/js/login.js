@@ -8,7 +8,7 @@ const errdarksrc = "../resources/errpicdark.jpg";
 
 function loadFunc() {
     resizeFunc();
-    document.getElementById("picframe").src = signinsrc;
+    document.getElementById("lpicframe").src = signinsrc;
     loadtheme(1);
 }
 
@@ -28,7 +28,7 @@ function loadtheme(themeid) {
 }
 
 function loadiconimg(){
-    img = document.getElementById("logoimageid");
+    img = document.getElementById("llogoimageid");
     if (theme == 1) {
         img.src = bluelogosrc;
     } else if (theme == 0) {
@@ -37,43 +37,43 @@ function loadiconimg(){
 }
 
 function hovericon() {
-    document.getElementById("logoimageid").src = multilogosrc;
+    document.getElementById("llogoimageid").src = multilogosrc;
 }
 
 function unhovericon() {
-    document.getElementById("logoimageid").src = (theme == 1) ? bluelogosrc : blacklogosrc;
+    document.getElementById("llogoimageid").src = (theme == 1) ? bluelogosrc : blacklogosrc;
 }
 
 function resizeFunc() {
     if (window.screen.width <= 600) {
-        document.getElementById("picframe").style.display = "none";
-        document.getElementById("raisedsegment").style.width = "332px";
+        document.getElementById("lpicframe").style.display = "none";
+        document.getElementById("lraisedsegment").style.width = "332px";
     } else {
-        document.getElementById("picframe").style.display = "block";
-        document.getElementById("raisedsegment").style.width = "1000px";
+        document.getElementById("lpicframe").style.display = "block";
+        document.getElementById("lraisedsegment").style.width = "1000px";
     }
 }
 
 var tabNum = 0;
 //Issue: mouse hover style gone 
 function changetab(mode) {
-    var siform = document.getElementById("signInForm");
-    var suform = document.getElementById("signUpForm");
-    var sibtab = document.getElementById("sibtn");
-    var subtab = document.getElementById("subtn");
-    var picFrame = document.getElementById("picframe");
+    var siform = document.getElementById("lsignInForm");
+    var suform = document.getElementById("lsignUpForm");
+    var sibtab = document.getElementById("lsibtn");
+    var subtab = document.getElementById("lsubtn");
+    var picFrame = document.getElementById("lpicframe");
     if (mode == 'si' && tabNum == 1) {
         hSlide(siform, -315, 15, 30, 1);
         hSlide(suform, 15, 345, 30, 1);
-        sibtab.setAttribute('style', "  background-color: var(--tab_button_active); color: var(--tab_button_active_font);");
-        subtab.setAttribute('style', "  background-color: var(--tab_button); color: var(--tab_button_font);");
+        sibtab.setAttribute('style', "  background-color: var(--login-tab_button_active); color: var(--login-tab_button_active_font);");
+        subtab.setAttribute('style', "  background-color: var(--login-tab_button); color: var(--login-tab_button_font);");
         picFrame.src = signinsrc;
         tabNum = 0;
     } else if (mode == 'su' && tabNum == 0) {
         hSlide(siform, 15, -315, 30, 1);
         hSlide(suform, 345, 15, 30, 1);
-        subtab.setAttribute('style', "  background-color: var(--tab_button_active); color: var(--tab_button_active_font);");
-        sibtab.setAttribute('style', "  background-color: var(--tab_button); color: var(--tab_button_font);");
+        subtab.setAttribute('style', "  background-color: var(--login-tab_button_active); color: var(--login-tab_button_active_font);");
+        sibtab.setAttribute('style', "  background-color: var(--login-tab_button); color: var(--login-tab_button_font);");
         picFrame.src = signupsrc;
         tabNum = 1;
     }
@@ -92,25 +92,25 @@ function validateEmail(email) {
 }
 
 function signInFormValidation() {
-    container = document.getElementById("raisedsegment");
+    container = document.getElementById("lraisedsegment");
     cssVars = getComputedStyle(document.documentElement);
-    form = document.getElementById("signInForm");
-    mail_input = document.getElementById("siemail");
-    pass_input = document.getElementById("sipass");
-    err_message = document.getElementById("sierrmsg");
-    err_list = document.getElementById("sierrlist");
-    mail_field = document.getElementById("sim");
-    pass_field = document.getElementById("sip");
-    picFrame = document.getElementById("picframe");
-    mail = document.getElementById("siemail").getElementsByTagName("*")[0].value;
-    pass = document.getElementById("sipass").getElementsByTagName("*")[0].value;
-    pass = document.getElementById("sipass").getElementsByTagName("*")[0].value;
+    form = document.getElementById("lsignInForm");
+    mail_input = document.getElementById("lsiemail");
+    pass_input = document.getElementById("lsipass");
+    err_message = document.getElementById("lsierrmsg");
+    err_list = document.getElementById("lsierrlist");
+    mail_field = document.getElementById("lsim");
+    pass_field = document.getElementById("lsip");
+    picFrame = document.getElementById("lpicframe");
+    mail = document.getElementById("lsiemail").getElementsByTagName("*")[0].value;
+    pass = document.getElementById("lsipass").getElementsByTagName("*")[0].value;
+    pass = document.getElementById("lsipass").getElementsByTagName("*")[0].value;
     form.style.marginTop = "150px";
     formStepDecrease = 15;
     mail_input.className = "field";
     pass_input.className = "field";
-    mail_field.style.borderColor = cssVars.getPropertyValue('--field');
-    pass_field.style.borderColor = cssVars.getPropertyValue('--field');
+    mail_field.style.borderColor = cssVars.getPropertyValue('--login-field');
+    pass_field.style.borderColor = cssVars.getPropertyValue('--login-field');
     picFrame.src = signinsrc;
     err_message.style.display = "none";
     err_list.innerHTML = "";
@@ -120,7 +120,7 @@ function signInFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         mail_input.className = "field error";
-        mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+        mail_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
         err_list.innerHTML += "<li>ایمیلی درج نشده است.</li>";
     }
     else
@@ -128,7 +128,7 @@ function signInFormValidation() {
             err = true;
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             mail_input.className = "field error";
-            mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+            mail_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
             err_list.innerHTML += "<li>ایمیل وارد شده نامعتبر است.</li>";
         }
 
@@ -136,7 +136,7 @@ function signInFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         pass_input.className = "field error";
-        pass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+        pass_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
         err_list.innerHTML += "<li>رمز عبوری درج نشده است.</li>";
     }
 
@@ -149,34 +149,34 @@ function signInFormValidation() {
 }
 
 function signUpFormValidation() {
-    container = document.getElementById("raisedsegment");
+    container = document.getElementById("lraisedsegment");
     cssVars = getComputedStyle(document.documentElement);
-    form = document.getElementById("signUpForm");
-    mail_input = document.getElementById("suemail");
-    pass_input = document.getElementById("supass");
-    repass_input = document.getElementById("surepass");
-    checkbox_input = document.getElementById("suchbox");
-    err_message = document.getElementById("suerrmsg");
-    err_list = document.getElementById("suerrlist");
-    mail_field = document.getElementById("sum");
-    pass_field = document.getElementById("sup");
-    repass_field = document.getElementById("surp");
-    checkbox_lable = document.getElementById("chl");
-    picFrame = document.getElementById("picframe");
-    mail = document.getElementById("suemail").getElementsByTagName("*")[0].value;
-    pass = document.getElementById("supass").getElementsByTagName("*")[0].value;
-    repass = document.getElementById("surepass").getElementsByTagName("*")[0].value;
-    checkbox = document.getElementById("chbox")
+    form = document.getElementById("lsignUpForm");
+    mail_input = document.getElementById("lsuemail");
+    pass_input = document.getElementById("lsupass");
+    repass_input = document.getElementById("lsurepass");
+    checkbox_input = document.getElementById("lsuchbox");
+    err_message = document.getElementById("lsuerrmsg");
+    err_list = document.getElementById("lsuerrlist");
+    mail_field = document.getElementById("lsum");
+    pass_field = document.getElementById("lsup");
+    repass_field = document.getElementById("lsurp");
+    checkbox_lable = document.getElementById("lchl");
+    picFrame = document.getElementById("lpicframe");
+    mail = document.getElementById("lsuemail").getElementsByTagName("*")[0].value;
+    pass = document.getElementById("lsupass").getElementsByTagName("*")[0].value;
+    repass = document.getElementById("lsurepass").getElementsByTagName("*")[0].value;
+    checkbox = document.getElementById("lchbox")
     form.style.marginTop = "110px";
     formStepDecrease = 13;
     mail_input.className = "field";
     pass_input.className = "field";
     repass_input.className = "field";
     checkbox_input.className = "field";
-    mail_field.style.borderColor = cssVars.getPropertyValue('--field');
-    pass_field.style.borderColor = cssVars.getPropertyValue('--field');
-    repass_field.style.borderColor = cssVars.getPropertyValue('--field');
-    checkbox_lable.style.color = cssVars.getPropertyValue('--field');
+    mail_field.style.borderColor = cssVars.getPropertyValue('--login-field');
+    pass_field.style.borderColor = cssVars.getPropertyValue('--login-field');
+    repass_field.style.borderColor = cssVars.getPropertyValue('--login-field');
+    checkbox_lable.style.color = cssVars.getPropertyValue('--login-field');
     picFrame.src = signupsrc;
     err_message.style.display = "none";
     err_list.innerHTML = "";
@@ -186,7 +186,7 @@ function signUpFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         mail_input.className = "field error";
-        mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+        mail_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
         err_list.innerHTML += "<li>ایمیلی درج نشده است.</li>";
     }
     else
@@ -194,7 +194,7 @@ function signUpFormValidation() {
             err = true;
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             mail_input.className = "field error";
-            mail_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+            mail_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
             err_list.innerHTML += "<li>ایمیل وارد شده نامعتبر است.</li>";
         }
 
@@ -202,14 +202,14 @@ function signUpFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         pass_input.className = "field error";
-        pass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+        pass_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
         err_list.innerHTML += "<li>رمز عبوری درج نشده است.</li>";
     } else
         if (pass != "" && repass == "") {
             err = true;
             form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
             repass_input.className = "field error";
-            repass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+            repass_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
             err_list.innerHTML += "<li>رمز عبور وارد شده تکرار نشده است.</li>";
         } else
             if (pass != repass) {
@@ -217,8 +217,8 @@ function signUpFormValidation() {
                 form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
                 repass_input.className = "field error";
                 pass_input.className = "field error";
-                pass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
-                repass_field.style.borderColor = cssVars.getPropertyValue('--err_box_font');
+                pass_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
+                repass_field.style.borderColor = cssVars.getPropertyValue('--login-err_box_font');
                 err_list.innerHTML += "<li>رمز های عبور با یکدیگر مطابقت نمیکنند.</li>";
             }
 
@@ -226,7 +226,7 @@ function signUpFormValidation() {
         err = true;
         form.style.marginTop = (parseInt(form.style.marginTop) - formStepDecrease) + "px";
         checkbox_input.className = "field error";
-        checkbox_lable.style.color = cssVars.getPropertyValue('--err_box_font');
+        checkbox_lable.style.color = cssVars.getPropertyValue('--login-err_box_font');
         err_list.innerHTML += "<li>قوانین و شرایط باید پذیرفته شوند.</li>";
     }
 
@@ -239,7 +239,7 @@ function signUpFormValidation() {
 }
 
 function loginPageHide() {
-    container = document.getElementById("bodycontainer");
+    container = document.getElementById("lbodycontainer");
     vslide(container, 0, -1000, 10, 1);
     fade(container, function () {
         document.getElementById("lpshup").style.display = "block";        // for testing
@@ -248,7 +248,7 @@ function loginPageHide() {
 
 function loginPageShowUp() {
     document.getElementById("lpshup").style.display = "none";        // for testing
-    container = document.getElementById("bodycontainer");
+    container = document.getElementById("lbodycontainer");
     vslide(container, -300, 0, 10, 1);
     unfade(container);
 }
