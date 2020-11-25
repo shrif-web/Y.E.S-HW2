@@ -48,7 +48,7 @@
   --login-field: #3a6c8a;
   --login-field_selected: #11232e;
   --login-link: #325e7a;
-  --login-link_hover: #10202b;
+  --login-link_hover: #769db8;
   --login-chbox_font: #325e7a;
   --login-err_box: #f1d7d7;
   --login-err_box_font: #9f3a38;
@@ -70,10 +70,10 @@
   --login-submit_button: #FE6E78;
   --login-submit_button_hover: #f55661;
   --login-submit_buttton_font: white;
-  --login-field: #3a6c8a;
+  --login-field: #725409;
   --login-field_selected: #030303;
-  --login-link: white;
-  --login-link_hover: #10202b;
+  --login-link: rgb(31, 59, 8);
+  --login-link_hover: #000000;
   --login-chbox_font: #7B5D5E;
   --login-err_box: #f1d7d7;
   --login-err_box_font: #9f3a38;
