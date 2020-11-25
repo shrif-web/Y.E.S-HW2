@@ -29,7 +29,6 @@
   height: 90px;
   position: fixed;
   top: 0;
-  /* display: flex; */
   padding: 10px;
   z-index: 2;
   align-content: center;
@@ -52,7 +51,10 @@
 
 #homeButton1,
 #dataButton1,
-#footerButton{
+#footerButtonHome,
+#footerButtonData,
+#footerButtonRegister,
+#footerButtonLogin{
   font-weight: bold;
   color: var(--font-color);
 }
@@ -103,8 +105,9 @@ body > .ui.container {
   min-width: 100px;
 }
 
-.ui .item {
+.ui .item:not(#texts) {
   color: #fff;
+  height: 90px;
 }
 
 .ui .item:hover:not(#texts) {

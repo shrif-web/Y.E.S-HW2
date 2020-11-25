@@ -34,7 +34,6 @@
     <link href="../css/theme.css" rel="stylesheet" />
     <link href="../css/slider.css" rel="stylesheet" />
     <link href="../css/homepage2.css" rel="stylesheet" />
-    <link href="../css/boxi.css" rel="stylesheet" />
 
     <script src="../js/homepage2.js"></script>
 
@@ -81,11 +80,11 @@
     <div class="ui fixed borderless huge menu" id="mobileHeader">
       <div class="ui container grid">
         <div class="row">
-          <a class="item" id="sidebarButton" onclick="toggleSideBar()">
+          <a class="item" id="sidebarButton">
             <i class="sidebar icon"></i>
           </a>
           <div class="right menu">
-            <a class="item"  onclick="onDataClick()">
+            <a class="item">
               <img
                 class="ui image"
                 src="../resources/multi_logo_200x200_copy.png"
@@ -99,10 +98,10 @@
 
     <!-- Footer -->
     <div class="ui four item  menu" id="mobileFooter">
-      <a class="item"id="footerButton" >ثبت‌نام</a>
-      <a class="item" id="footerButton">ورود</a>
-      <a class="item" onclick="onDataClick()" id="footerButton">داده‌ها</a>
-      <a class="active item" onclick="onHomeClick()" id="footerButton">خانه</a>
+      <a class="item"id="footerButtonRegister" >ثبت‌نام</a>
+      <a class="item" id="footerButtonLogin">ورود</a>
+      <a class="item" onclick="onDataClick()" id="footerButtonData">داده‌ها</a>
+      <a class="active item" onclick="onHomeClick()" id="footerButtonHome">خانه</a>
     </div>
 
     <!-- Sidebar -->
@@ -317,7 +316,7 @@
         </div>
 
         <div class="ui column" id="mobileData">
-          <div class="ui card data_card boxi" id="card">
+          <div class="ui card data_card" id="card">
             <div class="content">
               <div class="header">عرشیا</div>
             </div>
@@ -341,7 +340,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi" id="card">
+          <div class="ui card data_card" id="card">
             <div class="content">
               <div class="header">بهار</div>
             </div>
@@ -365,7 +364,7 @@
               </div>
             </div>
           </div>
-          <div class="ui card data_card boxi" id="card">
+          <div class="ui card data_card" id="card">
             <div class="content">
               <div class="header">محمدرضا</div>
             </div>

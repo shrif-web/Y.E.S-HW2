@@ -1,8 +1,5 @@
 @import "theme.css";
 
-
-
-
 @media only screen and (max-width: 999px) {
   #fourColGrid {
     display: none;
@@ -69,19 +66,6 @@
     direction: rtl;
     background-color: var(--color-rightbar);
     height: calc(100% - 70px);
-    /* height: calc(100% - 90px);
-    bottom: 90px;
-    overflow: hidden;
-    display: block;
-    right: 0px;
-
-    background-color: var(--color-rightbar);
-    width: 300px;
-    top: 90px;
-    overflow: hidden;
-    padding: 20px;
-    position: fixed !important;
-    direction: rtl; */
   }
 
   #fourColGrid,
@@ -91,6 +75,7 @@
     right: 300px;
     left: 0px;
     overflow: auto;
+    height: calc(100% - 100px);
     margin: auto;
     max-width: 1000px;
     top: 90px;
@@ -121,7 +106,7 @@
   overflow: hidden;
   padding: 0px;
 }
-#card_img{
+#card_img {
   width: 100%;
   height: 100%;
 }
@@ -144,21 +129,6 @@
   overflow: auto;
   right: 0px;
   left: 0px;
-  bottom: 80px !important;
-  padding: 2%;
-}
-
-#mobileData {
-  /*background-color: var(--color-grid);*/
-  height: calc(100% - 170px);
-  width: 100%;
-  top: 90px;
-  padding: 20px;
-  position: fixed !important;
-  overflow: auto;
-  right: 0px;
-  left: 0px;
-  margin-bottom: 20px;
   bottom: 80px !important;
   padding: 2%;
 }
@@ -216,7 +186,7 @@ table {
   margin-left: 0px !important;
   margin-top: 0px !important;
   position: absolute !important;
-  width: 100%!important;
+  width: 100% !important;
   height: 100% !important;
 }
 
@@ -224,26 +194,28 @@ table {
   margin-left: -1200px !important;
   margin-top: 0px !important;
   position: absolute !important;
-  width: 100%!important;
-  height: 100%!important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
-#mobileGrid{
+#mobileGrid {
   margin-left: 0px !important;
   margin-top: 0px !important;
   position: absolute !important;
-  width: 100%!important;
+  width: 100% !important;
   height: calc(100% - 180px);
   bottom: 90px;
+  overflow: auto;
 }
 
-#mobileData{
+#mobileData {
   margin-left: 0px !important;
   margin-top: 0px !important;
   position: absolute !important;
-  width: 100%!important;
+  width: 100% !important;
   height: calc(100% - 180px);
   bottom: 90px;
+  overflow: auto;
 }
 
 .dataDirButton {
@@ -262,6 +234,6 @@ table {
   color: var(--title-color);
 }
 
-i{
+i {
   color: var(--icon-color);
 }
