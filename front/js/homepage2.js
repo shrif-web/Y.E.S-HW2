@@ -89,9 +89,9 @@ function hLSlide(element, x0, x1, step, fps) {
 }
 
 // for login page
-const bluelogosrc = "../resources/blue_logo.png";
-const blacklogosrc = "../resources/black_logo.png";
-const multilogosrc = "../resources/multi_logo.png";
+const bluelogosrc = "../resources/multi_logo.png";
+const blacklogosrc = "../resources/blue_logo.png";
+const multilogosrc = "../resources/blue_logo.png";
 const signinsrc = "../resources/signinpic.gif";
 const signupsrc = "../resources/signuppic.jpg";
 const errlightsrc = "../resources/errpiclight.jpg";
@@ -126,7 +126,7 @@ function loadiconimg() {
 }
 
 function hovericon() {
-  document.getElementById("llogoimageid").src = multilogosrc;
+  document.getElementById("llogoimageid").src = (theme == 1) ? blacklogosrc : bluelogosrc;
 }
 
 function unhovericon() {

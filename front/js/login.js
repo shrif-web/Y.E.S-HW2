@@ -1,6 +1,6 @@
-const bluelogosrc = "../resources/blue_logo.png";
-const blacklogosrc = "../resources/black_logo.png";
-const multilogosrc = "../resources/multi_logo.png";
+// const bluelogosrc = "../resources/multi_logo.png";
+// const blacklogosrc = "../resources/blue_logo.png";
+// const multilogosrc = "../resources/black_logo.png";
 const signinsrc = "../resources/signinpic.gif";
 const signupsrc = "../resources/signuppic.jpg";
 const errlightsrc = "../resources/errpiclight.jpg";
