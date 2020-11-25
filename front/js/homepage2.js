@@ -4,21 +4,21 @@ function onHomepage2Load() {
   var sidebar = document.getElementById("sidebar");
   // var menu = document.getElementById("rightBar");
 
-  if (window.screen.width < 600) {
-    if (sidebar.classList.contains("visible")) {
-      sidebar.classList.remove("visible");
-    }
-    if (sidebar.classList.contains("right")) {
-      sidebar.classList.remove("right");
-    }
-  } else {
-    if (!sidebar.classList.contains("visible")) {
-      sidebar.classList.add("visible");
-    }
-    if (!sidebar.classList.contains("right")) {
-      sidebar.classList.add("right");
-    }
-  }
+  // if (window.screen.width < 600) {
+  //   if (sidebar.classList.contains("visible")) {
+  //     sidebar.classList.remove("visible");
+  //   }
+  //   if (sidebar.classList.contains("right")) {
+  //     sidebar.classList.remove("right");
+  //   }
+  // } else {
+  //   if (!sidebar.classList.contains("visible")) {
+  //     sidebar.classList.add("visible");
+  //   }
+  //   if (!sidebar.classList.contains("right")) {
+  //     sidebar.classList.add("right");
+  //   }
+  // }
 }
 
 function setTheme(themeName) {
