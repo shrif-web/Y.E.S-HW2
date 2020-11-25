@@ -185,7 +185,7 @@ table {
 
 #dataContent {
   margin-left: -1200px !important;
-  margin-top: 0px !important;
+  margin-top: 0px !important; 
   position: absolute !important;
   width: 100% !important;
   height: 100% !important;
@@ -287,6 +287,7 @@ a {
   padding-top: 100px;
   padding-left: 0px !important;
   padding-right: 0px !important;
+  padding-bottom: 120px !important;
 }
 
 #lraisedsegment {
@@ -365,7 +366,7 @@ a {
 }
 
 #lsignInForm {
-  margin-left: 15px;
+  margin-left: 13px;
   margin-top: 150px;
   position: absolute;
 }
@@ -444,7 +445,7 @@ a {
 }
 
 #lsignUpForm {
-  margin-left: 345px;
+  margin-left: 343px;
   margin-top: 110px;
   position: absolute;
 }

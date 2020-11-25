@@ -134,14 +134,23 @@ function unhovericon() {
 }
 
 function loginResizeFunc() {
+  lpic = document.getElementById("lpicframe");
+  container = document.getElementById("lraisedsegment");
+  form = document.getElementById("lformcontainer");
+
+
   if (window.screen.width <= 600 || window.innerWidth <= 600) {
-    document.getElementById("lpicframe").style.display = "none";
-    document.getElementById("lraisedsegment").style.width = "332px";
-    document.getElementById("lbodycontainer").style.height = (window.screen.height + parseInt(document.getElementById("lraisedsegment").style.marginTop) + parseInt(document.getElementById("lraisedsegment").style.height)) + "px";
+    lpic.style.display = "none";
+    container.style.width = "332px";
+  } else if (window.screen.width <= 1100 || window.innerWidth <= 1100) {
+    lpic.style.display = "block";
+    displayCurrWidth = (window.screen.width <= window.innerWidth) ? window.screen.width : window.innerWidth;
+    container.style.width = displayCurrWidth - 100 + "px";
+    lpic.style.width = displayCurrWidth - 100 - 332 + "px";
   } else {
-    document.getElementById("lpicframe").style.display = "block";
-    document.getElementById("lraisedsegment").style.width = "1000px";
-    document.getElementById("lbodycontainer").style.height = (window.screen.height + parseInt(document.getElementById("lraisedsegment").style.marginTop) + parseInt(document.getElementById("lraisedsegment").style.height)) + "px";
+    lpic.style.display = "block";
+    container.style.width = "994px";
+    lpic.style.width = "662px";
   }
 }
 
@@ -154,15 +163,15 @@ function changetab(mode) {
   var subtab = document.getElementById("lsubtn");
   var picFrame = document.getElementById("lpicframe");
   if (mode == 'si' && tabNum == 1) {
-    hSlide(siform, -315, 15, 30, 1);
-    hSlide(suform, 15, 345, 30, 1);
+    hSlide(siform, -317, 13, 30, 1);
+    hSlide(suform, 13, 343, 30, 1);
     sibtab.setAttribute('style', "  background-color: var(--login-tab_button_active); color: var(--login-tab_button_active_font);");
     subtab.setAttribute('style', "  background-color: var(--login-tab_button); color: var(--login-tab_button_font);");
     picFrame.src = signinsrc;
     tabNum = 0;
   } else if (mode == 'su' && tabNum == 0) {
-    hSlide(siform, 15, -315, 30, 1);
-    hSlide(suform, 345, 15, 30, 1);
+    hSlide(siform, 13, -317, 30, 1);
+    hSlide(suform, 343, 13, 30, 1);
     subtab.setAttribute('style', "  background-color: var(--login-tab_button_active); color: var(--login-tab_button_active_font);");
     sibtab.setAttribute('style', "  background-color: var(--login-tab_button); color: var(--login-tab_button_font);");
     picFrame.src = signupsrc;
