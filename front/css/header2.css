@@ -105,7 +105,7 @@ body > .ui.container {
   min-width: 100px;
 }
 
-.ui .item {
+.ui .item:not(#texts) {
   color: #fff;
   height: 90px;
 }
