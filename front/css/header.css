@@ -4,6 +4,10 @@
   font-family: var(--font-family) !important;
 }
 
+.a{
+  color: var(--a-color);
+}
+
 #headerBody {
   background-color: var(--color-header);
   border-radius: 0rem;
@@ -40,6 +44,8 @@
   z-index: 2;
   /* box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2); */
 }
+
+
 
 #headerButton {
   margin: 10px;
