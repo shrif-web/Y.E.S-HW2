@@ -1,397 +1,322 @@
 <!DOCTYPE html>
 <html class="theme-light">
-  <head>
-    <meta charset="utf-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-    <title>Second Homepage</title>
 
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+<head>
+  <meta charset="utf-8" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+  <title>Second Homepage</title>
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR"
-    />
-    <link
-      rel="alternate icon"
-      type="image/png"
-      href="../resources/blue_favicon/favicon-16x16.png"
-    />
-    <link
-      rel="alternate icon"
-      type="image/png"
-      href="../resources/blue_favicon/favicon-32x32.png"
-    />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
 
-    <link href="../css/header2.css" rel="stylesheet" />
-    <link href="../css/theme.css" rel="stylesheet" />
-    <link href="../css/slider.css" rel="stylesheet" />
-    <link href="../css/homepage2.css" rel="stylesheet" />
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../resources/blue_favicon/apple-touch-icon.png?v=ngJW8jGAmR" />
+  <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-16x16.png" />
+  <link rel="alternate icon" type="image/png" href="../resources/blue_favicon/favicon-32x32.png" />
 
-    <script src="../js/homepage2.js"></script>
+  <link href="../css/header2.css" rel="stylesheet" />
+  <link href="../css/theme.css" rel="stylesheet" />
+  <link href="../css/slider.css" rel="stylesheet" />
+  <link href="../css/homepage2.css" rel="stylesheet" />
 
-    <meta charset="UTF-8" />
+  <script src="../js/homepage2.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-    />
-    <script type="text/javascript"></script>
-  </head>
+  <meta charset="UTF-8" />
 
-  <body
-    class="body"
-    onload="onHomepage2Load()"
-    onresize="onHomepage2Load()"
-    style="position: relative;"
-  >
-    <!-- Desktop Header -->
-    <div class="ui fluid menu" id="desktopHeader">
-      <div class="ui blue button" id="headerButton1">
-        ورود
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+  <script type="text/javascript"></script>
+</head>
+
+<body class="body" onload="onHomepage2Load()" onresize="onHomepage2Load()" style="position: relative;">
+
+  <div id="lbodycontainer"  onresize="loginResizeFunc();" class="ui grid">
+    <div id="ltopgrid" class="two column row">
+      <div id="lbacktohomelink" class="left floated column" onclick="loginPageHide()"><a id="lbcki"><i
+            class="caret left icon"></i>بازگشت</a></div>
+      <div id="lmainicon"><img id="llogoimageid" class="ui small image" onclick="loginThemeToggle()"
+          onmouseover="hovericon()" onmouseout="unhovericon()"> </div>
+    </div>
+    <div id="lmainContainer">
+      <div id="lraisedsegment" class="ui raised segments">
+        <div id="lverticalcontainer" class="ui horizontal segments">
+          <img id="lpicframe">
+          <div id="lformcontainer" class="ui segment">
+            <div id="ltabbtns" class="ui two attached buttons">
+              <button id="lsibtn" class="ui button" onclick="changetab('si')">ورود</button>
+              <button id="lsubtn" class="ui button" onclick="changetab('su')">ثبت نام</button>
+            </div>
+            <div id="lsignInForm" class="ui form">
+              <div id="lsiemail" class="field">
+                <input id="lsim" class="field" type="text" name="email" placeholder="ایمیل" dir="rtl">
+              </div>
+              <div id="lsipass" class="field">
+                <input id="lsip" type="password" name="password" placeholder="رمز عبور" dir="rtl">
+              </div>
+              <button id="lsisubbtn" class="ui button" type="submit" onclick="signInFormValidation()">ورود</button>
+              <div id="lsierrmsg" dir="rtl">
+                <i id="lsicli" class="close icon" onclick="closeErrMsg('sierrmsg', 'signInForm', '120px')"></i>
+                <ul id="lsierrlist" class="list">
+                </ul>
+              </div>
+            </div>
+            <div id="lsignUpForm" class="ui form">
+              <div id="lsuemail" class="field">
+                <input id="lsum" type="text" name="email" placeholder="ایمیل" dir="rtl">
+              </div>
+              <div id="lsupass" class="field">
+                <input id="lsup" type="password" name="password" placeholder="رمز عبور" dir="rtl">
+              </div>
+              <div id="lsurepass" class="field">
+                <input id="lsurp" type="password" name="retype-password" placeholder="تکرار رمز عبور" dir="rtl">
+              </div>
+              <div id="lsuchbox" class="field" dir="rtl">
+                <div class="ui checkbox" dir="rtl">
+                  <input id="lchbox" type="checkbox" tabindex="0">
+                  <label id="lchl">قوانین و شرایط را میپذیرم.</label>
+                </div>
+              </div>
+              <button id="lsusubbtn" class="ui button" type="submit" onclick="signUpFormValidation()">ارسال</button>
+              <div id="lsuerrmsg" dir="rtl">
+                <i id="lsucli" class="close icon" onclick="closeErrMsg('suerrmsg', 'signUpForm', '75px')"></i>
+                <ul id="lsuerrlist" class="list">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="ui blue button" id="headerButton2" onclick="onButtonClick()">
-        ثبت‌نام
-      </div>
+    </div>
+  </div>
 
-      <div class="right menu">
-        <a class="item" onclick="onDataClick()" id="dataButton1">داده‌ها</a>
-        <a class="active item" onclick="onHomeClick()" id="homeButton1">خانه</a>
+  <!-- Desktop Header -->
+  <div class="ui fluid menu" id="desktopHeader">
+    <div class="ui blue button" id="headerButton1" onclick="loadSigninPage('si')">
+      ورود
+    </div>
+    <div class="ui blue button" id="headerButton2" onclick="loadSigninPage('su')">
+      ثبت‌نام
+    </div>
 
-        <a class="item" id="logoItem">
-          <img
-            class="ui image"
-            id="headerIcon"
-            src="../resources/multi_logo_200x200_copy.png"
-          />
+    <div class="right menu">
+      <a class="item" onclick="onDataClick()" id="dataButton1">داده‌ها</a>
+      <a class="active item" onclick="onHomeClick()" id="homeButton1">خانه</a>
+
+      <a class="item" id="logoItem">
+        <img class="ui image" id="headerIcon" src="../resources/multi_logo_200x200_copy.png" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Header and Footer -->
+  <!-- Header -->
+  <div class="ui fixed borderless huge menu" id="mobileHeader">
+    <div class="ui container grid">
+      <div class="row">
+        <a class="item" id="sidebarButton">
+          <i class="sidebar icon"></i>
         </a>
-      </div>
-    </div>
-
-    <!-- Mobile Header and Footer -->
-    <!-- Header -->
-    <div class="ui fixed borderless huge menu" id="mobileHeader">
-      <div class="ui container grid">
-        <div class="row">
-          <a class="item" id="sidebarButton">
-            <i class="sidebar icon"></i>
+        <div class="right menu">
+          <a class="item">
+            <img class="ui image" src="../resources/multi_logo_200x200_copy.png" id="headerIconMobile" />
           </a>
-          <div class="right menu">
-            <a class="item">
-              <img
-                class="ui image"
-                src="../resources/multi_logo_200x200_copy.png"
-                id="headerIconMobile"
-              />
-            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="ui four item  menu" id="mobileFooter">
+    <a class="item" id="footerButtonRegister"  onclick="loadSigninPage('su')">ثبت‌نام</a>
+    <a class="item" id="footerButtonLogin"  onclick="loadSigninPage('si')">ورود</a>
+    <a class="item" onclick="onDataClick()" id="footerButtonData">داده‌ها</a>
+    <a class="active item" onclick="onHomeClick()" id="footerButtonHome">خانه</a>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="ui vertical menu" id="rightBar">
+    <div style="margin-right: 30px;">
+      <h2 class="ui header">
+        <div class="title_text content">
+          اعضای تیم
+        </div>
+      </h2>
+      <div class="ui relaxed divided list">
+        <div class="item" id="texts">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <a class="name_link" href="https://github.com/ArshiAAkhavan">عرشیا اخوان</a>
+          </div>
+        </div>
+        <div class="item" id="texts">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <a class="name_link" href="https://github.com/baharkhd" id="texts">بهار خدابخشیان</a>
+          </div>
+        </div>
+        <div class="item" id="texts">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <a class="name_link" href="https://github.com/mohammadrezaabdi" id="texts">محمدرضا عبدی</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div class="ui four item  menu" id="mobileFooter">
-      <a class="item"id="footerButtonRegister" >ثبت‌نام</a>
-      <a class="item" id="footerButtonLogin">ورود</a>
-      <a class="item" onclick="onDataClick()" id="footerButtonData">داده‌ها</a>
-      <a class="active item" onclick="onHomeClick()" id="footerButtonHome">خانه</a>
-    </div>
-
-    <!-- Sidebar -->
-    <div class="ui vertical menu" id="rightBar">
-      <div style="margin-right: 30px;">
-        <h2 class="ui header">
-          <div class="title_text content">
-            اعضای تیم
-          </div>
-        </h2>
-        <div class="ui relaxed divided list">
-          <div class="item" id="texts">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a class="name_link" href="https://github.com/ArshiAAkhavan"
-                >عرشیا اخوان</a
-              >
-            </div>
-          </div>
-          <div class="item" id="texts">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a class="name_link" href="https://github.com/baharkhd" id="texts"
-                >بهار خدابخشیان</a
-              >
-            </div>
-          </div>
-          <div class="item" id="texts">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <a
-                class="name_link"
-                href="https://github.com/mohammadrezaabdi"
-                id="texts"
-                >محمدرضا عبدی</a
-              >
-            </div>
-          </div>
+    <div style="margin-right: 30px;margin-top: 40px;">
+      <h3 class="ui header">
+        <div class="title_text content slider_h2">
+          تنظیمات
         </div>
-      </div>
+      </h3>
 
-      <div style="margin-right: 30px;margin-top: 40px;">
-        <h3 class="ui header">
-          <div class="title_text content slider_h2">
-            تنظیمات
-          </div>
-        </h3>
-
-        <div style="display:inline-block">
-          <label class="switch_label">حالت شب</label>
-          <label id="switch" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slider" />
-            <span class="slider round"></span>
-          </label>
-        </div>
+      <div style="display:inline-block">
+        <label class="switch_label">حالت شب</label>
+        <label id="switch" class="switch">
+          <input type="checkbox" onchange="toggleTheme()" id="slider" />
+          <span class="slider round"></span>
+        </label>
       </div>
     </div>
+  </div>
 
-    <!-- Grid -->
-    <div class="ui container" id="mainContainer">
-      <div id="homeContent">
-        <div class="ui four column grid" id="fourColGrid">
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <img class="ui image" id="card_img" src="../resources/milf.jpg">
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-              <img class="ui image" id="card_img" src="../resources/milf.jpg">
-            </div>
-          </div>
-          <div class="ui center aligned column">
-              <div class="ui segment" id="card">
-              <img class="ui image" id="card_img" src="../resources/milf.jpg">
-            </div>
-          </div>
-          <div class="ui center aligned column">
-              <div class="ui segment" id="card">
-              <img class="ui image" id="card_img" src="../resources/milf.jpg">
-            </div>
-          </div>
-          <div class="ui center aligned column">
-             <div class="ui segment" id="card">
-              <img class="ui image" id="card_img" src="../resources/milf.jpg">
-            </div>
+  <!-- Grid -->
+  <div class="ui container" id="mainContainer">
+    <div id="homeContent">
+      <div class="ui four column grid" id="fourColGrid">
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
           </div>
         </div>
-
-        <div class="ui three column padded grid" id="threeColGrid">
-          <div class="ui center aligned column">
-              <div class="ui segment" id="card">
-              <img class="ui image" id="card_img" src="../resources/milf.jpg">
-            </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
             <img class="ui image" id="card_img" src="../resources/milf.jpg">
-          </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-            <img class="ui image" id="card_img" src="../resources/milf.jpg">
-          </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-            <img class="ui image" id="card_img" src="../resources/milf.jpg">
-          </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-            <img class="ui image" id="card_img" src="../resources/milf.jpg">
-          </div>
           </div>
         </div>
-        <div class="ui column" id="mobileGrid">
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
-            <img class="ui image" id="card_img" src="../resources/milf.jpg">
-          </div> 
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
             <img class="ui image" id="card_img" src="../resources/milf.jpg">
           </div>
-          </div>
-          <div class="ui center aligned column">
-            <div class="ui segment" id="card">
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
             <img class="ui image" id="card_img" src="../resources/milf.jpg">
           </div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
           </div>
         </div>
       </div>
-      <div id="dataContent">
-        <div id="table">
-          <div class="ui one column centered grid">
-            <div class=" column ">
-              <table class="ui striped inverted teal celled table" id="dataTable">
-                <thead>
-                  <tr>
-                    <th>رتبه</th>
-                    <th>تیم</th>
-                    <th>دانشگاه</th>
-                    <th>امتیاز</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Emmanuel Macron</td>
-                    <td class="selectable">
-                      <a href="https://www.gouvernement.fr/en/news"
-                        >ابلیس فرانسه</a
-                      >
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.epfl.ch/en/">EPFL</a>
-                    </td>
-                    <td class="warning">۵۰</td>
-                  </tr>
 
-                  <tr>
-                    <td>François Hollande</td>
-                    <td class="selectable">
-                      <a href="https://www.gouvernement.fr/en/news"
-                        >ابلیس فرانسه</a
-                      >
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.epfl.ch/en/">EPFL</a>
-                    </td>
-                    <td class="warning">۵۰</td>
-                  </tr>
-
-                  <tr>
-                    <td>Donald.j Trump</td>
-                    <td class="selectable">
-                      <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.mit.edu/">MIT</a>
-                    </td>
-                    <td class="negative">۲۰</td>
-                  </tr>
-
-                  <tr>
-                    <td>Joe Biden</td>
-                    <td class="selectable">
-                      <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
-                    </td>
-                    <td class="selectable">
-                      <a href="https://www.mit.edu/">MIT</a>
-                    </td>
-                    <td class="negative">۲۰</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="four column centered row" style="padding: 13px;">
-              <div class="">
-                <button class="dataDirButton ui left floated button red">
-                  پیشین
-                </button>
-              </div>
-              <div class=" ">
-                <button class="dataDirButton ui right floated button red">
-                  پسین
-                </button>
-              </div>
-            </div>
+      <div class="ui three column padded grid" id="threeColGrid">
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
           </div>
         </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="ui column" id="mobileGrid">
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+        <div class="ui center aligned column">
+          <div class="ui segment" id="card">
+            <img class="ui image" id="card_img" src="../resources/milf.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="dataContent">
+      <div id="table">
+        <div class="ui one column centered grid">
+          <div class=" column ">
+            <table class="ui striped inverted teal celled table" id="dataTable">
+              <thead>
+                <tr>
+                  <th>رتبه</th>
+                  <th>تیم</th>
+                  <th>دانشگاه</th>
+                  <th>امتیاز</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Emmanuel Macron</td>
+                  <td class="selectable">
+                    <a href="https://www.gouvernement.fr/en/news">ابلیس فرانسه</a>
+                  </td>
+                  <td class="selectable">
+                    <a href="https://www.epfl.ch/en/">EPFL</a>
+                  </td>
+                  <td class="warning">۵۰</td>
+                </tr>
 
-        <div class="ui column" id="mobileData">
-          <div class="ui card data_card" id="card">
-            <div class="content">
-              <div class="header">عرشیا</div>
-            </div>
-            <div class="content ">
-              <h4 class="ui sub header">وای.ای.اس</h4>
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      <a class="name_link">دانشگاه: شریف</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      امتیاز: ۱۰۰
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <tr>
+                  <td>François Hollande</td>
+                  <td class="selectable">
+                    <a href="https://www.gouvernement.fr/en/news">ابلیس فرانسه</a>
+                  </td>
+                  <td class="selectable">
+                    <a href="https://www.epfl.ch/en/">EPFL</a>
+                  </td>
+                  <td class="warning">۵۰</td>
+                </tr>
+
+                <tr>
+                  <td>Donald.j Trump</td>
+                  <td class="selectable">
+                    <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
+                  </td>
+                  <td class="selectable">
+                    <a href="https://www.mit.edu/">MIT</a>
+                  </td>
+                  <td class="negative">۲۰</td>
+                </tr>
+
+                <tr>
+                  <td>Joe Biden</td>
+                  <td class="selectable">
+                    <a href="https://www.usa.gov/">آمریکا خون‌خوار</a>
+                  </td>
+                  <td class="selectable">
+                    <a href="https://www.mit.edu/">MIT</a>
+                  </td>
+                  <td class="negative">۲۰</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="ui card data_card" id="card">
-            <div class="content">
-              <div class="header">بهار</div>
-            </div>
-            <div class="content">
-              <h4 class="ui sub header">وای.ای.اس</h4>
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      <a class="name_link">دانشگاه: شریف</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      امتیاز: ۱۰۰
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui card data_card" id="card">
-            <div class="content">
-              <div class="header">محمدرضا</div>
-            </div>
-            <div class="content">
-              <h4 class="ui sub header">وای.ای.اس</h4>
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      <a class="name_link">دانشگاه: شریف</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="content">
-                    <div class="summary">
-                      امتیاز: ۱۰۰
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="two column centered row"
-            style="padding: 20px;margin-bottom: 20px;max-width: 300px;display: flex;justify-content: center;margin: auto;"
-          >
+          <div class="four column centered row" style="padding: 13px;">
             <div class="">
               <button class="dataDirButton ui left floated button red">
                 پیشین
@@ -405,24 +330,111 @@
           </div>
         </div>
       </div>
+
+      <div class="ui column" id="mobileData">
+        <div class="ui card data_card" id="card">
+          <div class="content">
+            <div class="header">عرشیا</div>
+          </div>
+          <div class="content ">
+            <h4 class="ui sub header">وای.ای.اس</h4>
+            <div class="ui small feed">
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                    <a class="name_link">دانشگاه: شریف</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                    امتیاز: ۱۰۰
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui card data_card" id="card">
+          <div class="content">
+            <div class="header">بهار</div>
+          </div>
+          <div class="content">
+            <h4 class="ui sub header">وای.ای.اس</h4>
+            <div class="ui small feed">
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                    <a class="name_link">دانشگاه: شریف</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                    امتیاز: ۱۰۰
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui card data_card" id="card">
+          <div class="content">
+            <div class="header">محمدرضا</div>
+          </div>
+          <div class="content">
+            <h4 class="ui sub header">وای.ای.اس</h4>
+            <div class="ui small feed">
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                    <a class="name_link">دانشگاه: شریف</a>
+                  </div>
+                </div>
+              </div>
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                    امتیاز: ۱۰۰
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="two column centered row"
+          style="padding: 20px;margin-bottom: 20px;max-width: 300px;display: flex;justify-content: center;margin: auto;">
+          <div class="">
+            <button class="dataDirButton ui left floated button red">
+              پیشین
+            </button>
+          </div>
+          <div class=" ">
+            <button class="dataDirButton ui right floated button red">
+              پسین
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
-    <script>
-      $("#sidebarButton").click(function() {
-        if (document.getElementById("rightBar").style.display == "none") {
-          $("#rightBar").toggleClass("show");
-        } else {
-          $("#rightBar").toggleClass("hide");
-        }
-      });
-    </script>
-  </body>
+  <script>
+    $("#sidebarButton").click(function () {
+      if (document.getElementById("rightBar").style.display == "none") {
+        $("#rightBar").toggleClass("show");
+      } else {
+        $("#rightBar").toggleClass("hide");
+      }
+    });
+  </script>
+</body>
+
 </html>
