@@ -1,4 +1,8 @@
 /* The switch - the box around the slider */
+
+#texts{
+  color: var(--icon-color);
+}
 .slider_h2{
     /*color: var(--a-color);*/
 }

@@ -9,7 +9,7 @@
   --color-card-back: #EBD083;
   
   --a-color: #7B5D5E;
-
+  --icon-color:#7B5D5E;
   --font-color: white;
   --font-family: sahel;
 
@@ -33,4 +33,7 @@
   --color-card-back: rgba(233, 233, 233, 0.705);
   --font-color: white;
   --font-family: sahel;
+  --a-color: white;
+  --icon-color: white;
+
 }
