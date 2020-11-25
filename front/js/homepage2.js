@@ -18,9 +18,7 @@ function toggleTheme() {
     document.getElementById("headerIconMobile").src =
       "../resources/blue_logo_200x200.png";
     document.getElementById("dataTable").classList.remove("teal")
-      console.log("you are your mother");
     document.getElementById("dataTable").classList.add("blue");
-      console.log("you are your mother");
   } else {
     setTheme("theme-light");
     document.getElementById("headerIcon").src =
@@ -29,9 +27,7 @@ function toggleTheme() {
       "../resources/multi_logo_200x200_copy.png";
     
     document.getElementById("dataTable").classList.remove("blue")
-      console.log("you are your mother");
     document.getElementById("dataTable").classList.add("teal");
-      console.log("you are your mother");
   }
 }
 
@@ -58,10 +54,10 @@ function onHomeClick() {
     hSlide(document.getElementById("homeContent"), 1200, 0, 30, 1);
 
     document.getElementById("homeButton1").classList.add("active");
-    // document.getElementById("homeButton2").classList.add("active");
+    document.getElementById("footerButtonHome").classList.add("active");
 
     document.getElementById("dataButton1").classList.remove("active");
-    // document.getElementById("dataButton2").classList.remove("active");
+    document.getElementById("footerButtonData").classList.remove("active");
     homePageCurrentTab = 'home';
   }
 }
